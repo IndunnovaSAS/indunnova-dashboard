@@ -1,0 +1,90 @@
+name: Consolidate Errors and Create Issues
+
+on:
+  schedule:
+    # Ejecutar diariamente a las 6:00 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Permitir ejecucion manual
+    inputs:
+      skip_issues:
+        description: 'Solo consolidar, no crear issues'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: appsindunnova
+
+      - name: Set up GitHub CLI
+        run: |
+          echo "${{ secrets.GH_TOKEN }}" | gh auth login --with-token
+
+      - name: Update error data
+        run: |
+          python scripts/update_data.py
+
+      - name: Consolidate errors and create issues
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SKIP_ISSUES: ${{ github.event.inputs.skip_issues }}
+        run: |
+          if [ "$SKIP_ISSUES" = "true" ]; then
+            echo "Skipping issue creation (manual run with skip_issues=true)"
+            python -c "
+import json
+import os
+import sys
+sys.path.insert(0, 'scripts')
+from consolidate_errors import consolidate_errors
+
+data_dir = 'data'
+with open(os.path.join(data_dir, 'errors.json'), 'r') as f:
+    errors = json.load(f)
+
+consolidated = consolidate_errors(errors)
+
+with open(os.path.join(data_dir, 'consolidated_errors.json'), 'w') as f:
+    json.dump(consolidated, f, indent=2)
+
+print(f'Consolidated {len(errors)} errors into {len(consolidated)} groups')
+"
+          else
+            python scripts/consolidate_errors.py
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add data/
+          git diff --staged --quiet || git commit -m "chore: update consolidated errors [skip ci]"
+          git push
