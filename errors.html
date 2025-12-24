@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indunnova - Registro de Errores</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/errors.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html" class="back-link">← Dashboard</a>
+                <span class="logo-icon">🔴</span>
+                <h1>Registro de Errores</h1>
+            </div>
+            <div class="header-info">
+                <span class="last-update" id="lastUpdate">Ultima actualizacion: --</span>
+                <button class="refresh-btn" onclick="loadErrors()">
+                    <span class="refresh-icon">↻</span> Actualizar
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Resumen de Errores -->
+        <section class="errors-summary">
+            <div class="summary-card">
+                <div class="summary-icon">🔴</div>
+                <div class="summary-info">
+                    <span class="summary-value" id="totalErrors">--</span>
+                    <span class="summary-label">Errores Totales</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">⏰</div>
+                <div class="summary-info">
+                    <span class="summary-value" id="errors24h">--</span>
+                    <span class="summary-label">Ultimas 24h</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">📊</div>
+                <div class="summary-info">
+                    <span class="summary-value" id="affectedServices">--</span>
+                    <span class="summary-label">Servicios Afectados</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">🔥</div>
+                <div class="summary-info">
+                    <span class="summary-value" id="topErrorService">--</span>
+                    <span class="summary-label">Mas Errores</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filters-section">
+            <div class="filter-group">
+                <label>Servicio:</label>
+                <select id="serviceFilter" onchange="applyFilters()">
+                    <option value="all">Todos los servicios</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Severidad:</label>
+                <select id="severityFilter" onchange="applyFilters()">
+                    <option value="all">Todas</option>
+                    <option value="ERROR">ERROR</option>
+                    <option value="CRITICAL">CRITICAL</option>
+                    <option value="WARNING">WARNING</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Desde:</label>
+                <input type="date" id="dateFrom" onchange="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Hasta:</label>
+                <input type="date" id="dateTo" onchange="applyFilters()">
+            </div>
+            <div class="filter-group">
+                <label>Buscar:</label>
+                <input type="text" id="searchFilter" placeholder="Buscar en mensaje..." oninput="applyFilters()">
+            </div>
+            <button class="clear-filters-btn" onclick="clearFilters()">Limpiar filtros</button>
+        </section>
+
+        <!-- Resultados -->
+        <section class="results-section">
+            <div class="results-header">
+                <span id="resultsCount">-- errores encontrados</span>
+                <div class="pagination-info">
+                    <span id="paginationInfo">Pagina 1 de 1</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista de Errores -->
+        <section class="errors-list-section">
+            <div class="errors-list" id="errorsList">
+                <div class="loading">Cargando errores...</div>
+            </div>
+        </section>
+
+        <!-- Paginacion -->
+        <section class="pagination-section">
+            <button class="pagination-btn" id="prevBtn" onclick="previousPage()" disabled>← Anterior</button>
+            <div class="page-numbers" id="pageNumbers"></div>
+            <button class="pagination-btn" id="nextBtn" onclick="nextPage()">Siguiente →</button>
+        </section>
+
+        <!-- Modal de Detalle -->
+        <div class="modal" id="errorModal">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Detalle del Error</h3>
+                    <button class="modal-close" onclick="closeErrorModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="errorModalBody">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Indunnova - Registro de Errores</p>
+        <p>Datos de Cloud Logging | Proyecto: appsindunnova</p>
+    </footer>
+
+    <script src="js/errors.js"></script>
+</body>
+</html>

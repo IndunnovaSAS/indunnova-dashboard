@@ -284,6 +284,69 @@ def get_request_metrics():
 
     return dict(metrics_by_service)
 
+def get_all_errors_detailed():
+    """Obtiene todos los errores detallados de los últimos 7 días."""
+    cmd = '''gcloud logging read 'resource.type="cloud_run_revision" AND severity>=ERROR' --limit=2000 --format="json" --freshness=7d 2>/dev/null'''
+    output = run_command(cmd, timeout=300)
+
+    if not output:
+        return []
+
+    try:
+        data = json.loads(output)
+        errors = []
+
+        for log in data:
+            resource = log.get('resource', {})
+            labels = resource.get('labels', {})
+            service_name = labels.get('service_name', 'unknown')
+            revision_name = labels.get('revision_name', '')
+            timestamp_str = log.get('timestamp', '')
+            severity = log.get('severity', 'ERROR')
+            insert_id = log.get('insertId', '')
+
+            # Obtener mensaje de error
+            error_text = log.get('textPayload', '')
+            if not error_text:
+                json_payload = log.get('jsonPayload', {})
+                error_text = json_payload.get('message', '')
+                if not error_text:
+                    error_text = str(json_payload)[:1000] if json_payload else ''
+
+            # Obtener información de HTTP si existe
+            http_request = log.get('httpRequest', {})
+            http_info = None
+            if http_request:
+                http_info = {
+                    'method': http_request.get('requestMethod', ''),
+                    'url': http_request.get('requestUrl', ''),
+                    'status': http_request.get('status', 0),
+                    'latency': http_request.get('latency', ''),
+                    'userAgent': http_request.get('userAgent', ''),
+                    'remoteIp': http_request.get('remoteIp', '')
+                }
+
+            # Obtener trace si existe
+            trace = log.get('trace', '')
+            span_id = log.get('spanId', '')
+
+            errors.append({
+                'id': insert_id,
+                'service': service_name,
+                'revision': revision_name,
+                'timestamp': timestamp_str,
+                'severity': severity,
+                'message': error_text,
+                'httpRequest': http_info,
+                'trace': trace,
+                'spanId': span_id
+            })
+
+        return errors
+    except json.JSONDecodeError as e:
+        print(f"Error parseando JSON de errores detallados: {e}")
+        return []
+
 def get_github_repos():
     """Obtiene la lista de repositorios de GitHub."""
     cmd = 'gh repo list --limit 100 --json name,url,updatedAt,description 2>/dev/null'
@@ -344,6 +407,10 @@ def main():
     repos = get_github_repos()
     print(f"  Encontrados {len(repos)} repositorios")
 
+    print("Obteniendo errores detallados para pagina de errores...")
+    all_errors = get_all_errors_detailed()
+    print(f"  Encontrados {len(all_errors)} errores detallados")
+
     # Combinar métricas en los servicios
     for service in services:
         name = service['name']
@@ -369,6 +436,7 @@ def main():
     # Guardar datos
     services_path = os.path.join(data_dir, 'services.json')
     repos_path = os.path.join(data_dir, 'repos.json')
+    errors_path = os.path.join(data_dir, 'errors.json')
     meta_path = os.path.join(data_dir, 'meta.json')
 
     with open(services_path, 'w') as f:
@@ -378,6 +446,10 @@ def main():
     with open(repos_path, 'w') as f:
         json.dump(repos, f, indent=2)
     print(f"  Guardado: {repos_path}")
+
+    with open(errors_path, 'w') as f:
+        json.dump(all_errors, f, indent=2)
+    print(f"  Guardado: {errors_path}")
 
     # Calcular totales para metadatos
     total_errors_24h = sum(s['errors']['last24h'] for s in services)
