@@ -3,14 +3,17 @@ let consolidatedErrors = {};
 let createdIssues = [];
 let analyses = {};
 let filteredGroups = [];
+let issueStates = {}; // Cache for issue states
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', loadData);
 
 async function loadData() {
     try {
+        const cacheBuster = `?t=${Date.now()}`;
+
         // Load consolidated errors
-        const consolidatedResponse = await fetch('data/consolidated_errors.json');
+        const consolidatedResponse = await fetch('data/consolidated_errors.json' + cacheBuster);
         if (consolidatedResponse.ok) {
             consolidatedErrors = await consolidatedResponse.json();
         } else {
@@ -18,7 +21,7 @@ async function loadData() {
         }
 
         // Load created issues
-        const issuesResponse = await fetch('data/created_issues.json');
+        const issuesResponse = await fetch('data/created_issues.json' + cacheBuster);
         if (issuesResponse.ok) {
             createdIssues = await issuesResponse.json();
         } else {
@@ -26,7 +29,7 @@ async function loadData() {
         }
 
         // Load analyses
-        const analysesResponse = await fetch('data/error_analyses.json');
+        const analysesResponse = await fetch('data/error_analyses.json' + cacheBuster);
         if (analysesResponse.ok) {
             analyses = await analysesResponse.json();
         } else {
@@ -34,9 +37,12 @@ async function loadData() {
         }
 
         // Load metadata
-        const metaResponse = await fetch('data/meta.json');
+        const metaResponse = await fetch('data/meta.json' + cacheBuster);
         const meta = await metaResponse.json();
         document.getElementById('lastUpdate').textContent = `Ultima actualizacion: ${formatDate(meta.lastUpdate)}`;
+
+        // Fetch issue states from GitHub API
+        await fetchIssueStates();
 
         // Populate filters
         populateServiceFilter();
@@ -57,6 +63,37 @@ async function loadData() {
             </div>
         `;
     }
+}
+
+async function fetchIssueStates() {
+    // Fetch issue states from GitHub API (public repos don't need auth)
+    try {
+        const response = await fetch('https://api.github.com/repos/mbrt26/indunnova-dashboard/issues?state=all&per_page=100');
+        if (response.ok) {
+            const issues = await response.json();
+            issues.forEach(issue => {
+                // Extract issue number from URL
+                issueStates[issue.number] = {
+                    state: issue.state,
+                    closed_at: issue.closed_at,
+                    title: issue.title
+                };
+            });
+        }
+    } catch (error) {
+        console.error('Error fetching issue states:', error);
+    }
+}
+
+function getIssueState(issueUrl) {
+    if (!issueUrl) return null;
+    // Extract issue number from URL like "https://github.com/mbrt26/indunnova-dashboard/issues/1"
+    const match = issueUrl.match(/\/issues\/(\d+)$/);
+    if (match) {
+        const issueNumber = parseInt(match[1]);
+        return issueStates[issueNumber] || null;
+    }
+    return null;
 }
 
 function populateServiceFilter() {
@@ -93,13 +130,19 @@ function applyFilters() {
     const sortFilter = document.getElementById('sortFilter').value;
 
     // Convert to array with hash
-    filteredGroups = Object.entries(consolidatedErrors).map(([hash, data]) => ({
-        hash,
-        ...data,
-        hasIssue: createdIssues.some(i => i.hash === hash),
-        issueUrl: createdIssues.find(i => i.hash === hash)?.url,
-        analysis: analyses[hash]
-    }));
+    filteredGroups = Object.entries(consolidatedErrors).map(([hash, data]) => {
+        const issue = createdIssues.find(i => i.hash === hash);
+        const issueState = issue ? getIssueState(issue.url) : null;
+        return {
+            hash,
+            ...data,
+            hasIssue: !!issue,
+            issueUrl: issue?.url,
+            issueState: issueState?.state || null,
+            issueClosed: issueState?.state === 'closed',
+            analysis: analyses[hash]
+        };
+    });
 
     // Apply filters
     if (serviceFilter !== 'all') {
@@ -166,7 +209,7 @@ function renderGroups() {
                     </div>
                     <div class="issue-group-badges">
                         <span class="count-badge ${priorityClass}">${group.count} ocurrencias</span>
-                        ${group.hasIssue ? `<a href="${group.issueUrl}" target="_blank" class="issue-link-badge">🎫 Issue</a>` : ''}
+                        ${group.hasIssue ? `<a href="${group.issueUrl}" target="_blank" class="issue-link-badge ${group.issueClosed ? 'closed' : 'open'}">${group.issueClosed ? '✅ Cerrado' : '🎫 Abierto'}</a>` : ''}
                     </div>
                 </div>
                 <div class="issue-group-body">

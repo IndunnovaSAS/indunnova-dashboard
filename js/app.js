@@ -2,6 +2,7 @@
 let servicesData = [];
 let reposData = [];
 let metaData = {};
+let errorsData = [];
 
 // Load data on page load
 document.addEventListener('DOMContentLoaded', loadData);
@@ -34,11 +35,22 @@ async function loadData() {
         const metaResponse = await fetch('data/meta.json' + cacheBuster);
         metaData = await metaResponse.json();
 
+        // Load errors for chart
+        try {
+            const errorsResponse = await fetch('data/errors.json' + cacheBuster);
+            if (errorsResponse.ok) {
+                errorsData = await errorsResponse.json();
+            }
+        } catch (e) {
+            errorsData = [];
+        }
+
         document.getElementById('lastUpdate').textContent = `Ultima actualizacion: ${formatDate(metaData.lastUpdate)}`;
 
         // Render everything
         updateSummary();
         updateMetrics();
+        renderDailyErrorsChart();
         renderRecentDeployments();
         renderServices();
         renderRepos();
@@ -71,6 +83,67 @@ function updateMetrics() {
     document.getElementById('totalDeployments7d').textContent = metaData.totalDeployments7d || 0;
     document.getElementById('totalDeployments24h').textContent = metaData.totalDeployments24h || 0;
     document.getElementById('servicesWithErrors').textContent = metaData.servicesWithErrors || 0;
+}
+
+function renderDailyErrorsChart() {
+    const container = document.getElementById('dailyErrorsChart');
+    if (!container) return;
+
+    // Group errors by day
+    const dailyCounts = {};
+    const today = new Date();
+
+    // Initialize last 7 days
+    for (let i = 6; i >= 0; i--) {
+        const date = new Date(today);
+        date.setDate(date.getDate() - i);
+        const key = date.toISOString().split('T')[0];
+        dailyCounts[key] = 0;
+    }
+
+    // Count errors per day
+    errorsData.forEach(error => {
+        if (error.timestamp) {
+            const date = error.timestamp.split('T')[0];
+            if (dailyCounts.hasOwnProperty(date)) {
+                dailyCounts[date]++;
+            }
+        }
+    });
+
+    const days = Object.keys(dailyCounts).sort();
+    const counts = days.map(d => dailyCounts[d]);
+    const maxCount = Math.max(...counts, 1);
+
+    // Build chart HTML
+    const dayNames = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+
+    let html = '<div class="chart-bars">';
+
+    days.forEach((day, index) => {
+        const count = counts[index];
+        const height = (count / maxCount) * 100;
+        const date = new Date(day + 'T12:00:00');
+        const dayName = dayNames[date.getDay()];
+        const dayNum = date.getDate();
+        const isToday = index === days.length - 1;
+
+        html += `
+            <div class="chart-bar-wrapper ${isToday ? 'today' : ''}">
+                <div class="chart-bar-value">${count}</div>
+                <div class="chart-bar" style="height: ${Math.max(height, 2)}%"></div>
+                <div class="chart-bar-label">${dayName} ${dayNum}</div>
+            </div>
+        `;
+    });
+
+    html += '</div>';
+
+    // Add total
+    const total = counts.reduce((a, b) => a + b, 0);
+    html += `<div class="chart-total">Total: <strong>${total}</strong> errores en 7 dias</div>`;
+
+    container.innerHTML = html;
 }
 
 function renderRecentDeployments() {

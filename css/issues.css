@@ -144,20 +144,35 @@
 }
 
 .issue-link-badge {
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--success-color);
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    transition: all 0.2s;
 }
 
-.issue-link-badge:hover {
-    background: rgba(16, 185, 129, 0.2);
+.issue-link-badge.open {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(79, 70, 229, 0.3);
+}
+
+.issue-link-badge.open:hover {
+    background: rgba(79, 70, 229, 0.2);
+}
+
+.issue-link-badge.closed {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success-color);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.issue-link-badge.closed:hover {
+    background: rgba(16, 185, 129, 0.25);
 }
 
 .issue-group-body {

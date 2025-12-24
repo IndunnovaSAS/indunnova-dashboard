@@ -870,3 +870,107 @@ a.metric-card.clickable:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Daily Errors Chart Section */
+.chart-section {
+    margin-bottom: 2rem;
+}
+
+.chart-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.daily-chart-container {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.daily-chart {
+    min-height: 200px;
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 180px;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.chart-bar-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.chart-bar-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.chart-bar {
+    width: 100%;
+    max-width: 60px;
+    background: linear-gradient(180deg, var(--danger-color) 0%, #ff7b7b 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: all 0.3s ease;
+    min-height: 4px;
+}
+
+.chart-bar-wrapper:hover .chart-bar {
+    transform: scaleY(1.02);
+    box-shadow: 0 -4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.chart-bar-wrapper.today .chart-bar {
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-light) 100%);
+}
+
+.chart-bar-wrapper.today .chart-bar-label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.chart-bar-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.chart-total {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.chart-total strong {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+    .chart-bars {
+        gap: 0.25rem;
+    }
+
+    .chart-bar-value {
+        font-size: 0.75rem;
+    }
+
+    .chart-bar-label {
+        font-size: 0.625rem;
+    }
+}
