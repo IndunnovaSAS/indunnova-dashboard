@@ -7,17 +7,31 @@ let metaData = {};
 document.addEventListener('DOMContentLoaded', loadData);
 
 async function loadData() {
+    // Show loading state
+    const refreshBtn = document.querySelector('.refresh-btn');
+    const refreshIcon = document.querySelector('.refresh-icon');
+    if (refreshBtn) {
+        refreshBtn.disabled = true;
+        refreshBtn.style.opacity = '0.7';
+    }
+    if (refreshIcon) {
+        refreshIcon.style.animation = 'spin 1s linear infinite';
+    }
+
     try {
+        // Add cache-busting timestamp to force fresh data
+        const cacheBuster = `?t=${Date.now()}`;
+
         // Load services data
-        const servicesResponse = await fetch('data/services.json');
+        const servicesResponse = await fetch('data/services.json' + cacheBuster);
         servicesData = await servicesResponse.json();
 
         // Load repos data
-        const reposResponse = await fetch('data/repos.json');
+        const reposResponse = await fetch('data/repos.json' + cacheBuster);
         reposData = await reposResponse.json();
 
         // Load metadata
-        const metaResponse = await fetch('data/meta.json');
+        const metaResponse = await fetch('data/meta.json' + cacheBuster);
         metaData = await metaResponse.json();
 
         document.getElementById('lastUpdate').textContent = `Ultima actualizacion: ${formatDate(metaData.lastUpdate)}`;
@@ -32,6 +46,15 @@ async function loadData() {
         console.error('Error loading data:', error);
         document.getElementById('servicesGrid').innerHTML = '<div class="loading">Error al cargar datos. Verifique que los archivos JSON existen.</div>';
         document.getElementById('reposGrid').innerHTML = '<div class="loading">Error al cargar datos.</div>';
+    } finally {
+        // Reset button state
+        if (refreshBtn) {
+            refreshBtn.disabled = false;
+            refreshBtn.style.opacity = '1';
+        }
+        if (refreshIcon) {
+            refreshIcon.style.animation = '';
+        }
     }
 }
 
