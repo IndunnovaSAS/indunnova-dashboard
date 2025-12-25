@@ -151,53 +151,58 @@ function renderUsageHeatmap() {
     const container = document.getElementById('usageHeatmap');
     if (!container) return;
 
-    // Sort services by usage (requests30d)
-    const sortedServices = [...servicesData]
-        .filter(s => s.interactions)
-        .sort((a, b) => (b.interactions?.requests30d || 0) - (a.interactions?.requests30d || 0));
+    try {
+        // Sort services by usage (requests30d)
+        const sortedServices = servicesData
+            .filter(s => s && s.interactions)
+            .sort((a, b) => (b.interactions.requests30d || 0) - (a.interactions.requests30d || 0));
 
-    if (sortedServices.length === 0) {
-        container.innerHTML = '<div class="no-data">No hay datos de uso disponibles</div>';
-        return;
+        if (sortedServices.length === 0) {
+            container.innerHTML = '<div class="no-data">No hay datos de uso disponibles</div>';
+            return;
+        }
+
+        // Find max value for scaling
+        const maxRequests = Math.max(...sortedServices.map(s => s.interactions.requests30d || 0));
+
+        let html = '';
+
+        sortedServices.forEach(service => {
+            const requests7d = service.interactions.requests7d || 0;
+            const requests30d = service.interactions.requests30d || 0;
+
+            // Calculate intensity (0-1) based on 30d requests
+            const intensity = maxRequests > 0 ? requests30d / maxRequests : 0;
+
+            // Generate color from blue (low) to red (high)
+            const hue = 200 - (intensity * 200); // 200 = blue, 0 = red
+            const saturation = 70 + (intensity * 30); // 70-100%
+            const lightness = 50 - (intensity * 15); // darker for higher values
+
+            const bgColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+            const textColor = intensity > 0.5 ? 'white' : 'var(--text-primary)';
+
+            // Determine size class based on usage
+            let sizeClass = 'size-sm';
+            if (intensity > 0.6) sizeClass = 'size-lg';
+            else if (intensity > 0.3) sizeClass = 'size-md';
+
+            html += `
+                <div class="heatmap-cell ${sizeClass}"
+                     style="background-color: ${bgColor}; color: ${textColor};"
+                     title="${service.name}: ${formatNumber(requests30d)} visitas (30d) / ${formatNumber(requests7d)} visitas (7d)"
+                     onclick="showServiceDetails('${service.name}')">
+                    <span class="heatmap-name">${truncateServiceName(service.name)}</span>
+                    <span class="heatmap-value">${formatNumber(requests30d)}</span>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    } catch (error) {
+        console.error('Error rendering heatmap:', error);
+        container.innerHTML = '<div class="no-data">Error al cargar mapa de calor</div>';
     }
-
-    // Find max value for scaling
-    const maxRequests = Math.max(...sortedServices.map(s => s.interactions?.requests30d || 0));
-
-    let html = '';
-
-    sortedServices.forEach(service => {
-        const requests7d = service.interactions?.requests7d || 0;
-        const requests30d = service.interactions?.requests30d || 0;
-
-        // Calculate intensity (0-1) based on 30d requests
-        const intensity = maxRequests > 0 ? requests30d / maxRequests : 0;
-
-        // Generate color from blue (low) to red (high)
-        const hue = 200 - (intensity * 200); // 200 = blue, 0 = red
-        const saturation = 70 + (intensity * 30); // 70-100%
-        const lightness = 50 - (intensity * 15); // darker for higher values
-
-        const bgColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-        const textColor = intensity > 0.5 ? 'white' : 'var(--text-primary)';
-
-        // Determine size class based on usage
-        let sizeClass = 'size-sm';
-        if (intensity > 0.6) sizeClass = 'size-lg';
-        else if (intensity > 0.3) sizeClass = 'size-md';
-
-        html += `
-            <div class="heatmap-cell ${sizeClass}"
-                 style="background-color: ${bgColor}; color: ${textColor};"
-                 title="${service.name}: ${formatNumber(requests30d)} visitas (30d) / ${formatNumber(requests7d)} visitas (7d)"
-                 onclick="showServiceDetails('${service.name}')">
-                <span class="heatmap-name">${truncateServiceName(service.name)}</span>
-                <span class="heatmap-value">${formatNumber(requests30d)}</span>
-            </div>
-        `;
-    });
-
-    container.innerHTML = html;
 }
 
 function truncateServiceName(name) {
