@@ -531,7 +531,7 @@ ORDER BY mtd_cost DESC
     try:
         # Ejecutar bq directamente con subprocess y stdin
         result = subprocess.run(
-            ['bq', 'query', '--use_legacy_sql=false', '--format=json'],
+            ['bq', 'query', '--project_id=appsindunnova', '--use_legacy_sql=false', '--format=json'],
             input=query,
             capture_output=True,
             text=True,
