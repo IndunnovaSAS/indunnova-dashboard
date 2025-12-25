@@ -4,9 +4,54 @@ let createdIssues = [];
 let analyses = {};
 let filteredGroups = [];
 let issueStates = {}; // Cache for issue states
+let allGroups = []; // All groups before date filtering
 
 // Load data on page load
-document.addEventListener('DOMContentLoaded', loadData);
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDateFilters();
+    loadData();
+});
+
+function initializeDateFilters() {
+    const today = new Date();
+    const sevenDaysAgo = new Date(today);
+    sevenDaysAgo.setDate(today.getDate() - 7);
+
+    document.getElementById('dateTo').value = today.toISOString().split('T')[0];
+    document.getElementById('dateFrom').value = sevenDaysAgo.toISOString().split('T')[0];
+}
+
+function applyPeriodFilter() {
+    const period = document.getElementById('periodFilter').value;
+    const dateFromGroup = document.getElementById('dateRangeGroup');
+    const dateToGroup = document.getElementById('dateRangeGroup2');
+
+    if (period === 'custom') {
+        dateFromGroup.style.display = 'flex';
+        dateToGroup.style.display = 'flex';
+    } else {
+        dateFromGroup.style.display = 'none';
+        dateToGroup.style.display = 'none';
+
+        const today = new Date();
+        let fromDate = new Date(today);
+
+        if (period === '7d') {
+            fromDate.setDate(today.getDate() - 7);
+        } else if (period === '30d') {
+            fromDate.setDate(today.getDate() - 30);
+        } else if (period === '90d') {
+            fromDate.setDate(today.getDate() - 90);
+        } else {
+            fromDate = null; // all time
+        }
+
+        document.getElementById('dateTo').value = today.toISOString().split('T')[0];
+        document.getElementById('dateFrom').value = fromDate ? fromDate.toISOString().split('T')[0] : '';
+    }
+
+    applyFilters();
+}
 
 async function loadData() {
     try {
@@ -128,9 +173,11 @@ function applyFilters() {
     const priorityFilter = document.getElementById('priorityFilter').value;
     const issueFilter = document.getElementById('issueFilter').value;
     const sortFilter = document.getElementById('sortFilter').value;
+    const dateFrom = document.getElementById('dateFrom').value;
+    const dateTo = document.getElementById('dateTo').value;
 
     // Convert to array with hash
-    filteredGroups = Object.entries(consolidatedErrors).map(([hash, data]) => {
+    allGroups = Object.entries(consolidatedErrors).map(([hash, data]) => {
         const issue = createdIssues.find(i => i.hash === hash);
         const issueState = issue ? getIssueState(issue.url) : null;
         return {
@@ -144,11 +191,32 @@ function applyFilters() {
         };
     });
 
-    // Apply filters
+    filteredGroups = [...allGroups];
+
+    // Apply date filter
+    if (dateFrom) {
+        const fromDate = new Date(dateFrom);
+        fromDate.setHours(0, 0, 0, 0);
+        filteredGroups = filteredGroups.filter(g => {
+            const lastSeen = new Date(g.last_seen);
+            return lastSeen >= fromDate;
+        });
+    }
+    if (dateTo) {
+        const toDate = new Date(dateTo);
+        toDate.setHours(23, 59, 59, 999);
+        filteredGroups = filteredGroups.filter(g => {
+            const firstSeen = new Date(g.first_seen);
+            return firstSeen <= toDate;
+        });
+    }
+
+    // Apply service filter
     if (serviceFilter !== 'all') {
         filteredGroups = filteredGroups.filter(g => g.services.includes(serviceFilter));
     }
 
+    // Apply priority filter
     if (priorityFilter !== 'all') {
         if (priorityFilter === 'high') {
             filteredGroups = filteredGroups.filter(g => g.count >= 50);
@@ -159,11 +227,16 @@ function applyFilters() {
         }
     }
 
+    // Apply issue filter
     if (issueFilter !== 'all') {
         if (issueFilter === 'with-issue') {
             filteredGroups = filteredGroups.filter(g => g.hasIssue);
         } else if (issueFilter === 'without-issue') {
             filteredGroups = filteredGroups.filter(g => !g.hasIssue);
+        } else if (issueFilter === 'open') {
+            filteredGroups = filteredGroups.filter(g => g.hasIssue && !g.issueClosed);
+        } else if (issueFilter === 'closed') {
+            filteredGroups = filteredGroups.filter(g => g.hasIssue && g.issueClosed);
         }
     }
 
@@ -176,7 +249,35 @@ function applyFilters() {
         filteredGroups.sort((a, b) => b.services.length - a.services.length);
     }
 
+    // Update progress widget with filtered data
+    updateProgressWidget();
+
     renderGroups();
+}
+
+function updateProgressWidget() {
+    const total = filteredGroups.length;
+    const corrected = filteredGroups.filter(g => g.issueClosed).length;
+    const detected = filteredGroups.filter(g => g.hasIssue).length;
+    const pending = total - corrected;
+
+    // Update stats
+    document.getElementById('correctedCount').textContent = corrected;
+    document.getElementById('detectedCount').textContent = detected;
+    document.getElementById('pendingCount').textContent = pending;
+
+    // Update progress ring
+    const percent = total > 0 ? Math.round((corrected / total) * 100) : 0;
+    document.getElementById('progressPercent').textContent = `${percent}%`;
+
+    // Update SVG ring
+    const ring = document.getElementById('progressRing');
+    if (ring) {
+        const circumference = 2 * Math.PI * 40; // radius = 40
+        const offset = circumference - (percent / 100) * circumference;
+        ring.style.strokeDashoffset = offset;
+        ring.style.transition = 'stroke-dashoffset 0.5s ease-in-out';
+    }
 }
 
 function renderGroups() {

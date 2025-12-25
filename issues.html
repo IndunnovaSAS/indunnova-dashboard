@@ -28,6 +28,39 @@
     </header>
 
     <main class="main-content">
+        <!-- Widget de Progreso -->
+        <section class="progress-widget-section">
+            <div class="progress-widget">
+                <div class="progress-chart-container">
+                    <div class="progress-chart" id="progressChart">
+                        <svg viewBox="0 0 100 100" class="progress-ring">
+                            <circle class="progress-ring-bg" cx="50" cy="50" r="40"/>
+                            <circle class="progress-ring-fill" id="progressRing" cx="50" cy="50" r="40"
+                                stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+                        </svg>
+                        <div class="progress-center">
+                            <span class="progress-percent" id="progressPercent">0%</span>
+                            <span class="progress-label-small">corregidos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-stats">
+                    <div class="progress-stat corrected">
+                        <span class="progress-stat-value" id="correctedCount">0</span>
+                        <span class="progress-stat-label">Corregidos</span>
+                    </div>
+                    <div class="progress-stat detected">
+                        <span class="progress-stat-value" id="detectedCount">0</span>
+                        <span class="progress-stat-label">Detectados</span>
+                    </div>
+                    <div class="progress-stat pending">
+                        <span class="progress-stat-value" id="pendingCount">0</span>
+                        <span class="progress-stat-label">Pendientes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Resumen -->
         <section class="summary-section">
             <div class="summary-card">
@@ -75,36 +108,60 @@
 
         <!-- Filtros -->
         <section class="filters-section">
-            <div class="filter-group">
-                <label>Servicio:</label>
-                <select id="serviceFilter" onchange="applyFilters()">
-                    <option value="all">Todos</option>
-                </select>
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label>Periodo:</label>
+                    <select id="periodFilter" onchange="applyPeriodFilter()">
+                        <option value="all">Todo el tiempo</option>
+                        <option value="7d" selected>Ultimos 7 dias</option>
+                        <option value="30d">Ultimos 30 dias</option>
+                        <option value="90d">Ultimos 90 dias</option>
+                        <option value="custom">Personalizado</option>
+                    </select>
+                </div>
+                <div class="filter-group date-range" id="dateRangeGroup" style="display: none;">
+                    <label>Desde:</label>
+                    <input type="date" id="dateFrom" onchange="applyFilters()">
+                </div>
+                <div class="filter-group date-range" id="dateRangeGroup2" style="display: none;">
+                    <label>Hasta:</label>
+                    <input type="date" id="dateTo" onchange="applyFilters()">
+                </div>
             </div>
-            <div class="filter-group">
-                <label>Prioridad:</label>
-                <select id="priorityFilter" onchange="applyFilters()">
-                    <option value="all">Todas</option>
-                    <option value="high">Alta (50+)</option>
-                    <option value="medium">Media (10-49)</option>
-                    <option value="low">Baja (3-9)</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Estado:</label>
-                <select id="issueFilter" onchange="applyFilters()">
-                    <option value="all">Todos</option>
-                    <option value="with-issue">Con Issue</option>
-                    <option value="without-issue">Sin Issue</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Ordenar:</label>
-                <select id="sortFilter" onchange="applyFilters()">
-                    <option value="count">Mas Ocurrencias</option>
-                    <option value="recent">Mas Reciente</option>
-                    <option value="services">Mas Servicios</option>
-                </select>
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label>Servicio:</label>
+                    <select id="serviceFilter" onchange="applyFilters()">
+                        <option value="all">Todos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Prioridad:</label>
+                    <select id="priorityFilter" onchange="applyFilters()">
+                        <option value="all">Todas</option>
+                        <option value="high">Alta (50+)</option>
+                        <option value="medium">Media (10-49)</option>
+                        <option value="low">Baja (3-9)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Estado:</label>
+                    <select id="issueFilter" onchange="applyFilters()">
+                        <option value="all">Todos</option>
+                        <option value="with-issue">Con Issue</option>
+                        <option value="without-issue">Sin Issue</option>
+                        <option value="open">Issues Abiertos</option>
+                        <option value="closed">Issues Cerrados</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Ordenar:</label>
+                    <select id="sortFilter" onchange="applyFilters()">
+                        <option value="count">Mas Ocurrencias</option>
+                        <option value="recent">Mas Reciente</option>
+                        <option value="services">Mas Servicios</option>
+                    </select>
+                </div>
             </div>
         </section>
 
