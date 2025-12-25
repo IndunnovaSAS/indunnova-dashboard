@@ -378,7 +378,7 @@ function renderServices() {
         const totalCost = costEstimate.totalWithSql || costEstimate.estimatedMonthly || 0;
         const cloudRunCost = costEstimate.estimatedMonthly || 0;
         const sqlCost = costEstimate.sqlCostShare || 0;
-        const usesDb = costEstimate.usesConsolidatedDb || false;
+        const usesDb = costEstimate.usesConsolidatedDb || costEstimate.hasDedicatedDb || false;
 
         return `
         <div class="${cardClass}">
@@ -499,9 +499,16 @@ function showServiceDetails(serviceName) {
                         <span class="cost-item-value">$${sqlCostShare.toFixed(2)}</span>
                     </div>
                     ` : ''}
+                    ${costEstimate.hasDedicatedDb ? `
+                    <div class="cost-subheader" style="font-weight: 600; margin-top: 0.75rem; color: var(--text-secondary);">Cloud SQL (${costEstimate.dedicatedDbName})</div>
+                    <div class="cost-item">
+                        <span class="cost-item-label">DB dedicada</span>
+                        <span class="cost-item-value">$${sqlCostShare.toFixed(2)}</span>
+                    </div>
+                    ` : ''}
                 </div>
                 <p class="cost-note" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
-                    * Estimacion basada en uso actual. ${usesDb ? 'Costo SQL dividido entre servicios que usan la DB consolidada.' : ''}
+                    * Estimacion basada en uso actual. ${usesDb ? 'Costo SQL dividido entre servicios que usan la DB consolidada.' : ''}${costEstimate.hasDedicatedDb ? 'Costo completo de DB dedicada.' : ''}
                 </p>
             </div>
         </div>

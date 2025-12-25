@@ -69,6 +69,12 @@ SERVICES_USING_CONSOLIDATED_DB = [
     'vid-comunicaciones',
 ]
 
+# Servicios con bases de datos dedicadas (no comparten postgres-consolidated)
+SERVICES_WITH_DEDICATED_DB = {
+    'rgd-aire': 'rgd-aire-db',
+    # 'florezcook': 'florezcook-instance',  # Descomentar cuando se conecte
+}
+
 GITHUB_ORG = 'mbrt26'
 PROJECT_NUMBER = '381877373634'  # Google Cloud project number for appsindunnova
 
@@ -810,15 +816,34 @@ def main():
             avg_latency
         )
 
-        # Agregar costo de Cloud SQL si usa la DB consolidada
+        # Agregar costo de Cloud SQL
         if name in SERVICES_USING_CONSOLIDATED_DB:
+            # Servicio usa la DB consolidada compartida
             sql_cost_share = round(cost_per_service, 2)
             cost_estimate['sqlCostShare'] = sql_cost_share
             cost_estimate['usesConsolidatedDb'] = True
+            cost_estimate['hasDedicatedDb'] = False
+            cost_estimate['dedicatedDbName'] = None
             cost_estimate['totalWithSql'] = round(cost_estimate['estimatedMonthly'] + sql_cost_share, 2)
+        elif name in SERVICES_WITH_DEDICATED_DB:
+            # Servicio tiene su propia base de datos dedicada
+            dedicated_db_name = SERVICES_WITH_DEDICATED_DB[name]
+            dedicated_db_cost = 0
+            for instance in cloud_sql_data.get('instances', []):
+                if instance['name'] == dedicated_db_name and instance['state'] == 'RUNNABLE':
+                    dedicated_db_cost = instance['totalCost']
+                    break
+            cost_estimate['sqlCostShare'] = round(dedicated_db_cost, 2)
+            cost_estimate['usesConsolidatedDb'] = False
+            cost_estimate['hasDedicatedDb'] = True
+            cost_estimate['dedicatedDbName'] = dedicated_db_name
+            cost_estimate['totalWithSql'] = round(cost_estimate['estimatedMonthly'] + dedicated_db_cost, 2)
         else:
+            # Servicio no usa base de datos
             cost_estimate['sqlCostShare'] = 0
             cost_estimate['usesConsolidatedDb'] = False
+            cost_estimate['hasDedicatedDb'] = False
+            cost_estimate['dedicatedDbName'] = None
             cost_estimate['totalWithSql'] = cost_estimate['estimatedMonthly']
 
         service['costEstimate'] = cost_estimate
