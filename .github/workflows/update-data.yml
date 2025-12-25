@@ -38,9 +38,11 @@ jobs:
         run: |
           echo "${{ secrets.GH_TOKEN }}" | gh auth login --with-token
 
+      - name: Install dependencies
+        run: pip install google-cloud-bigquery
+
       - name: Update data files
-        run: |
-          python scripts/update_data.py
+        run: python scripts/update_data.py
 
       - name: Commit and push if changed
         run: |

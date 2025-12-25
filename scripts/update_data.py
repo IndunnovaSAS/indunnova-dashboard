@@ -499,75 +499,59 @@ def get_cloud_sql_costs():
 
 
 def get_real_billing_data():
-    """Obtiene costos reales de facturación desde BigQuery."""
+    """Obtiene costos reales de facturación desde BigQuery usando Python client."""
+    try:
+        from google.cloud import bigquery
+    except ImportError:
+        print("  BigQuery: google-cloud-bigquery no instalado")
+        return None
+
     query = """
-WITH daily_costs AS (
-  SELECT
-    DATE(usage_start_time) as cost_date,
-    service.description as service_name,
-    SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)) as daily_cost
-  FROM `appsindunnova.billing.gcp_billing_export_v1_01C9CE_390A53_7FC29D`
-  WHERE invoice.month = FORMAT_DATE('%Y%m', CURRENT_DATE())
-  GROUP BY 1, 2
-),
-service_summary AS (
-  SELECT
-    service_name,
-    SUM(daily_cost) as mtd_cost,
-    COUNT(DISTINCT cost_date) as days_with_data,
-    AVG(daily_cost) as avg_daily_cost
-  FROM daily_costs
-  GROUP BY service_name
-)
-SELECT
-  service_name,
-  ROUND(mtd_cost, 2) as mtd_cost,
-  days_with_data,
-  ROUND(avg_daily_cost * 31, 2) as projected_monthly
-FROM service_summary
-ORDER BY mtd_cost DESC
-"""
+    WITH daily_costs AS (
+      SELECT
+        DATE(usage_start_time) as cost_date,
+        service.description as service_name,
+        SUM(cost) + SUM(IFNULL((SELECT SUM(c.amount) FROM UNNEST(credits) c), 0)) as daily_cost
+      FROM `appsindunnova.billing.gcp_billing_export_v1_01C9CE_390A53_7FC29D`
+      WHERE invoice.month = FORMAT_DATE('%Y%m', CURRENT_DATE())
+      GROUP BY 1, 2
+    ),
+    service_summary AS (
+      SELECT
+        service_name,
+        SUM(daily_cost) as mtd_cost,
+        COUNT(DISTINCT cost_date) as days_with_data,
+        AVG(daily_cost) as avg_daily_cost
+      FROM daily_costs
+      GROUP BY service_name
+    )
+    SELECT
+      service_name,
+      ROUND(mtd_cost, 2) as mtd_cost,
+      days_with_data,
+      ROUND(avg_daily_cost * 31, 2) as projected_monthly
+    FROM service_summary
+    ORDER BY mtd_cost DESC
+    """
 
     try:
-        # Ejecutar bq directamente con subprocess y stdin
-        result = subprocess.run(
-            ['bq', 'query', '--project_id=appsindunnova', '--use_legacy_sql=false', '--format=json'],
-            input=query,
-            capture_output=True,
-            text=True,
-            timeout=60
-        )
-
-        if result.returncode != 0:
-            stderr = result.stderr.strip() if result.stderr else "(sin mensaje)"
-            stdout = result.stdout.strip()[:100] if result.stdout else ""
-            print(f"  BigQuery: Error (code {result.returncode}) - {stderr[:200]}")
-            if stdout:
-                print(f"  BigQuery stdout: {stdout}")
-            return None
-
-        if not result.stdout.strip():
-            print("  BigQuery: Sin resultados")
-            return None
-
-        data = json.loads(result.stdout)
+        client = bigquery.Client(project='appsindunnova')
+        query_job = client.query(query)
+        results = query_job.result()
 
         # Convertir a diccionario por servicio
         costs = {}
-        for row in data:
+        for row in results:
             service = row['service_name']
             costs[service] = {
                 'mtd': float(row['mtd_cost']),
                 'projected': float(row['projected_monthly']),
                 'days': int(row['days_with_data'])
             }
+
+        if costs:
+            print(f"  BigQuery: {len(costs)} servicios encontrados")
         return costs
-    except json.JSONDecodeError as e:
-        print(f"  BigQuery: Error parseando JSON - {e}")
-        return None
-    except subprocess.TimeoutExpired:
-        print("  BigQuery: Timeout")
-        return None
     except Exception as e:
         print(f"  BigQuery: Error - {e}")
         return None
