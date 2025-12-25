@@ -16,7 +16,6 @@ SERVICE_TO_REPO = {
     'carnesdelsebastian': 'carnesdelsebastian',
     'codeta-crm': 'CODETA',
     'colsegur': 'Colsegur',
-    'creaciones-apice': 'CreacionesApice',
     'crm-contenedores': 'ObrajeCRM',
     'crm-ecourmet': 'EcourmetV2',
     'crm-gyt': 'GYT',
