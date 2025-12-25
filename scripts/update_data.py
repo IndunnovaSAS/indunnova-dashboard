@@ -62,7 +62,7 @@ SERVICES_USING_CONSOLIDATED_DB = [
     'mouse-digital',
     'novapcr-app',
     'plasticos-ambientales',
-    'rgd-aire',
+    # rgd-aire usa su propia instancia: rgd-aire-db
     'seyca',
     'seyca-produccion',
     'tersasoft',
