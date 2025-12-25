@@ -13,10 +13,7 @@ from collections import defaultdict
 # Mapeo de servicios Cloud Run a repositorios
 SERVICE_TO_REPO = {
     'arcopack-erp': 'Arcopack',
-    'carnes-sebastian': 'carnesdelsebastian',
-    'carnes-sebastian-staging': 'carnesdelsebastian',
     'carnesdelsebastian': 'carnesdelsebastian',
-    'carnesdelsebastian-staging': 'carnesdelsebastian',
     'codeta-crm': 'CODETA',
     'colsegur': 'Colsegur',
     'creaciones-apice': 'CreacionesApice',
