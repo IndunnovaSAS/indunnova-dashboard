@@ -51,7 +51,8 @@ jobs:
           # Pull latest changes first to avoid conflicts
           git fetch origin main
           git reset --soft origin/main
-          git add data/
+          # Only add files managed by update_data.py (exclude consolidation files)
+          git add data/errors.json data/meta.json data/repos.json data/services.json
           if ! git diff --staged --quiet; then
             git commit -m "chore: update dashboard data [skip ci]"
             git push origin main
