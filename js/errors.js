@@ -15,8 +15,16 @@ function initializeDateFilters() {
     const weekAgo = new Date(today);
     weekAgo.setDate(weekAgo.getDate() - 7);
 
-    document.getElementById('dateTo').value = today.toISOString().split('T')[0];
-    document.getElementById('dateFrom').value = weekAgo.toISOString().split('T')[0];
+    // Format as YYYY-MM-DD using local timezone (not UTC)
+    const formatLocalDate = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+
+    document.getElementById('dateTo').value = formatLocalDate(today);
+    document.getElementById('dateFrom').value = formatLocalDate(weekAgo);
 }
 
 async function loadErrors() {
