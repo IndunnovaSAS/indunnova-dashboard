@@ -1,5 +1,16 @@
 [
   {
+    "id": "69514197000f089742d2ce43",
+    "service": "rgd-aire",
+    "revision": "rgd-aire-00298-44v",
+    "timestamp": "2025-12-28T14:41:27.985239Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 26, in <module>\n    main()\n  File \"/app/manage.py\", line 22, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 416, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 460, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 107, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/commands/migrate.py\", line 114, in handle\n    executor = MigrationExecutor(connection, self.migration_progress_callback)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/executor.py\", line 18, in __init__\n    self.loader = MigrationLoader(self.connection)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 58, in __init__\n    self.build_graph()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 276, in build_graph\n    self.graph.validate_consistency()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/graph.py\", line 198, in validate_consistency\n    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]\n     ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/graph.py\", line 60, in raise_error\n    raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)\ndjango.db.migrations.exceptions.NodeNotFoundError: Migration tasks.0008_add_visto_por_asignado dependencies reference nonexistent parent node ('servicios', '0020_add_visto_por_asignado')",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
     "id": "695106fe000722403cc0e072",
     "service": "rgd-aire",
     "revision": "rgd-aire-00298-44v",
@@ -15571,188 +15582,5 @@
     "httpRequest": null,
     "trace": "",
     "spanId": ""
-  },
-  {
-    "id": "69480b6d000737ebacc5d21d",
-    "service": "mentes-estrategicas",
-    "revision": "mentes-estrategicas-00003-kth",
-    "timestamp": "2025-12-21T14:59:57.473067Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/arbiter.py\", line 608, in spawn_worker\n    worker.init_process()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/gthread.py\", line 94, in init_process\n    super().init_process()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 135, in init_process\n    self.load_wsgi()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 147, in load_wsgi\n    self.wsgi = self.app.wsgi()\n                ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/base.py\", line 66, in wsgi\n    self.callable = self.load()\n                    ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 57, in load\n    return self.load_wsgiapp()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 47, in load_wsgiapp\n    return util.import_app(self.app_uri)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/util.py\", line 370, in import_app\n    mod = importlib.import_module(module)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/mentes_estrategicas/wsgi.py\", line 16, in <module>\n    application = get_wsgi_application()\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/wsgi.py\", line 12, in get_wsgi_application\n    django.setup(set_prefix=False)\n  File \"/usr/local/lib/python3.11/site-packages/django/__init__.py\", line 19, in setup\n    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\n                      ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/conf/__init__.py\", line 81, in __getattr__\n    self._setup(name)\n  File \"/usr/local/lib/python3.11/site-packages/django/conf/__init__.py\", line 68, in _setup\n    self._wrapped = Settings(settings_module)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/conf/__init__.py\", line 166, in __init__\n    mod = importlib.import_module(self.SETTINGS_MODULE)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/mentes_estrategicas/settings.py\", line 25, in <module>\n    SECRET_KEY = config('SECRET_KEY')\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/decouple.py\", line 248, in __call__\n    return self.config(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/decouple.py\", line 107, in __call__\n    return self.get(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/decouple.py\", line 92, in get\n    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))\ndecouple.UndefinedValueError: SECRET_KEY not found. Declare it as envvar or define a default value.",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b560006222ae239d81e",
-    "service": "logiempresas",
-    "revision": "logiempresas-00102-dtb",
-    "timestamp": "2025-12-21T14:59:34.401962Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 412, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 458, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 106, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/commands/migrate.py\", line 356, in handle\n    post_migrate_state = executor.migrate(\n                         ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 135, in migrate\n    state = self._migrate_all_forwards(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 167, in _migrate_all_forwards\n    state = self.apply_migration(\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 252, in apply_migration\n    state = migration.apply(state, schema_editor)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/migration.py\", line 132, in apply\n    operation.database_forwards(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/operations/fields.py\", line 235, in database_forwards\n    schema_editor.alter_field(from_model, from_field, to_field)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/sqlite3/schema.py\", line 175, in alter_field\n    super().alter_field(model, old_field, new_field, strict=strict)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 831, in alter_field\n    self._alter_field(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/sqlite3/schema.py\", line 463, in _alter_field\n    self._remake_table(model, alter_fields=[(old_field, new_field)])\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/sqlite3/schema.py\", line 336, in _remake_table\n    self.execute(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 201, in execute\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py\", line 328, in execute\n    return super().execute(query, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: no such table: django_content_type",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b560005c7e412a7afd7",
-    "service": "logiempresas",
-    "revision": "logiempresas-00102-dtb",
-    "timestamp": "2025-12-21T14:59:34.378852Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py\", line 328, in execute\n    return super().execute(query, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nsqlite3.OperationalError: no such table: django_content_type",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b430002046b00169e3a",
-    "service": "crm-ecourmet",
-    "revision": "crm-ecourmet-00014-q52",
-    "timestamp": "2025-12-21T14:59:15.132203Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/arbiter.py\", line 609, in spawn_worker\n    worker.init_process()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/gthread.py\", line 95, in init_process\n    super().init_process()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 134, in init_process\n    self.load_wsgi()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 146, in load_wsgi\n    self.wsgi = self.app.wsgi()\n                ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/base.py\", line 67, in wsgi\n    self.callable = self.load()\n                    ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 58, in load\n    return self.load_wsgiapp()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 48, in load_wsgiapp\n    return util.import_app(self.app_uri)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/util.py\", line 371, in import_app\n    mod = importlib.import_module(module)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/crm_ecourmet/wsgi.py\", line 16, in <module>\n    application = get_wsgi_application()\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/wsgi.py\", line 12, in get_wsgi_application\n    django.setup(set_prefix=False)\n  File \"/usr/local/lib/python3.11/site-packages/django/__init__.py\", line 19, in setup\n    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/log.py\", line 76, in configure_logging\n    logging_config_func(logging_settings)\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 823, in dictConfig\n    dictConfigClass(config).configure()\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 580, in configure\n    raise ValueError('Unable to configure handler '\nValueError: Unable to configure handler 'file'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b43000204427727274b",
-    "service": "crm-ecourmet",
-    "revision": "crm-ecourmet-00014-q52",
-    "timestamp": "2025-12-21T14:59:15.132162Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 573, in configure\n    handler = self.configure_handler(handlers[name])\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 757, in configure_handler\n    result = factory(**kwargs)\n             ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/logging/__init__.py\", line 1181, in __init__\n    StreamHandler.__init__(self, self._open())\n                                 ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/logging/__init__.py\", line 1213, in _open\n    return open_func(self.baseFilename, self.mode,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/app/logs/django.log'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "-8ksqnyc568",
-    "service": "huella-carbono",
-    "revision": "",
-    "timestamp": "2025-12-21T14:58:23.678834Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "v520bxc7m2",
-    "service": "huella-carbono",
-    "revision": "huella-carbono-00008-sgw",
-    "timestamp": "2025-12-21T14:58:23.585055Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b0f0008b0fe268cadc2",
-    "service": "huella-carbono",
-    "revision": "huella-carbono-00008-sgw",
-    "timestamp": "2025-12-21T14:58:23.569598Z",
-    "severity": "ERROR",
-    "message": "Default STARTUP TCP probe failed 1 time consecutively for container \"huella-carbono-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b0e00066d8479e6c85a",
-    "service": "huella-carbono",
-    "revision": "huella-carbono-00008-sgw",
-    "timestamp": "2025-12-21T14:58:22.421252Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 382, in execute\n    settings.INSTALLED_APPS\n  File \"/usr/local/lib/python3.11/site-packages/django/conf/__init__.py\", line 102, in __getattr__\n    self._setup(name)\n  File \"/usr/local/lib/python3.11/site-packages/django/conf/__init__.py\", line 89, in _setup\n    self._wrapped = Settings(settings_module)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/conf/__init__.py\", line 217, in __init__\n    mod = importlib.import_module(self.SETTINGS_MODULE)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/huellacarbono/settings.py\", line 23, in <module>\n    raise ValueError(\nValueError: DJANGO_SECRET_KEY environment variable is required in production. Generate one using: python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "n3bsoxd1bfk",
-    "service": "crm-komsa",
-    "revision": "",
-    "timestamp": "2025-12-21T14:58:09.685087Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "-3lf725cgei",
-    "service": "crm-komsa",
-    "revision": "crm-komsa-00046-dmq",
-    "timestamp": "2025-12-21T14:58:09.591175Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b00000b3b9a7584d94c",
-    "service": "crm-komsa",
-    "revision": "crm-komsa-00046-dmq",
-    "timestamp": "2025-12-21T14:58:08.736154Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/arbiter.py\", line 609, in spawn_worker\n    worker.init_process()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/gthread.py\", line 95, in init_process\n    super().init_process()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 134, in init_process\n    self.load_wsgi()\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/workers/base.py\", line 146, in load_wsgi\n    self.wsgi = self.app.wsgi()\n                ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/base.py\", line 67, in wsgi\n    self.callable = self.load()\n                    ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 58, in load\n    return self.load_wsgiapp()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py\", line 48, in load_wsgiapp\n    return util.import_app(self.app_uri)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/gunicorn/util.py\", line 371, in import_app\n    mod = importlib.import_module(module)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/crm_komsa/wsgi.py\", line 16, in <module>\n    application = get_wsgi_application()\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/wsgi.py\", line 12, in get_wsgi_application\n    django.setup(set_prefix=False)\n  File \"/usr/local/lib/python3.11/site-packages/django/__init__.py\", line 19, in setup\n    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/log.py\", line 76, in configure_logging\n    logging_config_func(logging_settings)\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 823, in dictConfig\n    dictConfigClass(config).configure()\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 580, in configure\n    raise ValueError('Unable to configure handler '\nValueError: Unable to configure handler 'file'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69480b00000b3b69af1f10f2",
-    "service": "crm-komsa",
-    "revision": "crm-komsa-00046-dmq",
-    "timestamp": "2025-12-21T14:58:08.736105Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 573, in configure\n    handler = self.configure_handler(handlers[name])\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/logging/config.py\", line 757, in configure_handler\n    result = factory(**kwargs)\n             ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/logging/__init__.py\", line 1181, in __init__\n    StreamHandler.__init__(self, self._open())\n                                 ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/logging/__init__.py\", line 1213, in _open\n    return open_func(self.baseFilename, self.mode,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/app/logs/django.log'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "694800e90001d18ff2ae8d84",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00031-55w",
-    "timestamp": "2025-12-21T14:15:05.119183Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1088, in load\n    lib = find_library(parser, name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1028, in find_library\n    raise TemplateSyntaxError(\ndjango.template.exceptions.TemplateSyntaxError: 'humanize' is not a registered tag library. Must be one of:",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "694800e90001d13a1c7accaf",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00031-55w",
-    "timestamp": "2025-12-21T14:15:05.119098Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1026, in find_library\n    return parser.libraries[name]\n           ~~~~~~~~~~~~~~~~^^^^^^\nKeyError: 'humanize'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "694800e90001e92c968521df",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00031-55w",
-    "timestamp": "2025-12-21T14:15:02.941595Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://novapcr-app-381877373634.us-central1.run.app/siigo/",
-      "status": 500,
-      "latency": "2.181697153s",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15",
-      "remoteIp": "129.222.203.22"
-    },
-    "trace": "projects/appsindunnova/traces/781fe3e6b2bad823fc5fb0d24b771b4c",
-    "spanId": "664729d49828e32f"
   }
 ]
