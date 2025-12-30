@@ -1,4 +1,927 @@
 {
+  "875e5536ca85": {
+    "count": 1,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-29T22:57:00.072530Z",
+    "last_seen": "2025-12-29T22:57:00.072530Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/app/proyectos/views/bitacora_v2/ejecucion.py\", line 373, in _procesar_archivos_adjuntos\n    evidencia = EvidenciaEjecucion.objects.create(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/query.py\", line 663, in create\n    obj.save(force_insert=True, using=self.db)\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/base.py\", line 902, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/base.py\", line 1008, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/base.py\", line 1169, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/base.py\", line 1210, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/query.py\", line 1868, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py\", line 1882, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 79, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 92, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 100, in _execute\n    with self.db.wrap_database_errors:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: insert or update on table \"proyectos_evidenciaejecucion\" violates foreign key constraint \"proyectos_evidenciaejecucion_subido_por_id_fkey\"",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T22:57:00.072530Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00299-m57",
+        "http_status": null
+      }
+    ],
+    "error_type": "IntegrityError",
+    "revisions": [
+      "rgd-aire-00299-m57"
+    ]
+  },
+  "fdc3f0875251": {
+    "count": 1,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-29T22:57:00.072496Z",
+    "last_seen": "2025-12-29T22:57:00.072496Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.ForeignKeyViolation: insert or update on table \"proyectos_evidenciaejecucion\" violates foreign key constraint \"proyectos_evidenciaejecucion_subido_por_id_fkey\"",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T22:57:00.072496Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00299-m57",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "rgd-aire-00299-m57"
+    ]
+  },
+  "a1a7d02bbfb5": {
+    "count": 8,
+    "services": [
+      "logiempresas"
+    ],
+    "first_seen": "2025-12-24T23:35:45.608610Z",
+    "last_seen": "2025-12-29T20:39:15.119422Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 412, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 458, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 106, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/commands/migrate.py\", line 356, in handle\n    post_migrate_state = executor.migrate(\n                         ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 135, in migrate\n    state = self._migrate_all_forwards(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 167, in _migrate_all_forwards\n    state = self.apply_migration(\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 252, in apply_migration\n    state = migration.apply(state, schema_editor)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/migration.py\", line 132, in apply\n    operation.database_forwards(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/operations/models.py\", line 96, in database_forwards\n    schema_editor.create_model(model)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 451, in create_model\n    self.execute(sql, params or None)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/schema.py\", line 45, in execute\n    return super().execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 201, in execute\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: relation \"notificaciones_configuracionnotificacion\" already exists",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T20:39:15.119422Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T20:38:25.191363Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-25T17:11:30.530581Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-25T16:34:13.526004Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-25T16:25:27.453366Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00110-f4g",
+        "http_status": null
+      }
+    ],
+    "error_type": "ProgrammingError",
+    "revisions": [
+      "logiempresas-00111-sls",
+      "logiempresas-00110-f4g"
+    ]
+  },
+  "34f1dd7d6e7d": {
+    "count": 7,
+    "services": [
+      "logiempresas"
+    ],
+    "first_seen": "2025-12-24T23:36:16.455295Z",
+    "last_seen": "2025-12-29T20:39:15.084242Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.DuplicateTable: relation \"notificaciones_configuracionnotificacion\" already exists",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T20:39:15.084242Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T20:38:25.157658Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-25T17:11:30.504614Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-25T16:34:13.495607Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00111-sls",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-25T16:25:27.431898Z",
+        "service": "logiempresas",
+        "revision": "logiempresas-00110-f4g",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "logiempresas-00111-sls",
+      "logiempresas-00110-f4g"
+    ]
+  },
+  "5fd614014b0f": {
+    "count": 11,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-25T14:36:53.255760Z",
+    "last_seen": "2025-12-29T16:33:59.262625Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/contextlib.py\", line 81, in inner\n    return func(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/views_fase1_fase2.py\", line 152, in lavado_canastillas_nuevo\n    return render(request, 'calidad/fase1/lavado_canastillas/formulario.html', {\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/shortcuts.py\", line 24, in render\n    content = loader.render_to_string(template_name, context, request, using=using)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 62, in render_to_string\n    return template.render(context, request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 61, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 175, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 157, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 63, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 238, in render\n    nodelist.append(node.render_annotated(context))\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1070, in render\n    return render_value_in_context(output, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1047, in render_value_in_context\n    value = str(value)\n            ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/html.py\", line 481, in <lambda>\n    klass.__str__ = lambda self: mark_safe(klass_str(self))\n                                           ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/boundfield.py\", line 34, in __str__\n    return self.as_widget()\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/boundfield.py\", line 107, in as_widget\n    return widget.render(\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/widgets.py\", line 280, in render\n    context = self.get_context(name, value, attrs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/widgets.py\", line 758, in get_context\n    context = super().get_context(name, value, attrs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/widgets.py\", line 717, in get_context\n    context[\"widget\"][\"optgroups\"] = self.optgroups(\n                                     ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/widgets.py\", line 657, in optgroups\n    for index, (option_value, option_label) in enumerate(self.choices):\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/models.py\", line 1403, in __iter__\n    for obj in queryset:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 516, in _iterator\n    yield from iterable\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: operator does not exist: bigint = uuid",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T16:33:59.262625Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T16:33:46.350756Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T16:33:36.268489Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:40:13.165520Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:39:43.899304Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      }
+    ],
+    "error_type": "ProgrammingError",
+    "revisions": [
+      "carnesdelsebastian-00288-ctw",
+      "carnesdelsebastian-00253-78d",
+      "carnesdelsebastian-00286-5s8",
+      "carnesdelsebastian-00248-rtj",
+      "carnesdelsebastian-00267-kqk",
+      "carnesdelsebastian-00250-8rq"
+    ]
+  },
+  "3b7b878abaea": {
+    "count": 3,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T16:33:36.268417Z",
+    "last_seen": "2025-12-29T16:33:59.262555Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedFunction: operator does not exist: bigint = uuid",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T16:33:59.262555Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T16:33:46.350683Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T16:33:36.268417Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00288-ctw"
+    ]
+  },
+  "7094027ff185": {
+    "count": 50,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-25T14:36:53.118169Z",
+    "last_seen": "2025-12-29T16:33:59.155734Z",
+    "sample_message": "",
+    "sample_http": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/calidad/lista-chequeo-unificada/dashboard/",
+      "status": 500,
+      "latency": "0.136562410s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:50e2:4008:98:4b9c:3a46:d76b"
+    },
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T16:33:59.155734Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2025-12-29T16:33:46.238139Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2025-12-29T16:33:36.100080Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2025-12-29T16:16:03.118367Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2025-12-29T16:14:21.163470Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": 500
+      }
+    ],
+    "error_type": "Unknown Error",
+    "revisions": [
+      "carnesdelsebastian-00288-ctw",
+      "carnesdelsebastian-00281-stl",
+      "carnesdelsebastian-00248-rtj",
+      "carnesdelsebastian-00272-29j",
+      "carnesdelsebastian-00283-m5w",
+      "carnesdelsebastian-00253-78d",
+      "carnesdelsebastian-00260-lxx",
+      "carnesdelsebastian-00268-nhq",
+      "carnesdelsebastian-00254-9xh",
+      "carnesdelsebastian-00255-hwq",
+      "carnesdelsebastian-00267-kqk",
+      "carnesdelsebastian-00270-xfm",
+      "carnesdelsebastian-00258-bvb",
+      "carnesdelsebastian-00250-8rq",
+      "carnesdelsebastian-00285-z92",
+      "carnesdelsebastian-00286-5s8",
+      "carnesdelsebastian-00273-b6l",
+      "carnesdelsebastian-00282-k7g",
+      "carnesdelsebastian-00271-58r",
+      "carnesdelsebastian-00276-kw4"
+    ]
+  },
+  "4711160f70ba": {
+    "count": 31,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-26T12:44:05.542655Z",
+    "last_seen": "2025-12-29T16:16:03.213887Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 184, in post\n    return super().post(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 153, in post\n    return self.form_valid(form)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/views/registro_tratamiento_agua.py\", line 195, in form_valid\n    return super().form_valid(form)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 135, in form_valid\n    self.object = form.save()\n                  ^^^^^^^^^^^\n  File \"/app/apps/calidad/forms/registro_tratamiento_agua.py\", line 278, in save\n    instance.save()\n  File \"/app/apps/calidad/models/registro_tratamiento_agua.py\", line 304, in save\n    super().save(*args, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1020, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1061, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1805, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1822, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.DataError: value too long for type character varying(30)",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T16:16:03.213887Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T16:14:21.283337Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:34:29.379777Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:34:15.506239Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00285-z92",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:28:19.186259Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00285-z92",
+        "http_status": null
+      }
+    ],
+    "error_type": "DataError",
+    "revisions": [
+      "carnesdelsebastian-00288-ctw",
+      "carnesdelsebastian-00286-5s8",
+      "carnesdelsebastian-00253-78d",
+      "carnesdelsebastian-00267-kqk",
+      "carnesdelsebastian-00272-29j",
+      "carnesdelsebastian-00273-b6l",
+      "carnesdelsebastian-00258-bvb",
+      "carnesdelsebastian-00271-58r",
+      "carnesdelsebastian-00254-9xh",
+      "carnesdelsebastian-00285-z92",
+      "carnesdelsebastian-00268-nhq",
+      "carnesdelsebastian-00255-hwq",
+      "carnesdelsebastian-00283-m5w"
+    ]
+  },
+  "c911daa27d89": {
+    "count": 2,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T16:14:21.283299Z",
+    "last_seen": "2025-12-29T16:16:03.213846Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.StringDataRightTruncation: value too long for type character varying(30)",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T16:16:03.213846Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T16:14:21.283299Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00288-ctw",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00288-ctw"
+    ]
+  },
+  "98933a0d3139": {
+    "count": 5,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-26T12:44:15.786386Z",
+    "last_seen": "2025-12-29T15:40:13.165451Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_controlhigienedotacion.area does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T15:40:13.165451Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:39:43.899227Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:37:43.963501Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:37:35.466277Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-26T12:44:15.786386Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00253-78d",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00286-5s8",
+      "carnesdelsebastian-00253-78d"
+    ]
+  },
+  "1f4df187cf7b": {
+    "count": 7,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-27T14:03:28.236830Z",
+    "last_seen": "2025-12-29T15:34:29.379684Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_registro_temperatura.turno does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T15:34:29.379684Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00286-5s8",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:34:15.506140Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00285-z92",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:28:19.186166Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00285-z92",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T15:14:38.119822Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00283-m5w",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T12:23:59.395707Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00267-kqk",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00286-5s8",
+      "carnesdelsebastian-00285-z92",
+      "carnesdelsebastian-00283-m5w",
+      "carnesdelsebastian-00267-kqk"
+    ]
+  },
+  "e469da52627f": {
+    "count": 4,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-26T15:48:07.494683Z",
+    "last_seen": "2025-12-29T14:20:52.461668Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 92, in rendered_content\n    return template.render(context, self._request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 61, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 175, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 157, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 63, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 194, in render\n    len_values = len(values)\n                 ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column calidad_cambiosugeridoformulario.titulo does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:20:52.461668Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00281-stl",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:46:26.969529Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00276-kw4",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-27T14:03:28.236932Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00267-kqk",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-26T15:48:07.494683Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00260-lxx",
+        "http_status": null
+      }
+    ],
+    "error_type": "ProgrammingError",
+    "revisions": [
+      "carnesdelsebastian-00276-kw4",
+      "carnesdelsebastian-00281-stl",
+      "carnesdelsebastian-00260-lxx",
+      "carnesdelsebastian-00267-kqk"
+    ]
+  },
+  "44793214e808": {
+    "count": 2,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T13:46:26.969468Z",
+    "last_seen": "2025-12-29T14:20:52.461600Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_cambiosugeridoformulario.titulo does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:20:52.461600Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00281-stl",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:46:26.969468Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00276-kw4",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00276-kw4",
+      "carnesdelsebastian-00281-stl"
+    ]
+  },
+  "d88ef2ffc27f": {
+    "count": 2,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-23T13:19:54.233819Z",
+    "last_seen": "2025-12-29T14:14:31.084574Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 92, in rendered_content\n    return template.render(context, self._request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/backends/django.py\", line 107, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 171, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1016, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 977, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 159, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1016, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 977, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 65, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1016, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 977, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py\", line 326, in render\n    if match:\n       ^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/query.py\", line 398, in __bool__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/query.py\", line 1949, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py\", line 1623, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 79, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 92, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 100, in _execute\n    with self.db.wrap_database_errors:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column tasks_task.visto_por_asignado does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:14:31.084574Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-23T13:19:54.233819Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00288-gj8",
+        "http_status": null
+      }
+    ],
+    "error_type": "ProgrammingError",
+    "revisions": [
+      "rgd-aire-00288-gj8",
+      "rgd-aire-00298-44v"
+    ]
+  },
+  "9f285c52731f": {
+    "count": 2,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-29T14:12:48.901175Z",
+    "last_seen": "2025-12-29T14:14:31.084515Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column tasks_task.visto_por_asignado does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:14:31.084515Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T14:12:48.901175Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "rgd-aire-00298-44v"
+    ]
+  },
+  "2031ce08ea32": {
+    "count": 3,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-23T13:19:54.144362Z",
+    "last_seen": "2025-12-29T14:14:30.865088Z",
+    "sample_message": "",
+    "sample_http": {
+      "method": "GET",
+      "url": "https://rgd-aire-381877373634.us-central1.run.app/proyectos/bitacora-v2/ejecucion/264/evidencias/",
+      "status": 500,
+      "latency": "0.088890180s",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36",
+      "remoteIp": "191.156.231.5"
+    },
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:14:30.865088Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2025-12-29T14:12:48.744839Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2025-12-23T13:19:54.144362Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00288-gj8",
+        "http_status": 500
+      }
+    ],
+    "error_type": "Unknown Error",
+    "revisions": [
+      "rgd-aire-00288-gj8",
+      "rgd-aire-00298-44v"
+    ]
+  },
+  "a8f9c37b276b": {
+    "count": 1,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-29T14:12:48.901207Z",
+    "last_seen": "2025-12-29T14:12:48.901207Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 59, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/tasks/views.py\", line 100, in tasks_dashboard\n    ).count()\n      ^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/query.py\", line 604, in count\n    return self.query.get_count(using=self.db)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/sql/query.py\", line 644, in get_count\n    return obj.get_aggregation(using, {\"__count\": Count(\"*\")})[\"__count\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/sql/query.py\", line 626, in get_aggregation\n    result = compiler.execute_sql(SINGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py\", line 1623, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 79, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 92, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 100, in _execute\n    with self.db.wrap_database_errors:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column tasks_task.visto_por_asignado does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:12:48.901207Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      }
+    ],
+    "error_type": "ProgrammingError",
+    "revisions": [
+      "rgd-aire-00298-44v"
+    ]
+  },
+  "19ec0d634bfe": {
+    "count": 30,
+    "services": [
+      "rgd-aire"
+    ],
+    "first_seen": "2025-12-27T17:36:48.383873Z",
+    "last_seen": "2025-12-29T14:05:32.368975Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 26, in <module>\n    main()\n  File \"/app/manage.py\", line 22, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 416, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 460, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 107, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/commands/migrate.py\", line 114, in handle\n    executor = MigrationExecutor(connection, self.migration_progress_callback)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/executor.py\", line 18, in __init__\n    self.loader = MigrationLoader(self.connection)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 58, in __init__\n    self.build_graph()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 276, in build_graph\n    self.graph.validate_consistency()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/graph.py\", line 198, in validate_consistency\n    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]\n     ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/graph.py\", line 60, in raise_error\n    raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)\ndjango.db.migrations.exceptions.NodeNotFoundError: Migration tasks.0008_add_visto_por_asignado dependencies reference nonexistent parent node ('servicios', '0020_add_visto_por_asignado')",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T14:05:32.368975Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:42:58.709491Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T12:33:16.167813Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T11:55:59.081511Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T11:21:45.326097Z",
+        "service": "rgd-aire",
+        "revision": "rgd-aire-00298-44v",
+        "http_status": null
+      }
+    ],
+    "error_type": "NodeNotFoundError",
+    "revisions": [
+      "rgd-aire-00298-44v",
+      "rgd-aire-00297-cz4"
+    ]
+  },
+  "3b22626232fb": {
+    "count": 4,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T13:17:19.407037Z",
+    "last_seen": "2025-12-29T13:20:57.114684Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_formulariocalidad.numero does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T13:20:57.114684Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00273-b6l",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:20:13.623992Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00273-b6l",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:18:07.456259Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00273-b6l",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:17:19.407037Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00273-b6l",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00273-b6l"
+    ]
+  },
+  "bf6a13714a39": {
+    "count": 109,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-23T15:27:19.999309Z",
+    "last_seen": "2025-12-29T13:18:07.483839Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 412, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 458, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/management/commands/cargar_formularios_calidad.py\", line 190, in handle\n    form, created = FormularioCalidad.objects.update_or_create(\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 949, in update_or_create\n    obj, created = self.select_for_update().get_or_create(defaults, **kwargs)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 916, in get_or_create\n    return self.get(**kwargs), False\n           ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 633, in get\n    num = len(clone)\n          ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column calidad_formulariocalidad.numero does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T13:18:07.483839Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00273-b6l",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:17:19.435431Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00273-b6l",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:10:21.376152Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00272-29j",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:04:05.683279Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00271-58r",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T12:59:03.198346Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00270-xfm",
+        "http_status": null
+      }
+    ],
+    "error_type": "ProgrammingError",
+    "revisions": [
+      "carnesdelsebastian-00248-rtj",
+      "carnesdelsebastian-00262-2fq",
+      "carnesdelsebastian-00266-57c",
+      "carnesdelsebastian-00272-29j",
+      "carnesdelsebastian-00252-wwj",
+      "carnesdelsebastian-00253-78d",
+      "carnesdelsebastian-00260-lxx",
+      "carnesdelsebastian-00263-cnn",
+      "carnesdelsebastian-00264-cgk",
+      "carnesdelsebastian-00268-nhq",
+      "carnesdelsebastian-00259-pvn",
+      "carnesdelsebastian-00254-9xh",
+      "carnesdelsebastian-00255-hwq",
+      "carnesdelsebastian-00265-p4l",
+      "carnesdelsebastian-00251-fhv",
+      "carnesdelsebastian-00247-ncd",
+      "carnesdelsebastian-00270-xfm",
+      "carnesdelsebastian-00258-bvb",
+      "carnesdelsebastian-00250-8rq",
+      "carnesdelsebastian-00249-mgp",
+      "carnesdelsebastian-00261-gnz",
+      "carnesdelsebastian-00256-qcg",
+      "carnesdelsebastian-00269-c97",
+      "carnesdelsebastian-00273-b6l",
+      "carnesdelsebastian-00257-z5s",
+      "carnesdelsebastian-00271-58r"
+    ]
+  },
+  "1c63faf0346e": {
+    "count": 19,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T12:19:56.565836Z",
+    "last_seen": "2025-12-29T13:12:46.402735Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_categoriaformulariocalidad.color does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T13:12:46.402735Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00272-29j",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:12:42.454086Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00272-29j",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:10:21.334768Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00272-29j",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:07:24.646199Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00271-58r",
+        "http_status": null
+      },
+      {
+        "timestamp": "2025-12-29T13:07:21.550907Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00271-58r",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00267-kqk",
+      "carnesdelsebastian-00272-29j",
+      "carnesdelsebastian-00270-xfm",
+      "carnesdelsebastian-00269-c97",
+      "carnesdelsebastian-00271-58r",
+      "carnesdelsebastian-00268-nhq"
+    ]
+  },
+  "c360249cec6d": {
+    "count": 1,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T12:59:05.230635Z",
+    "last_seen": "2025-12-29T12:59:05.230635Z",
+    "sample_message": "Default STARTUP TCP probe failed 1 time consecutively for container \"carnesdelsebastian-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T12:59:05.230635Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00270-xfm",
+        "http_status": null
+      }
+    ],
+    "error_type": "Default STARTUP TCP probe failed 1 time consecutively for container \"carnesdelsebastian-1\" on port 8",
+    "revisions": [
+      "carnesdelsebastian-00270-xfm"
+    ]
+  },
+  "ec9bf3f419ba": {
+    "count": 1,
+    "services": [
+      "carnesdelsebastian"
+    ],
+    "first_seen": "2025-12-29T12:20:04.120306Z",
+    "last_seen": "2025-12-29T12:20:04.120306Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedTable: relation \"calidad_controlambientes\" does not exist",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2025-12-29T12:20:04.120306Z",
+        "service": "carnesdelsebastian",
+        "revision": "carnesdelsebastian-00267-kqk",
+        "http_status": null
+      }
+    ],
+    "error_type": "Traceback (most recent call last):",
+    "revisions": [
+      "carnesdelsebastian-00267-kqk"
+    ]
+  },
   "deb68553cf4d": {
     "count": 2,
     "services": [
@@ -60,184 +983,6 @@
     "error_type": "Unknown Error",
     "revisions": [
       "crm-komsa-00053-9jl"
-    ]
-  },
-  "19ec0d634bfe": {
-    "count": 21,
-    "services": [
-      "rgd-aire"
-    ],
-    "first_seen": "2025-12-27T17:36:48.383873Z",
-    "last_seen": "2025-12-29T03:53:22.452270Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 26, in <module>\n    main()\n  File \"/app/manage.py\", line 22, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 416, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 460, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 107, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/commands/migrate.py\", line 114, in handle\n    executor = MigrationExecutor(connection, self.migration_progress_callback)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/executor.py\", line 18, in __init__\n    self.loader = MigrationLoader(self.connection)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 58, in __init__\n    self.build_graph()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 276, in build_graph\n    self.graph.validate_consistency()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/graph.py\", line 198, in validate_consistency\n    [n.raise_error() for n in self.node_map.values() if isinstance(n, DummyNode)]\n     ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/graph.py\", line 60, in raise_error\n    raise NodeNotFoundError(self.error_message, self.key, origin=self.origin)\ndjango.db.migrations.exceptions.NodeNotFoundError: Migration tasks.0008_add_visto_por_asignado dependencies reference nonexistent parent node ('servicios', '0020_add_visto_por_asignado')",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-29T03:53:22.452270Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00298-44v",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-29T02:21:57.297072Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00298-44v",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-29T00:34:12.431066Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00298-44v",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-28T22:15:21.533348Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00298-44v",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-28T21:10:04.595292Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00298-44v",
-        "http_status": null
-      }
-    ],
-    "error_type": "NodeNotFoundError",
-    "revisions": [
-      "rgd-aire-00298-44v",
-      "rgd-aire-00297-cz4"
-    ]
-  },
-  "e469da52627f": {
-    "count": 2,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-26T15:48:07.494683Z",
-    "last_seen": "2025-12-27T14:03:28.236932Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 92, in rendered_content\n    return template.render(context, self._request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 61, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 175, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 157, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 63, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 194, in render\n    len_values = len(values)\n                 ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column calidad_registro_temperatura.turno does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-27T14:03:28.236932Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00267-kqk",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T15:48:07.494683Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00260-lxx",
-        "http_status": null
-      }
-    ],
-    "error_type": "ProgrammingError",
-    "revisions": [
-      "carnesdelsebastian-00260-lxx",
-      "carnesdelsebastian-00267-kqk"
-    ]
-  },
-  "1f4df187cf7b": {
-    "count": 4,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T15:12:31.853774Z",
-    "last_seen": "2025-12-27T14:03:28.236830Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_registro_temperatura.turno does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-27T14:03:28.236830Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00267-kqk",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T17:30:14.555690Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T17:30:07.616072Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T15:12:31.853774Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      }
-    ],
-    "error_type": "Traceback (most recent call last):",
-    "revisions": [
-      "carnesdelsebastian-00245-wfp",
-      "carnesdelsebastian-00267-kqk"
-    ]
-  },
-  "7094027ff185": {
-    "count": 22,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T15:08:09.024302Z",
-    "last_seen": "2025-12-27T14:02:56.431061Z",
-    "sample_message": "",
-    "sample_http": {
-      "method": "POST",
-      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/calidad/lavado-manos/nuevo/",
-      "status": 500,
-      "latency": "0.498589600s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "170.247.0.146"
-    },
-    "occurrences": [
-      {
-        "timestamp": "2025-12-27T14:02:56.431061Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00267-kqk",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2025-12-26T15:48:00.152220Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00260-lxx",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2025-12-26T15:30:44.076422Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00258-bvb",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2025-12-26T15:30:35.736920Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00258-bvb",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2025-12-26T14:33:09.416898Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00255-hwq",
-        "http_status": 500
-      }
-    ],
-    "error_type": "Unknown Error",
-    "revisions": [
-      "carnesdelsebastian-00245-wfp",
-      "carnesdelsebastian-00248-rtj",
-      "carnesdelsebastian-00255-hwq",
-      "carnesdelsebastian-00267-kqk",
-      "carnesdelsebastian-00258-bvb",
-      "carnesdelsebastian-00254-9xh",
-      "carnesdelsebastian-00253-78d",
-      "carnesdelsebastian-00260-lxx",
-      "carnesdelsebastian-00250-8rq"
     ]
   },
   "f618bfd45c95": {
@@ -385,78 +1130,11 @@
     ],
     "error_type": "Unknown Error",
     "revisions": [
-      "novapcr-app-00074-5pv",
       "novapcr-app-00078-9br",
-      "novapcr-app-00072-qjd",
+      "novapcr-app-00062-82t",
       "novapcr-app-00063-qtj",
-      "novapcr-app-00062-82t"
-    ]
-  },
-  "bf6a13714a39": {
-    "count": 126,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T14:55:06.667809Z",
-    "last_seen": "2025-12-26T18:31:00.123707Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 412, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 458, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 106, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/commands/migrate.py\", line 356, in handle\n    post_migrate_state = executor.migrate(\n                         ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 135, in migrate\n    state = self._migrate_all_forwards(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 167, in _migrate_all_forwards\n    state = self.apply_migration(\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 249, in apply_migration\n    with self.connection.schema_editor(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 166, in __exit__\n    self.execute(sql)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/schema.py\", line 48, in execute\n    return super().execute(sql, None)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 201, in execute\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: relation \"calidad_momentoverificacion\" does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-26T18:31:00.123707Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00266-57c",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T18:30:40.950863Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00266-57c",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T18:30:21.566836Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00266-57c",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T18:23:03.282283Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00265-p4l",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T18:22:44.244690Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00265-p4l",
-        "http_status": null
-      }
-    ],
-    "error_type": "ProgrammingError",
-    "revisions": [
-      "carnesdelsebastian-00265-p4l",
-      "carnesdelsebastian-00255-hwq",
-      "carnesdelsebastian-00249-mgp",
-      "carnesdelsebastian-00257-z5s",
-      "carnesdelsebastian-00246-xsb",
-      "carnesdelsebastian-00264-cgk",
-      "carnesdelsebastian-00260-lxx",
-      "carnesdelsebastian-00252-wwj",
-      "carnesdelsebastian-00251-fhv",
-      "carnesdelsebastian-00258-bvb",
-      "carnesdelsebastian-00254-9xh",
-      "carnesdelsebastian-00266-57c",
-      "carnesdelsebastian-00247-ncd",
-      "carnesdelsebastian-00250-8rq",
-      "carnesdelsebastian-00245-wfp",
-      "carnesdelsebastian-00248-rtj",
-      "carnesdelsebastian-00262-2fq",
-      "carnesdelsebastian-00253-78d",
-      "carnesdelsebastian-00261-gnz",
-      "carnesdelsebastian-00259-pvn",
-      "carnesdelsebastian-00263-cnn",
-      "carnesdelsebastian-00256-qcg"
+      "novapcr-app-00072-qjd",
+      "novapcr-app-00074-5pv"
     ]
   },
   "7eb6bcf7835d": {
@@ -479,56 +1157,6 @@
     "error_type": "Traceback (most recent call last):",
     "revisions": [
       "carnesdelsebastian-00260-lxx"
-    ]
-  },
-  "4711160f70ba": {
-    "count": 12,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T15:12:31.853841Z",
-    "last_seen": "2025-12-26T15:30:44.288656Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/list.py\", line 174, in get\n    context = self.get_context_data()\n              ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/views/esterilizacion_semanal.py\", line 106, in get_context_data\n    context = super().get_context_data(**kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/list.py\", line 128, in get_context_data\n    paginator, page, queryset, is_paginated = self.paginate_queryset(\n                                              ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/list.py\", line 73, in paginate_queryset\n    page = paginator.page(page_number)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/paginator.py\", line 72, in page\n    number = self.validate_number(number)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/paginator.py\", line 53, in validate_number\n    if number > self.num_pages:\n                ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 57, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n                                         ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/paginator.py\", line 99, in num_pages\n    if self.count == 0 and not self.allow_empty_first_page:\n       ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 57, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n                                         ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/paginator.py\", line 93, in count\n    return c()\n           ^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 608, in count\n    return self.query.get_count(using=self.db)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 568, in get_count\n    return obj.get_aggregation(using, {\"__count\": Count(\"*\")})[\"__count\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 554, in get_aggregation\n    result = compiler.execute_sql(SINGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: relation \"calidad_semana_control_esterilizacion\" does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-26T15:30:44.288656Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00258-bvb",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T15:30:38.286178Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00258-bvb",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T14:33:12.342113Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00255-hwq",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T14:32:54.692251Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00255-hwq",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-26T14:26:58.744459Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00254-9xh",
-        "http_status": null
-      }
-    ],
-    "error_type": "ProgrammingError",
-    "revisions": [
-      "carnesdelsebastian-00245-wfp",
-      "carnesdelsebastian-00255-hwq",
-      "carnesdelsebastian-00258-bvb",
-      "carnesdelsebastian-00254-9xh",
-      "carnesdelsebastian-00253-78d"
     ]
   },
   "0406a46896ba": {
@@ -562,9 +1190,9 @@
     ],
     "error_type": "Traceback (most recent call last):",
     "revisions": [
-      "carnesdelsebastian-00258-bvb",
+      "carnesdelsebastian-00255-hwq",
       "carnesdelsebastian-00254-9xh",
-      "carnesdelsebastian-00255-hwq"
+      "carnesdelsebastian-00258-bvb"
     ]
   },
   "4cbfb1a3e809": {
@@ -598,9 +1226,9 @@
     ],
     "error_type": "Traceback (most recent call last):",
     "revisions": [
-      "carnesdelsebastian-00258-bvb",
+      "carnesdelsebastian-00255-hwq",
       "carnesdelsebastian-00254-9xh",
-      "carnesdelsebastian-00255-hwq"
+      "carnesdelsebastian-00258-bvb"
     ]
   },
   "85cf353e9f7c": {
@@ -701,8 +1329,8 @@
     ],
     "error_type": "ProgrammingError",
     "revisions": [
-      "colorplastic-app-00007-zw2",
-      "colorplastic-app-00005-k76"
+      "colorplastic-app-00005-k76",
+      "colorplastic-app-00007-zw2"
     ]
   },
   "f2c450cb6641": {
@@ -770,101 +1398,23 @@
     ],
     "error_type": "Unknown Error",
     "revisions": [
-      "colorplastic-app-00001-sr4",
-      "colorplastic-app-00001-8pm",
-      "colorplastic-app-00004-8zk",
       "colorplastic-app-00002-4n9",
+      "colorplastic-app-00004-8zk",
+      "colorplastic-app-00001-8pm",
       "colorplastic-app-00005-k76",
-      "colorplastic-app-00007-zw2",
-      "colorplastic-app-00003-tf2",
+      "colorplastic-app-00002-7kr",
       "colorplastic-app-00001-k92",
-      "colorplastic-app-00002-7kr"
-    ]
-  },
-  "5fd614014b0f": {
-    "count": 8,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T15:08:09.528844Z",
-    "last_seen": "2025-12-26T12:44:15.786464Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/views_control_higiene.py\", line 87, in control_higiene_lista\n    for control in controles[:10]:  # Muestra de los \u00faltimos 10\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 398, in __iter__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column calidad_controlhigienedotacion.area does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-26T12:44:15.786464Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00253-78d",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T14:55:40.003116Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00250-8rq",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T14:36:53.255760Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00248-rtj",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T17:30:29.616154Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T17:29:44.507194Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      }
-    ],
-    "error_type": "ProgrammingError",
-    "revisions": [
-      "carnesdelsebastian-00245-wfp",
-      "carnesdelsebastian-00250-8rq",
-      "carnesdelsebastian-00248-rtj",
-      "carnesdelsebastian-00253-78d"
-    ]
-  },
-  "98933a0d3139": {
-    "count": 2,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T17:30:29.616084Z",
-    "last_seen": "2025-12-26T12:44:15.786386Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_controlhigienedotacion.area does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-26T12:44:15.786386Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00253-78d",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T17:30:29.616084Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      }
-    ],
-    "error_type": "Traceback (most recent call last):",
-    "revisions": [
-      "carnesdelsebastian-00245-wfp",
-      "carnesdelsebastian-00253-78d"
+      "colorplastic-app-00003-tf2",
+      "colorplastic-app-00007-zw2",
+      "colorplastic-app-00001-sr4"
     ]
   },
   "b8e1adb4b7c8": {
-    "count": 3,
+    "count": 1,
     "services": [
       "carnesdelsebastian"
     ],
-    "first_seen": "2025-12-22T15:32:41.842535Z",
+    "first_seen": "2025-12-26T12:44:05.542567Z",
     "last_seen": "2025-12-26T12:44:05.542567Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedTable: relation \"calidad_lista_verificacion_sanitaria\" does not exist",
     "sample_http": null,
@@ -874,23 +1424,10 @@
         "service": "carnesdelsebastian",
         "revision": "carnesdelsebastian-00253-78d",
         "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T17:30:46.818791Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T15:32:41.842535Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
       }
     ],
     "error_type": "Traceback (most recent call last):",
     "revisions": [
-      "carnesdelsebastian-00245-wfp",
       "carnesdelsebastian-00253-78d"
     ]
   },
@@ -981,12 +1518,12 @@
     ],
     "error_type": "ProgrammingError",
     "revisions": [
-      "colorplastic-app-00001-sr4",
-      "colorplastic-app-00001-8pm",
-      "colorplastic-app-00004-8zk",
       "colorplastic-app-00002-4n9",
+      "colorplastic-app-00004-8zk",
+      "colorplastic-app-00001-8pm",
+      "colorplastic-app-00002-7kr",
       "colorplastic-app-00003-tf2",
-      "colorplastic-app-00002-7kr"
+      "colorplastic-app-00001-sr4"
     ]
   },
   "27a19ca84bff": {
@@ -1078,12 +1615,12 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "colorplastic-app-00001-sr4",
-      "colorplastic-app-00001-8pm",
       "colorplastic-app-00002-4n9",
-      "colorplastic-app-00003-tf2",
+      "colorplastic-app-00001-8pm",
+      "colorplastic-app-00002-7kr",
       "colorplastic-app-00001-k92",
-      "colorplastic-app-00002-7kr"
+      "colorplastic-app-00003-tf2",
+      "colorplastic-app-00001-sr4"
     ]
   },
   "5b1355f9fcd2": {
@@ -1117,9 +1654,9 @@
     ],
     "error_type": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https:/",
     "revisions": [
-      "colorplastic-app-00001-8pm",
       "colorplastic-app-00001-k92",
-      "colorplastic-app-00002-7kr"
+      "colorplastic-app-00002-7kr",
+      "colorplastic-app-00001-8pm"
     ]
   },
   "81a40f599f1d": {
@@ -1231,102 +1768,8 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "novapcr-app-00074-5pv",
-      "novapcr-app-00062-82t"
-    ]
-  },
-  "a1a7d02bbfb5": {
-    "count": 9,
-    "services": [
-      "logiempresas"
-    ],
-    "first_seen": "2025-12-22T13:17:09.341249Z",
-    "last_seen": "2025-12-25T17:11:30.530581Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 412, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 458, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 106, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/commands/migrate.py\", line 356, in handle\n    post_migrate_state = executor.migrate(\n                         ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 135, in migrate\n    state = self._migrate_all_forwards(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 167, in _migrate_all_forwards\n    state = self.apply_migration(\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 252, in apply_migration\n    state = migration.apply(state, schema_editor)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/migration.py\", line 132, in apply\n    operation.database_forwards(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/operations/models.py\", line 96, in database_forwards\n    schema_editor.create_model(model)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 451, in create_model\n    self.execute(sql, params or None)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/schema.py\", line 45, in execute\n    return super().execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 201, in execute\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: relation \"notificaciones_configuracionnotificacion\" already exists",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-25T17:11:30.530581Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00111-sls",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T16:34:13.526004Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00111-sls",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T16:25:27.453366Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00110-f4g",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T16:06:20.727343Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00110-f4g",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-24T23:36:16.486487Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00110-f4g",
-        "http_status": null
-      }
-    ],
-    "error_type": "ProgrammingError",
-    "revisions": [
-      "logiempresas-00111-sls",
-      "logiempresas-00110-f4g"
-    ]
-  },
-  "34f1dd7d6e7d": {
-    "count": 8,
-    "services": [
-      "logiempresas"
-    ],
-    "first_seen": "2025-12-22T13:17:09.311265Z",
-    "last_seen": "2025-12-25T17:11:30.504614Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.DuplicateTable: relation \"notificaciones_configuracionnotificacion\" already exists",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-25T17:11:30.504614Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00111-sls",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T16:34:13.495607Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00111-sls",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T16:25:27.431898Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00110-f4g",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-25T16:06:20.691980Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00110-f4g",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-24T23:36:16.455295Z",
-        "service": "logiempresas",
-        "revision": "logiempresas-00110-f4g",
-        "http_status": null
-      }
-    ],
-    "error_type": "Traceback (most recent call last):",
-    "revisions": [
-      "logiempresas-00111-sls",
-      "logiempresas-00110-f4g"
+      "novapcr-app-00062-82t",
+      "novapcr-app-00074-5pv"
     ]
   },
   "9f5a7062f936": {
@@ -1413,15 +1856,15 @@
     ],
     "error_type": "Unknown Error",
     "revisions": [
-      "gestion-proveedores-isa-00018-kxs",
-      "gestion-proveedores-isa-00014-865",
-      "gestion-proveedores-isa-00016-wrv",
-      "gestion-proveedores-isa-00013-6nf",
-      "gestion-proveedores-isa-00009-rtx",
       "gestion-proveedores-isa-00015-zsx",
+      "gestion-proveedores-isa-00017-4f2",
+      "gestion-proveedores-isa-00013-6nf",
+      "gestion-proveedores-isa-00014-865",
+      "gestion-proveedores-isa-00009-rtx",
       "gestion-proveedores-isa-00012-kwv",
+      "gestion-proveedores-isa-00016-wrv",
       "gestion-proveedores-isa-00011-4fn",
-      "gestion-proveedores-isa-00017-4f2"
+      "gestion-proveedores-isa-00018-kxs"
     ]
   },
   "072d1ff1f280": {
@@ -1467,14 +1910,14 @@
     ],
     "error_type": "Default STARTUP TCP probe failed 1 time consecutively for container \"gestion-proveedores-isa-1\" on p",
     "revisions": [
-      "gestion-proveedores-isa-00018-kxs",
-      "gestion-proveedores-isa-00014-865",
-      "gestion-proveedores-isa-00016-wrv",
-      "gestion-proveedores-isa-00013-6nf",
       "gestion-proveedores-isa-00015-zsx",
+      "gestion-proveedores-isa-00017-4f2",
+      "gestion-proveedores-isa-00013-6nf",
+      "gestion-proveedores-isa-00014-865",
       "gestion-proveedores-isa-00012-kwv",
+      "gestion-proveedores-isa-00016-wrv",
       "gestion-proveedores-isa-00011-4fn",
-      "gestion-proveedores-isa-00017-4f2"
+      "gestion-proveedores-isa-00018-kxs"
     ]
   },
   "2dd1bac10a11": {
@@ -1520,13 +1963,13 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "gestion-proveedores-isa-00018-kxs",
-      "gestion-proveedores-isa-00014-865",
-      "gestion-proveedores-isa-00013-6nf",
       "gestion-proveedores-isa-00015-zsx",
+      "gestion-proveedores-isa-00017-4f2",
+      "gestion-proveedores-isa-00013-6nf",
+      "gestion-proveedores-isa-00014-865",
       "gestion-proveedores-isa-00012-kwv",
       "gestion-proveedores-isa-00011-4fn",
-      "gestion-proveedores-isa-00017-4f2"
+      "gestion-proveedores-isa-00018-kxs"
     ]
   },
   "b859899768a4": {
@@ -1572,13 +2015,13 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "gestion-proveedores-isa-00018-kxs",
-      "gestion-proveedores-isa-00014-865",
-      "gestion-proveedores-isa-00013-6nf",
       "gestion-proveedores-isa-00015-zsx",
+      "gestion-proveedores-isa-00017-4f2",
+      "gestion-proveedores-isa-00013-6nf",
+      "gestion-proveedores-isa-00014-865",
       "gestion-proveedores-isa-00012-kwv",
       "gestion-proveedores-isa-00011-4fn",
-      "gestion-proveedores-isa-00017-4f2"
+      "gestion-proveedores-isa-00018-kxs"
     ]
   },
   "8c7472041438": {
@@ -2119,9 +2562,9 @@
     ],
     "error_type": "Default STARTUP TCP probe failed 1 time consecutively for container \"mouse-digital-1\" on port 8080. ",
     "revisions": [
-      "mouse-digital-00084-nv8",
       "mouse-digital-00083-cm6",
-      "mouse-digital-00085-76q"
+      "mouse-digital-00085-76q",
+      "mouse-digital-00084-nv8"
     ]
   },
   "e3258b84f14d": {
@@ -2155,9 +2598,9 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "mouse-digital-00084-nv8",
       "mouse-digital-00083-cm6",
-      "mouse-digital-00085-76q"
+      "mouse-digital-00085-76q",
+      "mouse-digital-00084-nv8"
     ]
   },
   "a0fb6d6273f4": {
@@ -2191,9 +2634,9 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "mouse-digital-00084-nv8",
       "mouse-digital-00083-cm6",
-      "mouse-digital-00085-76q"
+      "mouse-digital-00085-76q",
+      "mouse-digital-00084-nv8"
     ]
   },
   "8febf4d7a028": {
@@ -2353,18 +2796,18 @@
     "error_type": "Unknown Error",
     "revisions": [
       "plasticos-ambientales-00047-zvq",
-      "plasticos-ambientales-00048-2sk",
       "plasticos-ambientales-00044-mr8",
+      "plasticos-ambientales-00040-6ww",
+      "plasticos-ambientales-00048-2sk",
+      "plasticos-ambientales-00038-bvg",
+      "plasticos-ambientales-00041-2tx",
       "plasticos-ambientales-00054-fh7",
       "plasticos-ambientales-00045-sqz",
-      "plasticos-ambientales-00040-6ww",
-      "plasticos-ambientales-00050-5x6",
-      "plasticos-ambientales-00052-f2t",
-      "plasticos-ambientales-00043-wfm",
       "plasticos-ambientales-00051-p8l",
       "plasticos-ambientales-00046-68r",
-      "plasticos-ambientales-00038-bvg",
-      "plasticos-ambientales-00041-2tx"
+      "plasticos-ambientales-00052-f2t",
+      "plasticos-ambientales-00043-wfm",
+      "plasticos-ambientales-00050-5x6"
     ]
   },
   "5be422dec357": {
@@ -2884,10 +3327,10 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
+      "plasticos-ambientales-00043-wfm",
       "plasticos-ambientales-00038-bvg",
       "plasticos-ambientales-00041-2tx",
-      "plasticos-ambientales-00050-5x6",
-      "plasticos-ambientales-00043-wfm"
+      "plasticos-ambientales-00050-5x6"
     ]
   },
   "4b284ff7b146": {
@@ -3044,8 +3487,8 @@
       "plasticos-ambientales-00047-zvq",
       "plasticos-ambientales-00044-mr8",
       "plasticos-ambientales-00045-sqz",
-      "plasticos-ambientales-00040-6ww",
-      "plasticos-ambientales-00043-wfm"
+      "plasticos-ambientales-00043-wfm",
+      "plasticos-ambientales-00040-6ww"
     ]
   },
   "75065b46cd5c": {
@@ -3254,25 +3697,25 @@
     ],
     "error_type": "Unknown Error",
     "revisions": [
-      "tersasoft-00021-jzl",
-      "tersasoft-00011-2z6",
-      "tersasoft-00012-6lt",
-      "tersasoft-00018-6ww",
-      "tersasoft-00023-xz6",
-      "tersasoft-00020-dn9",
-      "tersasoft-00002-vtk",
-      "tersasoft-00005-8xf",
-      "tersasoft-00027-w4p",
-      "tersasoft-00001-k84",
-      "tersasoft-00019-vdp",
-      "tersasoft-00014-fx4",
-      "tersasoft-00006-rwp",
-      "tersasoft-00015-5rp",
+      "tersasoft-00003-gqz",
       "tersasoft-00022-fhb",
       "tersasoft-00010-gqt",
-      "tersasoft-00003-gqz",
+      "tersasoft-00005-8xf",
+      "tersasoft-00006-rwp",
+      "tersasoft-00012-6lt",
+      "tersasoft-00014-fx4",
+      "tersasoft-00027-w4p",
       "tersasoft-00024-vbq",
-      "tersasoft-00013-2lc"
+      "tersasoft-00018-6ww",
+      "tersasoft-00021-jzl",
+      "tersasoft-00020-dn9",
+      "tersasoft-00002-vtk",
+      "tersasoft-00013-2lc",
+      "tersasoft-00001-k84",
+      "tersasoft-00023-xz6",
+      "tersasoft-00011-2z6",
+      "tersasoft-00019-vdp",
+      "tersasoft-00015-5rp"
     ]
   },
   "39011e91655a": {
@@ -3368,25 +3811,25 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "tersasoft-00021-jzl",
-      "tersasoft-00018-6ww",
       "tersasoft-00017-n5r",
+      "tersasoft-00008-cj6",
+      "tersasoft-00003-gqz",
       "tersasoft-00007-ms8",
+      "tersasoft-00022-fhb",
       "tersasoft-00009-mvb",
+      "tersasoft-00004-fds",
+      "tersasoft-00010-gqt",
+      "tersasoft-00005-8xf",
+      "tersasoft-00006-rwp",
+      "tersasoft-00014-fx4",
+      "tersasoft-00018-6ww",
+      "tersasoft-00021-jzl",
       "tersasoft-00020-dn9",
       "tersasoft-00002-vtk",
-      "tersasoft-00005-8xf",
+      "tersasoft-00013-2lc",
       "tersasoft-00001-k84",
       "tersasoft-00019-vdp",
-      "tersasoft-00014-fx4",
-      "tersasoft-00006-rwp",
-      "tersasoft-00004-fds",
-      "tersasoft-00015-5rp",
-      "tersasoft-00022-fhb",
-      "tersasoft-00008-cj6",
-      "tersasoft-00010-gqt",
-      "tersasoft-00003-gqz",
-      "tersasoft-00013-2lc"
+      "tersasoft-00015-5rp"
     ]
   },
   "62222a9dce29": {
@@ -3432,82 +3875,25 @@
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "tersasoft-00021-jzl",
-      "tersasoft-00018-6ww",
       "tersasoft-00017-n5r",
+      "tersasoft-00008-cj6",
+      "tersasoft-00003-gqz",
       "tersasoft-00007-ms8",
+      "tersasoft-00022-fhb",
       "tersasoft-00009-mvb",
+      "tersasoft-00004-fds",
+      "tersasoft-00010-gqt",
+      "tersasoft-00005-8xf",
+      "tersasoft-00006-rwp",
+      "tersasoft-00014-fx4",
+      "tersasoft-00018-6ww",
+      "tersasoft-00021-jzl",
       "tersasoft-00020-dn9",
       "tersasoft-00002-vtk",
-      "tersasoft-00005-8xf",
+      "tersasoft-00013-2lc",
       "tersasoft-00001-k84",
       "tersasoft-00019-vdp",
-      "tersasoft-00014-fx4",
-      "tersasoft-00006-rwp",
-      "tersasoft-00004-fds",
-      "tersasoft-00015-5rp",
-      "tersasoft-00022-fhb",
-      "tersasoft-00008-cj6",
-      "tersasoft-00010-gqt",
-      "tersasoft-00003-gqz",
-      "tersasoft-00013-2lc"
-    ]
-  },
-  "d88ef2ffc27f": {
-    "count": 1,
-    "services": [
-      "rgd-aire"
-    ],
-    "first_seen": "2025-12-23T13:19:54.233819Z",
-    "last_seen": "2025-12-23T13:19:54.233819Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader.py\", line 47, in select_template\n    raise TemplateDoesNotExist(\", \".join(template_name_list), chain=chain)\ndjango.template.exceptions.TemplateDoesNotExist: proyectos/bitacora_v2/ejecucion/evidencias_form.html",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-23T13:19:54.233819Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00288-gj8",
-        "http_status": null
-      }
-    ],
-    "error_type": "Traceback (most recent call last):",
-    "revisions": [
-      "rgd-aire-00288-gj8"
-    ]
-  },
-  "2031ce08ea32": {
-    "count": 2,
-    "services": [
-      "rgd-aire"
-    ],
-    "first_seen": "2025-12-22T14:28:04.346639Z",
-    "last_seen": "2025-12-23T13:19:54.144362Z",
-    "sample_message": "",
-    "sample_http": {
-      "method": "GET",
-      "url": "https://rgd-aire-381877373634.us-central1.run.app/crm/proyectoscrm/exportar-excel/?",
-      "status": 500,
-      "latency": "0.119317492s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-      "remoteIp": "186.113.90.147"
-    },
-    "occurrences": [
-      {
-        "timestamp": "2025-12-23T13:19:54.144362Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00288-gj8",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2025-12-22T14:28:04.346639Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00288-gj8",
-        "http_status": 500
-      }
-    ],
-    "error_type": "Unknown Error",
-    "revisions": [
-      "rgd-aire-00288-gj8"
+      "tersasoft-00015-5rp"
     ]
   },
   "530e3e5c949f": {
@@ -3539,11 +3925,11 @@
     ]
   },
   "f2cc2082fc18": {
-    "count": 20,
+    "count": 16,
     "services": [
       "formas-futuro"
     ],
-    "first_seen": "2025-12-23T01:18:07.119073Z",
+    "first_seen": "2025-12-23T11:18:59.648125Z",
     "last_seen": "2025-12-23T11:46:10.289628Z",
     "sample_message": "",
     "sample_http": null,
@@ -3582,23 +3968,21 @@
     "error_type": "Unknown Error",
     "revisions": [
       "formas-futuro-00010-t8g",
-      "formas-futuro-00012-r9s",
-      "formas-futuro-00011-56z",
-      "formas-futuro-00006-td8",
-      "formas-futuro-00009-s2w",
       "formas-futuro-00005-m2d",
       "formas-futuro-00008-6fv",
-      "formas-futuro-00001-2g7",
       "formas-futuro-00007-jzr",
-      "formas-futuro-00002-kbc"
+      "formas-futuro-00009-s2w",
+      "formas-futuro-00006-td8",
+      "formas-futuro-00012-r9s",
+      "formas-futuro-00011-56z"
     ]
   },
   "d99b6eb3a5f2": {
-    "count": 8,
+    "count": 7,
     "services": [
       "formas-futuro"
     ],
-    "first_seen": "2025-12-23T01:25:17.603949Z",
+    "first_seen": "2025-12-23T11:22:58.561077Z",
     "last_seen": "2025-12-23T11:46:10.194127Z",
     "sample_message": "Default STARTUP TCP probe failed 1 time consecutively for container \"formas-futuro-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
     "sample_http": null,
@@ -3637,21 +4021,20 @@
     "error_type": "Default STARTUP TCP probe failed 1 time consecutively for container \"formas-futuro-1\" on port 8080. ",
     "revisions": [
       "formas-futuro-00010-t8g",
-      "formas-futuro-00012-r9s",
-      "formas-futuro-00011-56z",
-      "formas-futuro-00006-td8",
-      "formas-futuro-00009-s2w",
       "formas-futuro-00008-6fv",
       "formas-futuro-00007-jzr",
-      "formas-futuro-00002-kbc"
+      "formas-futuro-00009-s2w",
+      "formas-futuro-00006-td8",
+      "formas-futuro-00012-r9s",
+      "formas-futuro-00011-56z"
     ]
   },
   "a9bc7b0951a0": {
-    "count": 8,
+    "count": 7,
     "services": [
       "formas-futuro"
     ],
-    "first_seen": "2025-12-23T01:25:16.936420Z",
+    "first_seen": "2025-12-23T11:22:58.271475Z",
     "last_seen": "2025-12-23T11:46:09.024418Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 413, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 459, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/base.py\", line 107, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/management/commands/migrate.py\", line 118, in handle\n    executor = MigrationExecutor(connection, self.migration_progress_callback)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/executor.py\", line 18, in __init__\n    self.loader = MigrationLoader(self.connection)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 58, in __init__\n    self.build_graph()\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/loader.py\", line 235, in build_graph\n    self.applied_migrations = recorder.applied_migrations()\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/recorder.py\", line 89, in applied_migrations\n    if self.has_table():\n       ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/migrations/recorder.py\", line 63, in has_table\n    with self.connection.cursor() as cursor:\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 319, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 295, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 277, in ensure_connection\n    with self.wrap_database_errors:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 278, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 255, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/postgresql/base.py\", line 332, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: FATAL:  password authentication failed for user \"postgres\"",
     "sample_http": null,
@@ -3690,21 +4073,20 @@
     "error_type": "OperationalError",
     "revisions": [
       "formas-futuro-00010-t8g",
-      "formas-futuro-00012-r9s",
-      "formas-futuro-00011-56z",
-      "formas-futuro-00006-td8",
-      "formas-futuro-00009-s2w",
       "formas-futuro-00008-6fv",
       "formas-futuro-00007-jzr",
-      "formas-futuro-00002-kbc"
+      "formas-futuro-00009-s2w",
+      "formas-futuro-00006-td8",
+      "formas-futuro-00012-r9s",
+      "formas-futuro-00011-56z"
     ]
   },
   "3c6401207edf": {
-    "count": 8,
+    "count": 7,
     "services": [
       "formas-futuro"
     ],
-    "first_seen": "2025-12-23T01:25:16.909449Z",
+    "first_seen": "2025-12-23T11:22:58.237255Z",
     "last_seen": "2025-12-23T11:46:08.986682Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 278, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/base/base.py\", line 255, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/db/backends/postgresql/base.py\", line 332, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: FATAL:  password authentication failed for user \"postgres\"",
     "sample_http": null,
@@ -3743,21 +4125,20 @@
     "error_type": "OperationalError",
     "revisions": [
       "formas-futuro-00010-t8g",
-      "formas-futuro-00012-r9s",
-      "formas-futuro-00011-56z",
-      "formas-futuro-00006-td8",
-      "formas-futuro-00009-s2w",
       "formas-futuro-00008-6fv",
       "formas-futuro-00007-jzr",
-      "formas-futuro-00002-kbc"
+      "formas-futuro-00009-s2w",
+      "formas-futuro-00006-td8",
+      "formas-futuro-00012-r9s",
+      "formas-futuro-00011-56z"
     ]
   },
   "5597f8ef5bb1": {
-    "count": 2,
+    "count": 1,
     "services": [
       "formas-futuro"
     ],
-    "first_seen": "2025-12-23T01:18:06.995611Z",
+    "first_seen": "2025-12-23T11:18:59.487082Z",
     "last_seen": "2025-12-23T11:18:59.487082Z",
     "sample_message": "Default STARTUP TCP probe failed 1 time consecutively for container \"formas-futuro-1\" on port 8080. The instance was not started.\nConnection failed with status DEADLINE_EXCEEDED.",
     "sample_http": null,
@@ -3767,131 +4148,11 @@
         "service": "formas-futuro",
         "revision": "formas-futuro-00005-m2d",
         "http_status": null
-      },
-      {
-        "timestamp": "2025-12-23T01:18:06.995611Z",
-        "service": "formas-futuro",
-        "revision": "formas-futuro-00001-2g7",
-        "http_status": null
       }
     ],
     "error_type": "Default STARTUP TCP probe failed 1 time consecutively for container \"formas-futuro-1\" on port 8080. ",
     "revisions": [
-      "formas-futuro-00005-m2d",
-      "formas-futuro-00001-2g7"
-    ]
-  },
-  "705796e9a6b4": {
-    "count": 4,
-    "services": [
-      "carnesdelsebastian"
-    ],
-    "first_seen": "2025-12-22T15:08:09.528745Z",
-    "last_seen": "2025-12-22T17:29:44.507070Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedTable: relation \"calidad_controllavadomanosv2\" does not exist",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-22T17:29:44.507070Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T15:08:58.944408Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T15:08:45.640901Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      },
-      {
-        "timestamp": "2025-12-22T15:08:09.528745Z",
-        "service": "carnesdelsebastian",
-        "revision": "carnesdelsebastian-00245-wfp",
-        "http_status": null
-      }
-    ],
-    "error_type": "Traceback (most recent call last):",
-    "revisions": [
-      "carnesdelsebastian-00245-wfp"
-    ]
-  },
-  "4d497c50e90a": {
-    "count": 1,
-    "services": [
-      "arcopack-erp"
-    ],
-    "first_seen": "2025-12-22T17:22:06.776376Z",
-    "last_seen": "2025-12-22T17:22:06.776376Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/orden_produccion.py\", line 82, in orden_produccion_detail_view\n    peso_total_bobinas = orden.unidades_lote_sustrato.aggregate(\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 592, in aggregate\n    return self.query.chain().get_aggregation(self.db, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 398, in get_aggregation\n    aggregate = aggregate_expr.resolve_expression(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'peso_kg' into field. Choices are: actualizado_en, cantidad, creado_en, estado, fecha_liberacion_calidad, id, liberado_calidad, lote, lote_id, numero_unidad, observaciones, ordenes_produccion, unidades_cantidad",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-22T17:22:06.776376Z",
-        "service": "arcopack-erp",
-        "revision": "arcopack-erp-00355-wnj",
-        "http_status": null
-      }
-    ],
-    "error_type": "FieldError",
-    "revisions": [
-      "arcopack-erp-00355-wnj"
-    ]
-  },
-  "7c53966e6a9b": {
-    "count": 1,
-    "services": [
-      "arcopack-erp"
-    ],
-    "first_seen": "2025-12-22T17:21:45.427194Z",
-    "last_seen": "2025-12-22T17:21:45.427194Z",
-    "sample_message": "",
-    "sample_http": {
-      "method": "GET",
-      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/ordenes/41/detalle/",
-      "status": 500,
-      "latency": "4.613227776s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-      "remoteIp": "190.28.84.210"
-    },
-    "occurrences": [
-      {
-        "timestamp": "2025-12-22T17:21:45.427194Z",
-        "service": "arcopack-erp",
-        "revision": "arcopack-erp-00355-wnj",
-        "http_status": 500
-      }
-    ],
-    "error_type": "Unknown Error",
-    "revisions": [
-      "arcopack-erp-00355-wnj"
-    ]
-  },
-  "a8f9c37b276b": {
-    "count": 1,
-    "services": [
-      "rgd-aire"
-    ],
-    "first_seen": "2025-12-22T14:28:04.465703Z",
-    "last_seen": "2025-12-22T14:28:04.465703Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 59, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/views/generic/base.py\", line 105, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/contrib/auth/mixins.py\", line 135, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/views/generic/base.py\", line 144, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/crm/views.py\", line 1797, in get\n    'Ciudad': trato.ciudad or '',\n              ^^^^^^^^^^^^\nAttributeError: 'Trato' object has no attribute 'ciudad'",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2025-12-22T14:28:04.465703Z",
-        "service": "rgd-aire",
-        "revision": "rgd-aire-00288-gj8",
-        "http_status": null
-      }
-    ],
-    "error_type": "AttributeError",
-    "revisions": [
-      "rgd-aire-00288-gj8"
+      "formas-futuro-00005-m2d"
     ]
   }
 }
