@@ -1,5 +1,67 @@
 [
   {
+    "id": "695bf38f0003e909e4bf7ac6",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00318-fjz",
+    "timestamp": "2026-01-05T17:23:27.256265Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/views_indicadores_calidad.py\", line 87, in dashboard_indicadores_calidad\n    controles_microbiologicos = list(chain(\n                                ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 398, in __iter__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: relation \"calidad_controlambientes\" does not exist",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "695bf38f0003e8e112e98059",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00318-fjz",
+    "timestamp": "2026-01-05T17:23:27.256225Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedTable: relation \"calidad_controlambientes\" does not exist",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "695bf38f0003eefc953c0b5a",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00318-fjz",
+    "timestamp": "2026-01-05T17:23:27.177654Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/calidad/indicadores-calidad/",
+      "status": 500,
+      "latency": "0.078486670s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:1d1c:d30:6339:3a32"
+    },
+    "trace": "projects/appsindunnova/traces/c94a780571d2b9ced4227472a6c36a60",
+    "spanId": "b84e4eaebbb8ad0c"
+  },
+  {
+    "id": "695bf22700078aa9aefc4db6",
+    "service": "logiempresas",
+    "revision": "logiempresas-00111-sls",
+    "timestamp": "2026-01-05T17:17:27.494249Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 412, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 458, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 106, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/commands/migrate.py\", line 356, in handle\n    post_migrate_state = executor.migrate(\n                         ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 135, in migrate\n    state = self._migrate_all_forwards(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 167, in _migrate_all_forwards\n    state = self.apply_migration(\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 252, in apply_migration\n    state = migration.apply(state, schema_editor)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/migration.py\", line 132, in apply\n    operation.database_forwards(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/operations/models.py\", line 96, in database_forwards\n    schema_editor.create_model(model)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 451, in create_model\n    self.execute(sql, params or None)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/schema.py\", line 45, in execute\n    return super().execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 201, in execute\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: relation \"notificaciones_configuracionnotificacion\" already exists",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "695bf22700070360cdf18949",
+    "service": "logiempresas",
+    "revision": "logiempresas-00111-sls",
+    "timestamp": "2026-01-05T17:17:27.459616Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 87, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.DuplicateTable: relation \"notificaciones_configuracionnotificacion\" already exists",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
     "id": "5tvru6e23a6w",
     "service": "mouse-digital",
     "revision": "",
@@ -24764,74 +24826,5 @@
     "httpRequest": null,
     "trace": "",
     "spanId": ""
-  },
-  {
-    "id": "695556f200099fea3fd08e99",
-    "service": "carnesdelsebastian",
-    "revision": "carnesdelsebastian-00293-57z",
-    "timestamp": "2025-12-31T17:01:38.630762Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_controlhigienedotacion.area does not exist",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "695556f20009a36889528954",
-    "service": "carnesdelsebastian",
-    "revision": "carnesdelsebastian-00293-57z",
-    "timestamp": "2025-12-31T17:01:38.398195Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/calidad/control-higiene/",
-      "status": 500,
-      "latency": "0.232229218s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-      "remoteIp": "181.205.251.118"
-    },
-    "trace": "projects/appsindunnova/traces/c816fed6ae40dcfd3ac0a074eb5bf1aa",
-    "spanId": "761c67f356a7a984"
-  },
-  {
-    "id": "695556e100021a5f2106a4d8",
-    "service": "carnesdelsebastian",
-    "revision": "carnesdelsebastian-00293-57z",
-    "timestamp": "2025-12-31T17:01:21.137823Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/calidad/views_control_higiene.py\", line 87, in control_higiene_lista\n    for control in controles[:10]:  # Muestra de los \u00faltimos 10\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 398, in __iter__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: column calidad_controlhigienedotacion.area does not exist",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "695556e100021a412b8ad4ea",
-    "service": "carnesdelsebastian",
-    "revision": "carnesdelsebastian-00293-57z",
-    "timestamp": "2025-12-31T17:01:21.137793Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.UndefinedColumn: column calidad_controlhigienedotacion.area does not exist",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "695556e100021e72fa46608f",
-    "service": "carnesdelsebastian",
-    "revision": "carnesdelsebastian-00293-57z",
-    "timestamp": "2025-12-31T17:01:18.365147Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/calidad/control-higiene/",
-      "status": 500,
-      "latency": "2.769082721s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
-      "remoteIp": "181.205.251.118"
-    },
-    "trace": "projects/appsindunnova/traces/54358670e3c8e9c058fee6f703adc903",
-    "spanId": "b7f59ad843128d1a"
   }
 ]
