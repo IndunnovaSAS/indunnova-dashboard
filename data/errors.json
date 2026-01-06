@@ -1,5 +1,63 @@
 [
   {
+    "id": "695d678a0002b9f815444e99",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00021-xj4",
+    "timestamp": "2026-01-06T19:50:34.178680Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 105, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 144, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 182, in post\n    return super().post(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 151, in post\n    return self.form_valid(form)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/common/mixins.py\", line 215, in form_valid\n    if formset.is_valid():\n       ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/formsets.py\", line 384, in is_valid\n    self.errors\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/formsets.py\", line 366, in errors\n    self.full_clean()\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/formsets.py\", line 429, in full_clean\n    form_errors = form.errors\n                  ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/forms.py\", line 201, in errors\n    self.full_clean()\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/forms.py\", line 339, in full_clean\n    self._post_clean()\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/models.py\", line 498, in _post_clean\n    self.instance.full_clean(exclude=exclude, validate_unique=False)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1654, in full_clean\n    self.clean()\n  File \"/app/apps/comercial/models/cliente.py\", line 370, in clean\n    contactos_principales = Contacto.objects.filter(\n                            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1495, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1513, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1523, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1646, in add_q\n    clause, _ = self._add_q(q_object, can_reuse)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1678, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1588, in build_filter\n    condition = self.build_lookup(lookups, col, value)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1415, in build_lookup\n    lookup = lookup_class(lhs, rhs)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/lookups.py\", line 38, in __init__\n    self.rhs = self.get_prep_lookup()\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py\", line 103, in get_prep_lookup\n    self.rhs = get_normalized_value(self.rhs, self.lhs)[0]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py\", line 20, in get_normalized_value\n    raise ValueError(\"Model instances passed to related filters must be saved.\")\nValueError: Model instances passed to related filters must be saved.",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "695d678a0002bebbda97f3d7",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00021-xj4",
+    "timestamp": "2026-01-06T19:50:34.080004Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://hemisferio-erp-381877373634.us-central1.run.app/comercial/clientes/crear/",
+      "status": 500,
+      "latency": "0.097980017s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "remoteIp": "177.255.185.104"
+    },
+    "trace": "projects/appsindunnova/traces/f51d0d8fa7fd490f95faf9d8a34ea223",
+    "spanId": "efc4a7764add68c9"
+  },
+  {
+    "id": "695d678000003d8562a09e95",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00021-xj4",
+    "timestamp": "2026-01-06T19:50:24.015749Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 105, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 144, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 182, in post\n    return super().post(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 151, in post\n    return self.form_valid(form)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/common/mixins.py\", line 215, in form_valid\n    if formset.is_valid():\n       ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/formsets.py\", line 384, in is_valid\n    self.errors\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/formsets.py\", line 366, in errors\n    self.full_clean()\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/formsets.py\", line 429, in full_clean\n    form_errors = form.errors\n                  ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/forms.py\", line 201, in errors\n    self.full_clean()\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/forms.py\", line 339, in full_clean\n    self._post_clean()\n  File \"/usr/local/lib/python3.11/site-packages/django/forms/models.py\", line 498, in _post_clean\n    self.instance.full_clean(exclude=exclude, validate_unique=False)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1654, in full_clean\n    self.clean()\n  File \"/app/apps/comercial/models/cliente.py\", line 370, in clean\n    contactos_principales = Contacto.objects.filter(\n                            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1495, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1513, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1523, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1646, in add_q\n    clause, _ = self._add_q(q_object, can_reuse)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1678, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1588, in build_filter\n    condition = self.build_lookup(lookups, col, value)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1415, in build_lookup\n    lookup = lookup_class(lhs, rhs)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/lookups.py\", line 38, in __init__\n    self.rhs = self.get_prep_lookup()\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py\", line 103, in get_prep_lookup\n    self.rhs = get_normalized_value(self.rhs, self.lhs)[0]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py\", line 20, in get_normalized_value\n    raise ValueError(\"Model instances passed to related filters must be saved.\")\nValueError: Model instances passed to related filters must be saved.",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "695d678000004384ca8d4bf8",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00021-xj4",
+    "timestamp": "2026-01-06T19:50:23.800354Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://hemisferio-erp-381877373634.us-central1.run.app/comercial/clientes/crear/",
+      "status": 500,
+      "latency": "0.209060991s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "remoteIp": "177.255.185.104"
+    },
+    "trace": "projects/appsindunnova/traces/41b85ca1918f78d99fe47d33ac9d9086",
+    "spanId": "b1b2a1fe788f3d5b"
+  },
+  {
     "id": "695d436a00000ef4d4d140b1",
     "service": "logiempresas",
     "revision": "logiempresas-00112-xnn",
@@ -25085,57 +25143,6 @@
     "service": "novapcr-app",
     "revision": "novapcr-app-00083-h2f",
     "timestamp": "2026-01-01T08:15:01.274921Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/app/sensores_iot/views.py\", line 1571, in cron_sync_y_alertas\n    resultado_sensores = sincronizar_y_detectar_paros()\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/sensores_iot/services.py\", line 479, in sincronizar_y_detectar_paros\n    resultados_sync = service.sync_all_active_canales()\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/sensores_iot/services.py\", line 288, in sync_all_active_canales\n    logger.info(f\"Iniciando sincronizaci\u00f3n de {canales.count()} canales activos\")\n                                               ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 608, in count\n    return self.query.get_count(using=self.db)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 568, in get_count\n    return obj.get_aggregation(using, {\"__count\": Count(\"*\")})[\"__count\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 554, in get_aggregation\n    result = compiler.execute_sql(SINGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69562d050004318d29fc1ff3",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00083-h2f",
-    "timestamp": "2026-01-01T08:15:01.274829Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69562d050004296b99d05aec",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00083-h2f",
-    "timestamp": "2026-01-01T08:15:01.272747Z",
-    "severity": "ERROR",
-    "message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69562d05000436d6db20435e",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00083-h2f",
-    "timestamp": "2026-01-01T08:15:01.191923Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "POST",
-      "url": "https://novapcr-app-381877373634.us-central1.run.app/sensores/cron/sync-alertas/",
-      "status": 500,
-      "latency": "0.077949592s",
-      "userAgent": "Google-Cloud-Scheduler",
-      "remoteIp": "35.243.23.231"
-    },
-    "trace": "projects/appsindunnova/traces/a662735119f468fcc1e0245b1153ddc4",
-    "spanId": "b46ed38e5a915c20"
-  },
-  {
-    "id": "69562bd90004fdb2def6942a",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00083-h2f",
-    "timestamp": "2026-01-01T08:10:01.327090Z",
     "severity": "ERROR",
     "message": "Traceback (most recent call last):\n  File \"/app/sensores_iot/views.py\", line 1571, in cron_sync_y_alertas\n    resultado_sensores = sincronizar_y_detectar_paros()\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/sensores_iot/services.py\", line 479, in sincronizar_y_detectar_paros\n    resultados_sync = service.sync_all_active_canales()\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/sensores_iot/services.py\", line 288, in sync_all_active_canales\n    logger.info(f\"Iniciando sincronizaci\u00f3n de {canales.count()} canales activos\")\n                                               ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 608, in count\n    return self.query.get_count(using=self.db)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 568, in get_count\n    return obj.get_aggregation(using, {\"__count\": Count(\"*\")})[\"__count\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 554, in get_aggregation\n    result = compiler.execute_sql(SINGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
     "httpRequest": null,
