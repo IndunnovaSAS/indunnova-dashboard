@@ -359,15 +359,15 @@
       "avgLatencyMs": 0
     },
     "interactions": {
-      "requests7d": 386,
-      "requests30d": 386
+      "requests7d": 338,
+      "requests30d": 338
     },
     "costEstimate": {
-      "estimatedMonthly": 0.06,
+      "estimatedMonthly": 0.05,
       "cpuCost": 0.05,
       "memoryCost": 0.0,
       "requestCost": 0.0,
-      "estimatedRequests": 1659,
+      "estimatedRequests": 1453,
       "avgLatencyMs": 650,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
@@ -376,7 +376,7 @@
       "usesConsolidatedDb": false,
       "hasDedicatedDb": false,
       "dedicatedDbName": null,
-      "totalWithSql": 0.06
+      "totalWithSql": 0.05
     }
   },
   {
@@ -624,7 +624,7 @@
     },
     "deployments": {
       "total": 30,
-      "last24h": 14,
+      "last24h": 3,
       "last7d": 30,
       "lastDeployment": "2026-01-10T02:32:53.732581Z",
       "recentDeployments": [
@@ -707,15 +707,15 @@
       "avgLatencyMs": 0
     },
     "interactions": {
-      "requests7d": 944,
-      "requests30d": 944
+      "requests7d": 880,
+      "requests30d": 880
     },
     "costEstimate": {
-      "estimatedMonthly": 0.14,
-      "cpuCost": 0.13,
+      "estimatedMonthly": 0.13,
+      "cpuCost": 0.12,
       "memoryCost": 0.01,
       "requestCost": 0.0,
-      "estimatedRequests": 4059,
+      "estimatedRequests": 3784,
       "avgLatencyMs": 650,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
@@ -724,7 +724,7 @@
       "usesConsolidatedDb": true,
       "hasDedicatedDb": false,
       "dedicatedDbName": null,
-      "totalWithSql": 1.45
+      "totalWithSql": 1.44
     }
   },
   {
@@ -786,18 +786,18 @@
       "last7d": 980,
       "recentErrors": [
         {
-          "timestamp": "2026-01-10T11:03:06.293540Z",
-          "message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n  ...",
+          "timestamp": "2026-01-10T11:04:10.934631Z",
+          "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/channels/routing.py\", line 62, in __call__\n    return await application(scope, receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/security/websoc...",
           "severity": "ERROR"
         },
         {
-          "timestamp": "2026-01-10T11:03:06.276800Z",
+          "timestamp": "2026-01-10T11:04:10.934533Z",
           "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n        ...",
           "severity": "ERROR"
         },
         {
-          "timestamp": "2026-01-10T11:03:06.269955Z",
-          "message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: dial error: failed to dial (connection name = \"appsindunnova:us-cent...",
+          "timestamp": "2026-01-10T11:04:10.934507Z",
+          "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 187, in _get_session\n    return self._session_cache\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'SessionStore' object has no attribute '_session_cache'",
           "severity": "ERROR"
         }
       ]
@@ -838,19 +838,19 @@
     "metrics": {
       "errors5xx": 490,
       "errors4xx": 0,
-      "avgLatencyMs": 755
+      "avgLatencyMs": 753
     },
     "interactions": {
-      "requests7d": 5301,
-      "requests30d": 5301
+      "requests7d": 5399,
+      "requests30d": 5399
     },
     "costEstimate": {
-      "estimatedMonthly": 1.23,
-      "cpuCost": 1.15,
+      "estimatedMonthly": 1.25,
+      "cpuCost": 1.17,
       "memoryCost": 0.06,
       "requestCost": 0.01,
-      "estimatedRequests": 22794,
-      "avgLatencyMs": 1055,
+      "estimatedRequests": 23215,
+      "avgLatencyMs": 1053,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
       "note": "Estimacion incluye cold starts y overhead tipico",
@@ -858,7 +858,7 @@
       "usesConsolidatedDb": true,
       "hasDedicatedDb": false,
       "dedicatedDbName": null,
-      "totalWithSql": 2.54
+      "totalWithSql": 2.56
     }
   },
   {
@@ -1291,11 +1291,26 @@
       ]
     },
     "deployments": {
-      "total": 4,
-      "last24h": 4,
-      "last7d": 4,
-      "lastDeployment": "2026-01-10T02:52:31.582841Z",
+      "total": 7,
+      "last24h": 7,
+      "last7d": 7,
+      "lastDeployment": "2026-01-10T12:03:04.390657Z",
       "recentDeployments": [
+        {
+          "revision": "novapcr-app-00090-tt2",
+          "timestamp": "2026-01-10T12:03:04.390657Z",
+          "status": "True"
+        },
+        {
+          "revision": "novapcr-app-00089-gbs",
+          "timestamp": "2026-01-10T11:56:16.215669Z",
+          "status": "True"
+        },
+        {
+          "revision": "novapcr-app-00088-rrq",
+          "timestamp": "2026-01-10T11:48:31.121323Z",
+          "status": "True"
+        },
         {
           "revision": "novapcr-app-00087-6mb",
           "timestamp": "2026-01-10T02:52:31.582841Z",
@@ -1304,16 +1319,6 @@
         {
           "revision": "novapcr-app-00086-b4x",
           "timestamp": "2026-01-10T02:33:43.282298Z",
-          "status": "True"
-        },
-        {
-          "revision": "novapcr-app-00085-qhl",
-          "timestamp": "2026-01-10T02:25:11.634456Z",
-          "status": "True"
-        },
-        {
-          "revision": "novapcr-app-00084-c2k",
-          "timestamp": "2026-01-10T02:23:25.037271Z",
           "status": "True"
         }
       ]
@@ -1324,15 +1329,15 @@
       "avgLatencyMs": 8308
     },
     "interactions": {
-      "requests7d": 459,
-      "requests30d": 459
+      "requests7d": 473,
+      "requests30d": 473
     },
     "costEstimate": {
-      "estimatedMonthly": 0.61,
-      "cpuCost": 0.58,
+      "estimatedMonthly": 0.63,
+      "cpuCost": 0.6,
       "memoryCost": 0.03,
       "requestCost": 0.0,
-      "estimatedRequests": 1973,
+      "estimatedRequests": 2033,
       "avgLatencyMs": 6115,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
@@ -1341,7 +1346,7 @@
       "usesConsolidatedDb": true,
       "hasDedicatedDb": false,
       "dedicatedDbName": null,
-      "totalWithSql": 1.92
+      "totalWithSql": 1.94
     }
   },
   {
@@ -1358,9 +1363,9 @@
       "recentErrors": []
     },
     "deployments": {
-      "total": 13,
+      "total": 10,
       "last24h": 0,
-      "last7d": 13,
+      "last7d": 10,
       "lastDeployment": "2026-01-07T23:06:13.706589Z",
       "recentDeployments": [
         {
@@ -1463,15 +1468,15 @@
       "avgLatencyMs": 0
     },
     "interactions": {
-      "requests7d": 1121,
-      "requests30d": 1121
+      "requests7d": 1120,
+      "requests30d": 1120
     },
     "costEstimate": {
       "estimatedMonthly": 0.16,
       "cpuCost": 0.15,
       "memoryCost": 0.01,
       "requestCost": 0.0,
-      "estimatedRequests": 4820,
+      "estimatedRequests": 4816,
       "avgLatencyMs": 650,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
@@ -1827,15 +1832,15 @@
       "avgLatencyMs": 0
     },
     "interactions": {
-      "requests7d": 35,
-      "requests30d": 35
+      "requests7d": 36,
+      "requests30d": 36
     },
     "costEstimate": {
       "estimatedMonthly": 0.0,
       "cpuCost": 0.0,
       "memoryCost": 0.0,
       "requestCost": 0.0,
-      "estimatedRequests": 150,
+      "estimatedRequests": 154,
       "avgLatencyMs": 650,
       "cpuCores": 0.3333,
       "memoryGiB": 0.5,
