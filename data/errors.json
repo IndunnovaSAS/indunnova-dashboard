@@ -1,5 +1,45 @@
 [
   {
+    "id": "6961c2bb0006164d0fa0c3bb",
+    "service": "gestion-proveedores-isa",
+    "revision": "gestion-proveedores-isa-00074-rb4",
+    "timestamp": "2026-01-10T03:08:43.398925Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 253, in _get_response_async\n    response = await wrapped_callback(\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/decorators/http.py\", line 43, in inner\n    return func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/etapas/views.py\", line 1628, in evaluar_criterio\n    evaluacion, created = EvaluacionCriterio.objects.update_or_create(\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 949, in update_or_create\n    obj, created = self.select_for_update().get_or_create(defaults, **kwargs)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 923, in get_or_create\n    return self.create(**params), True\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 658, in create\n    obj.save(force_insert=True, using=self.db)\n  File \"/app/apps/etapas/models.py\", line 1032, in save\n    resumen.calcular()\n  File \"/app/apps/etapas/models.py\", line 1073, in calcular\n    self.puntaje_ponderado = self.porcentaje * (self.dimension.peso / 100)\n                             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nTypeError: unsupported operand type(s) for *: 'float' and 'decimal.Decimal'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6961c2bb0006160e70902a4c",
+    "service": "gestion-proveedores-isa",
+    "revision": "gestion-proveedores-isa-00074-rb4",
+    "timestamp": "2026-01-10T03:08:43.398862Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 916, in get_or_create\n    return self.get(**kwargs), False\n           ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 637, in get\n    raise self.model.DoesNotExist(\napps.etapas.models.EvaluacionCriterio.DoesNotExist: EvaluacionCriterio matching query does not exist.",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6961c2bb0006292967d30393",
+    "service": "gestion-proveedores-isa",
+    "revision": "gestion-proveedores-isa-00074-rb4",
+    "timestamp": "2026-01-10T03:08:43.292757Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://gestion-proveedores-isa-381877373634.us-central1.run.app/etapas/etapa1/0e32127b-3d23-41cf-b461-e5f11b3d8b5e/evaluar-criterio/",
+      "status": 500,
+      "latency": "0.108882681s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:f56f:927b:c503:7234"
+    },
+    "trace": "projects/appsindunnova/traces/2fdeb09fc3e45d73e0cd0e0ea9766f11",
+    "spanId": "4e111b78876a9fbb"
+  },
+  {
     "id": "6961b90b000a5fccfc2d3a8f",
     "service": "gestion-proveedores-isa",
     "revision": "gestion-proveedores-isa-00068-fhk",
@@ -25271,39 +25311,6 @@
     "service": "mouse-digital",
     "revision": "mouse-digital-00122-csl",
     "timestamp": "2026-01-05T16:13:12.825678Z",
-    "severity": "ERROR",
-    "message": "Default STARTUP TCP probe failed 1 time consecutively for container \"mouse-digital-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "695be31800037ca176871d1a",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00122-csl",
-    "timestamp": "2026-01-05T16:13:12.228513Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/app/manage.py\", line 22, in <module>\n    main()\n  File \"/app/manage.py\", line 18, in main\n    execute_from_command_line(sys.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 442, in execute_from_command_line\n    utility.execute()\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/__init__.py\", line 436, in execute\n    self.fetch_command(subcommand).run_from_argv(self.argv)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 416, in run_from_argv\n    self.execute(*args, **cmd_options)\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 460, in execute\n    output = self.handle(*args, **options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/base.py\", line 107, in wrapper\n    res = handle_func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/management/commands/migrate.py\", line 353, in handle\n    post_migrate_state = executor.migrate(\n                         ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 135, in migrate\n    state = self._migrate_all_forwards(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 167, in _migrate_all_forwards\n    state = self.apply_migration(\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/executor.py\", line 255, in apply_migration\n    state = migration.apply(state, schema_editor)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/migration.py\", line 132, in apply\n    operation.database_forwards(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/migrations/operations/fields.py\", line 110, in database_forwards\n    schema_editor.add_field(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 775, in add_field\n    self.execute(sql, params or None)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/schema.py\", line 45, in execute\n    return super().execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/schema.py\", line 204, in execute\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 79, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 92, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 100, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 103, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.ProgrammingError: must be owner of table production_assemblyreceiptwaste",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "695be31800034566c2a373e5",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00122-csl",
-    "timestamp": "2026-01-05T16:13:12.214374Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 103, in _execute\n    return self.cursor.execute(sql)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.InsufficientPrivilege: must be owner of table production_assemblyreceiptwaste",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "695be31100043304a311c9b6",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00122-csl",
-    "timestamp": "2026-01-05T16:13:05.275204Z",
     "severity": "ERROR",
     "message": "Default STARTUP TCP probe failed 1 time consecutively for container \"mouse-digital-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
     "httpRequest": null,
