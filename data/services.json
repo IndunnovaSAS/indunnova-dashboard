@@ -341,34 +341,34 @@
       "recentErrors": []
     },
     "deployments": {
-      "total": 31,
-      "last24h": 8,
-      "last7d": 31,
-      "lastDeployment": "2026-01-12T14:01:07.989055Z",
+      "total": 34,
+      "last24h": 12,
+      "last7d": 34,
+      "lastDeployment": "2026-01-12T15:02:53.530600Z",
       "recentDeployments": [
+        {
+          "revision": "contabilidad-indunnova-00107-fjs",
+          "timestamp": "2026-01-12T15:02:53.530600Z",
+          "status": "True"
+        },
+        {
+          "revision": "contabilidad-indunnova-00106-llr",
+          "timestamp": "2026-01-12T14:54:44.645496Z",
+          "status": "True"
+        },
+        {
+          "revision": "contabilidad-indunnova-00105-cv9",
+          "timestamp": "2026-01-12T14:47:57.070314Z",
+          "status": "True"
+        },
+        {
+          "revision": "contabilidad-indunnova-00104-7l7",
+          "timestamp": "2026-01-12T14:47:03.942753Z",
+          "status": "True"
+        },
         {
           "revision": "contabilidad-indunnova-00103-vzx",
           "timestamp": "2026-01-12T14:01:07.989055Z",
-          "status": "True"
-        },
-        {
-          "revision": "contabilidad-indunnova-00102-m5c",
-          "timestamp": "2026-01-12T02:16:23.610685Z",
-          "status": "True"
-        },
-        {
-          "revision": "contabilidad-indunnova-00101-vf5",
-          "timestamp": "2026-01-12T01:55:47.317756Z",
-          "status": "True"
-        },
-        {
-          "revision": "contabilidad-indunnova-00100-vg9",
-          "timestamp": "2026-01-12T01:47:12.251740Z",
-          "status": "True"
-        },
-        {
-          "revision": "contabilidad-indunnova-00099-v8s",
-          "timestamp": "2026-01-12T01:34:53.729927Z",
           "status": "True"
         }
       ]
@@ -379,15 +379,15 @@
       "avgLatencyMs": 0
     },
     "interactions": {
-      "requests7d": 488,
-      "requests30d": 488
+      "requests7d": 459,
+      "requests30d": 459
     },
     "costEstimate": {
       "estimatedMonthly": 0.07,
-      "cpuCost": 0.07,
+      "cpuCost": 0.06,
       "memoryCost": 0.0,
       "requestCost": 0.0,
-      "estimatedRequests": 2098,
+      "estimatedRequests": 1973,
       "avgLatencyMs": 650,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
@@ -801,9 +801,9 @@
     "repo": "https://github.com/mbrt26/GestionProveedoresISA",
     "repoName": "GestionProveedoresISA",
     "errors": {
-      "total": 973,
-      "last24h": 973,
-      "last7d": 973,
+      "total": 972,
+      "last24h": 972,
+      "last7d": 972,
       "recentErrors": [
         {
           "timestamp": "2026-01-12T11:04:21.714789Z",
@@ -823,9 +823,9 @@
       ]
     },
     "deployments": {
-      "total": 37,
+      "total": 34,
       "last24h": 0,
-      "last7d": 37,
+      "last7d": 34,
       "lastDeployment": "2026-01-11T03:25:47.377434Z",
       "recentDeployments": [
         {
@@ -856,21 +856,21 @@
       ]
     },
     "metrics": {
-      "errors5xx": 488,
+      "errors5xx": 487,
       "errors4xx": 0,
-      "avgLatencyMs": 574
+      "avgLatencyMs": 575
     },
     "interactions": {
-      "requests7d": 7666,
-      "requests30d": 7666
+      "requests7d": 7631,
+      "requests30d": 7631
     },
     "costEstimate": {
       "estimatedMonthly": 1.48,
       "cpuCost": 1.38,
       "memoryCost": 0.07,
       "requestCost": 0.01,
-      "estimatedRequests": 32963,
-      "avgLatencyMs": 874,
+      "estimatedRequests": 32813,
+      "avgLatencyMs": 875,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
       "note": "Estimacion incluye cold starts y overhead tipico",
@@ -1257,10 +1257,15 @@
     "repo": "https://github.com/mbrt26/NOVAPCR",
     "repoName": "NOVAPCR",
     "errors": {
-      "total": 27,
-      "last24h": 27,
-      "last7d": 27,
+      "total": 28,
+      "last24h": 28,
+      "last7d": 28,
       "recentErrors": [
+        {
+          "timestamp": "2026-01-12T15:00:01.814152Z",
+          "message": "{}",
+          "severity": "ERROR"
+        },
         {
           "timestamp": "2026-01-12T14:00:01.763945Z",
           "message": "{}",
@@ -1270,17 +1275,12 @@
           "timestamp": "2026-01-12T11:00:03.922047Z",
           "message": "Traceback (most recent call last):\n  File \"/app/reportes_financieros/views.py\", line 983, in cron_sync_journals\n    resultado = service.sincronizar(dias=7)  # \u00daltimos 7 d\u00edas por defecto\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/reportes_financieros/services/sincronizacion_contable.py\"...",
           "severity": "ERROR"
-        },
-        {
-          "timestamp": "2026-01-12T11:00:03.921932Z",
-          "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n        ...",
-          "severity": "ERROR"
         }
       ]
     },
     "deployments": {
       "total": 66,
-      "last24h": 29,
+      "last24h": 26,
       "last7d": 66,
       "lastDeployment": "2026-01-11T23:56:21.827292Z",
       "recentDeployments": [
@@ -1312,21 +1312,21 @@
       ]
     },
     "metrics": {
-      "errors5xx": 12,
+      "errors5xx": 13,
       "errors4xx": 0,
-      "avgLatencyMs": 5087
+      "avgLatencyMs": 9311
     },
     "interactions": {
-      "requests7d": 897,
-      "requests30d": 897
+      "requests7d": 875,
+      "requests30d": 875
     },
     "costEstimate": {
-      "estimatedMonthly": 0.75,
-      "cpuCost": 0.71,
-      "memoryCost": 0.04,
+      "estimatedMonthly": 1.3,
+      "cpuCost": 1.23,
+      "memoryCost": 0.06,
       "requestCost": 0.0,
-      "estimatedRequests": 3857,
-      "avgLatencyMs": 3860,
+      "estimatedRequests": 3762,
+      "avgLatencyMs": 6817,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
       "note": "Estimacion incluye cold starts y overhead tipico",
@@ -1334,7 +1334,7 @@
       "usesConsolidatedDb": true,
       "hasDedicatedDb": false,
       "dedicatedDbName": null,
-      "totalWithSql": 2.06
+      "totalWithSql": 2.61
     }
   },
   {
@@ -1425,15 +1425,15 @@
       "avgLatencyMs": 0
     },
     "interactions": {
-      "requests7d": 779,
-      "requests30d": 779
+      "requests7d": 865,
+      "requests30d": 865
     },
     "costEstimate": {
-      "estimatedMonthly": 0.11,
-      "cpuCost": 0.1,
+      "estimatedMonthly": 0.13,
+      "cpuCost": 0.12,
       "memoryCost": 0.01,
       "requestCost": 0.0,
-      "estimatedRequests": 3349,
+      "estimatedRequests": 3719,
       "avgLatencyMs": 650,
       "cpuCores": 1.0,
       "memoryGiB": 0.5,
@@ -1442,7 +1442,7 @@
       "usesConsolidatedDb": false,
       "hasDedicatedDb": true,
       "dedicatedDbName": "rgd-aire-db",
-      "totalWithSql": 9.48
+      "totalWithSql": 9.5
     }
   },
   {
