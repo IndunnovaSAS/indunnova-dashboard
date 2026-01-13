@@ -1,94 +1,193 @@
 {
-  "2f113a7a583d": {
-    "count": 385,
-    "services": [
-      "gestion-proveedores-isa"
-    ],
-    "first_seen": "2026-01-12T05:33:41.016202Z",
-    "last_seen": "2026-01-12T06:14:48.328421Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/channels/routing.py\", line 62, in __call__\n    return await application(scope, receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/security/websocket.py\", line 37, in __call__\n    return await self.application(scope, receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/sessions.py\", line 47, in __call__\n    return await self.inner(dict(scope, cookies=cookies), receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/sessions.py\", line 263, in __call__\n    return await self.inner(wrapper.scope, receive, wrapper.send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 183, in __call__\n    await self.resolve_scope(scope)\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 176, in resolve_scope\n    scope[\"user\"]._wrapped = await get_user(scope)\n                             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/db.py\", line 13, in thread_handler\n    return super().thread_handler(loop, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 38, in get_user\n    user_id = _get_user_session_key(session)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 145, in _get_user_session_key\n    return get_user_model()._meta.pk.to_python(session[SESSION_KEY])\n                                               ~~~~~~~^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 268, in inner\n    return func(_wrapped, *args)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 53, in __getitem__\n    return self._session[key]\n           ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 192, in _get_session\n    self._session_cache = self.load()\n                          ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 42, in load\n    s = self._get_session_from_db()\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 32, in _get_session_from_db\n    return self.model.objects.get(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 633, in get\n    num = len(clone)\n          ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2026-01-12T06:14:48.328421Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:42.318525Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:35.309325Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:28.297896Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:20.113192Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      }
-    ],
-    "error_type": "OperationalError",
-    "revisions": [
-      "gestion-proveedores-isa-00080-2ch"
-    ]
-  },
-  "b859899768a4": {
+  "7dafe8bcba96": {
     "count": 393,
     "services": [
       "gestion-proveedores-isa"
     ],
-    "first_seen": "2026-01-12T05:33:41.016135Z",
-    "last_seen": "2026-01-12T06:14:48.328354Z",
-    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
+    "first_seen": "2026-01-13T05:34:01.446495Z",
+    "last_seen": "2026-01-13T06:13:21.454535Z",
+    "sample_message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:14:48.328354Z",
+        "timestamp": "2026-01-13T06:13:21.454535Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:42.318462Z",
+        "timestamp": "2026-01-13T06:13:15.422314Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:35.309244Z",
+        "timestamp": "2026-01-13T06:13:10.615422Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:28.297794Z",
+        "timestamp": "2026-01-13T06:13:05.315353Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:20.113088Z",
+        "timestamp": "2026-01-13T06:13:00.262160Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      }
+    ],
+    "error_type": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https:/",
+    "revisions": [
+      "gestion-proveedores-isa-00081-tnd"
+    ]
+  },
+  "dde6c375e4f9": {
+    "count": 393,
+    "services": [
+      "gestion-proveedores-isa"
+    ],
+    "first_seen": "2026-01-13T05:34:01.383445Z",
+    "last_seen": "2026-01-13T06:13:21.408329Z",
+    "sample_message": "",
+    "sample_http": {
+      "method": "GET",
+      "url": "https://gestion-proveedores-isa-381877373634.us-central1.run.app/ws/tablero/d60b1764-1d90-421e-9c98-fddca37a2c38/",
+      "status": 500,
+      "latency": "0.124395s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:cc60:8ee1:83c5:2421"
+    },
+    "occurrences": [
+      {
+        "timestamp": "2026-01-13T06:13:21.408329Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2026-01-13T06:13:15.373723Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2026-01-13T06:13:10.566688Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2026-01-13T06:13:05.268536Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": 500
+      },
+      {
+        "timestamp": "2026-01-13T06:13:00.216199Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": 500
+      }
+    ],
+    "error_type": "Unknown Error",
+    "revisions": [
+      "gestion-proveedores-isa-00081-tnd"
+    ]
+  },
+  "2f113a7a583d": {
+    "count": 384,
+    "services": [
+      "gestion-proveedores-isa"
+    ],
+    "first_seen": "2026-01-13T05:34:01.511249Z",
+    "last_seen": "2026-01-13T06:13:16.317832Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/channels/routing.py\", line 62, in __call__\n    return await application(scope, receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/security/websocket.py\", line 37, in __call__\n    return await self.application(scope, receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/sessions.py\", line 47, in __call__\n    return await self.inner(dict(scope, cookies=cookies), receive, send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/sessions.py\", line 263, in __call__\n    return await self.inner(wrapper.scope, receive, wrapper.send)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 183, in __call__\n    await self.resolve_scope(scope)\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 176, in resolve_scope\n    scope[\"user\"]._wrapped = await get_user(scope)\n                             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/db.py\", line 13, in thread_handler\n    return super().thread_handler(loop, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 38, in get_user\n    user_id = _get_user_session_key(session)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/channels/auth.py\", line 145, in _get_user_session_key\n    return get_user_model()._meta.pk.to_python(session[SESSION_KEY])\n                                               ~~~~~~~^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 268, in inner\n    return func(_wrapped, *args)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 53, in __getitem__\n    return self._session[key]\n           ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 192, in _get_session\n    self._session_cache = self.load()\n                          ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 42, in load\n    s = self._get_session_from_db()\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 32, in _get_session_from_db\n    return self.model.objects.get(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 633, in get\n    num = len(clone)\n          ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2026-01-13T06:13:16.317832Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:13:11.310678Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:13:06.020156Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:13:01.008228Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:12:55.913523Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       }
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "gestion-proveedores-isa-00080-2ch"
+      "gestion-proveedores-isa-00081-tnd"
+    ]
+  },
+  "b859899768a4": {
+    "count": 392,
+    "services": [
+      "gestion-proveedores-isa"
+    ],
+    "first_seen": "2026-01-13T05:34:01.511152Z",
+    "last_seen": "2026-01-13T06:13:16.317671Z",
+    "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
+    "sample_http": null,
+    "occurrences": [
+      {
+        "timestamp": "2026-01-13T06:13:16.317671Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:13:11.310563Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:13:06.020042Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:13:01.008117Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      },
+      {
+        "timestamp": "2026-01-13T06:12:55.913382Z",
+        "service": "gestion-proveedores-isa",
+        "revision": "gestion-proveedores-isa-00081-tnd",
+        "http_status": null
+      }
+    ],
+    "error_type": "OperationalError",
+    "revisions": [
+      "gestion-proveedores-isa-00081-tnd"
     ]
   },
   "cdc7cf45e223": {
@@ -96,144 +195,45 @@
     "services": [
       "gestion-proveedores-isa"
     ],
-    "first_seen": "2026-01-12T05:33:48.193881Z",
-    "last_seen": "2026-01-12T06:14:48.328328Z",
+    "first_seen": "2026-01-13T05:34:01.511113Z",
+    "last_seen": "2026-01-13T06:13:16.317633Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 187, in _get_session\n    return self._session_cache\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'SessionStore' object has no attribute '_session_cache'",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:14:48.328328Z",
+        "timestamp": "2026-01-13T06:13:16.317633Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:42.318432Z",
+        "timestamp": "2026-01-13T06:13:11.310528Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:35.309221Z",
+        "timestamp": "2026-01-13T06:13:06.020015Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:28.297765Z",
+        "timestamp": "2026-01-13T06:13:01.008086Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:14:20.113055Z",
+        "timestamp": "2026-01-13T06:12:55.913344Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       }
     ],
     "error_type": "AttributeError",
     "revisions": [
-      "gestion-proveedores-isa-00080-2ch"
-    ]
-  },
-  "7dafe8bcba96": {
-    "count": 392,
-    "services": [
-      "gestion-proveedores-isa"
-    ],
-    "first_seen": "2026-01-12T05:33:47.739878Z",
-    "last_seen": "2026-01-12T06:14:47.628194Z",
-    "sample_message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
-    "sample_http": null,
-    "occurrences": [
-      {
-        "timestamp": "2026-01-12T06:14:47.628194Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:42.082503Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:35.170441Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:27.684101Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      },
-      {
-        "timestamp": "2026-01-12T06:14:19.213536Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": null
-      }
-    ],
-    "error_type": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https:/",
-    "revisions": [
-      "gestion-proveedores-isa-00080-2ch"
-    ]
-  },
-  "dde6c375e4f9": {
-    "count": 392,
-    "services": [
-      "gestion-proveedores-isa"
-    ],
-    "first_seen": "2026-01-12T05:33:47.692243Z",
-    "last_seen": "2026-01-12T06:14:47.575014Z",
-    "sample_message": "",
-    "sample_http": {
-      "method": "GET",
-      "url": "https://gestion-proveedores-isa-381877373634.us-central1.run.app/ws/tablero/d60b1764-1d90-421e-9c98-fddca37a2c38/",
-      "status": 500,
-      "latency": "0.499247s",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "2803:9810:68ac:4e08:6976:eff7:1434:8bf0"
-    },
-    "occurrences": [
-      {
-        "timestamp": "2026-01-12T06:14:47.575014Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2026-01-12T06:14:42.028306Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2026-01-12T06:14:35.122285Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2026-01-12T06:14:27.634183Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": 500
-      },
-      {
-        "timestamp": "2026-01-12T06:14:19.166701Z",
-        "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
-        "http_status": 500
-      }
-    ],
-    "error_type": "Unknown Error",
-    "revisions": [
-      "gestion-proveedores-isa-00080-2ch"
+      "gestion-proveedores-isa-00081-tnd"
     ]
   },
   "c2eabda622ec": {
@@ -241,45 +241,45 @@
     "services": [
       "novapcr-app"
     ],
-    "first_seen": "2026-01-12T05:35:01.915779Z",
-    "last_seen": "2026-01-12T06:10:01.935796Z",
+    "first_seen": "2026-01-13T05:35:02.208270Z",
+    "last_seen": "2026-01-13T06:10:01.839738Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/app/sensores_iot/views.py\", line 1571, in cron_sync_y_alertas\n    resultado_sensores = sincronizar_y_detectar_paros()\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/sensores_iot/services.py\", line 479, in sincronizar_y_detectar_paros\n    resultados_sync = service.sync_all_active_canales()\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/sensores_iot/services.py\", line 288, in sync_all_active_canales\n    logger.info(f\"Iniciando sincronizaci\u00f3n de {canales.count()} canales activos\")\n                                               ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 608, in count\n    return self.query.get_count(using=self.db)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 568, in get_count\n    return obj.get_aggregation(using, {\"__count\": Count(\"*\")})[\"__count\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 554, in get_aggregation\n    result = compiler.execute_sql(SINGLE)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:10:01.935796Z",
+        "timestamp": "2026-01-13T06:10:01.839738Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:05:01.901030Z",
+        "timestamp": "2026-01-13T06:05:02.432741Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:01.975835Z",
+        "timestamp": "2026-01-13T06:00:01.836763Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T05:55:02.735661Z",
+        "timestamp": "2026-01-13T05:55:01.995473Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T05:50:01.861441Z",
+        "timestamp": "2026-01-13T05:50:01.931490Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       }
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "novapcr-app-00149-qk8"
+      "novapcr-app-00150-bv6"
     ]
   },
   "970e30a6f72a": {
@@ -287,45 +287,45 @@
     "services": [
       "novapcr-app"
     ],
-    "first_seen": "2026-01-12T05:35:01.915670Z",
-    "last_seen": "2026-01-12T06:10:01.935715Z",
+    "first_seen": "2026-01-13T05:35:02.208236Z",
+    "last_seen": "2026-01-13T06:10:01.839687Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:10:01.935715Z",
+        "timestamp": "2026-01-13T06:10:01.839687Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:05:01.900936Z",
+        "timestamp": "2026-01-13T06:05:02.432687Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:03.212222Z",
+        "timestamp": "2026-01-13T06:00:04.293833Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:03.117735Z",
+        "timestamp": "2026-01-13T06:00:04.236098Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:01.975714Z",
+        "timestamp": "2026-01-13T06:00:01.836716Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       }
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "novapcr-app-00149-qk8"
+      "novapcr-app-00150-bv6"
     ]
   },
   "cd564399a899": {
@@ -333,45 +333,45 @@
     "services": [
       "novapcr-app"
     ],
-    "first_seen": "2026-01-12T05:35:01.913397Z",
-    "last_seen": "2026-01-12T06:10:01.933650Z",
+    "first_seen": "2026-01-13T05:35:02.205930Z",
+    "last_seen": "2026-01-13T06:10:01.837353Z",
     "sample_message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:10:01.933650Z",
+        "timestamp": "2026-01-13T06:10:01.837353Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:05:01.898852Z",
+        "timestamp": "2026-01-13T06:05:02.429909Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:03.195492Z",
+        "timestamp": "2026-01-13T06:00:04.290041Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:03.098086Z",
+        "timestamp": "2026-01-13T06:00:04.233570Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:01.972854Z",
+        "timestamp": "2026-01-13T06:00:01.834501Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       }
     ],
     "error_type": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https:/",
     "revisions": [
-      "novapcr-app-00149-qk8"
+      "novapcr-app-00150-bv6"
     ]
   },
   "76ca6f79f0a5": {
@@ -379,52 +379,52 @@
     "services": [
       "novapcr-app"
     ],
-    "first_seen": "2026-01-12T05:35:01.820369Z",
-    "last_seen": "2026-01-12T06:10:01.832397Z",
+    "first_seen": "2026-01-13T05:35:02.134886Z",
+    "last_seen": "2026-01-13T06:10:01.743084Z",
     "sample_message": "",
     "sample_http": {
       "method": "POST",
       "url": "https://novapcr-app-381877373634.us-central1.run.app/sensores/cron/sync-alertas/",
       "status": 500,
-      "latency": "0.088283553s",
+      "latency": "0.068395598s",
       "userAgent": "Google-Cloud-Scheduler",
-      "remoteIp": "34.98.143.135"
+      "remoteIp": "34.98.143.97"
     },
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:10:01.832397Z",
+        "timestamp": "2026-01-13T06:10:01.743084Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": 500
       },
       {
-        "timestamp": "2026-01-12T06:05:01.828009Z",
+        "timestamp": "2026-01-13T06:05:02.327092Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": 500
       },
       {
-        "timestamp": "2026-01-12T06:00:01.860744Z",
+        "timestamp": "2026-01-13T06:00:01.765802Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": 500
       },
       {
-        "timestamp": "2026-01-12T05:55:01.854685Z",
+        "timestamp": "2026-01-13T05:55:01.908988Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": 500
       },
       {
-        "timestamp": "2026-01-12T05:50:01.779575Z",
+        "timestamp": "2026-01-13T05:50:01.808821Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": 500
       }
     ],
     "error_type": "Unknown Error",
     "revisions": [
-      "novapcr-app-00149-qk8"
+      "novapcr-app-00150-bv6"
     ]
   },
   "246f30992dfd": {
@@ -432,45 +432,45 @@
     "services": [
       "gestion-proveedores-isa"
     ],
-    "first_seen": "2026-01-12T05:34:56.340675Z",
-    "last_seen": "2026-01-12T06:09:56.365210Z",
+    "first_seen": "2026-01-13T05:34:57.059078Z",
+    "last_seen": "2026-01-13T06:09:57.069029Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 253, in _get_response_async\n    response = await wrapped_callback(\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 71, in dispatch\n    if not request.user.is_authenticated:\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 266, in inner\n    self._setup()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 419, in _setup\n    self._wrapped = self._setupfunc()\n                    ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/middleware.py\", line 25, in <lambda>\n    request.user = SimpleLazyObject(lambda: get_user(request))\n                                            ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/middleware.py\", line 11, in get_user\n    request._cached_user = auth.get_user(request)\n                           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py\", line 191, in get_user\n    user_id = _get_user_session_key(request)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py\", line 60, in _get_user_session_key\n    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])\n                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 53, in __getitem__\n    return self._session[key]\n           ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 192, in _get_session\n    self._session_cache = self.load()\n                          ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 42, in load\n    s = self._get_session_from_db()\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 32, in _get_session_from_db\n    return self.model.objects.get(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 633, in get\n    num = len(clone)\n          ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:09:56.365210Z",
+        "timestamp": "2026-01-13T06:09:57.069029Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:04:56.359110Z",
+        "timestamp": "2026-01-13T06:04:57.095342Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T05:59:56.339893Z",
+        "timestamp": "2026-01-13T05:59:57.057595Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T05:54:56.360632Z",
+        "timestamp": "2026-01-13T05:54:57.042040Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T05:49:56.402419Z",
+        "timestamp": "2026-01-13T05:49:57.077925Z",
         "service": "gestion-proveedores-isa",
-        "revision": "gestion-proveedores-isa-00080-2ch",
+        "revision": "gestion-proveedores-isa-00081-tnd",
         "http_status": null
       }
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "gestion-proveedores-isa-00080-2ch"
+      "gestion-proveedores-isa-00081-tnd"
     ]
   },
   "0d7a170cc0b0": {
@@ -478,27 +478,27 @@
     "services": [
       "novapcr-app"
     ],
-    "first_seen": "2026-01-12T06:00:03.117812Z",
-    "last_seen": "2026-01-12T06:00:03.212312Z",
+    "first_seen": "2026-01-13T06:00:04.236139Z",
+    "last_seen": "2026-01-13T06:00:04.293891Z",
     "sample_message": "Traceback (most recent call last):\n  File \"/app/integracion_siigo/tasks.py\", line 365, in sincronizar_balance_prueba_mes\n    registro = service.sync_balance_prueba(anio, mes)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/integracion_siigo/services.py\", line 1688, in sync_balance_prueba\n    registro = RegistroSincronizacion.objects.create(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 658, in create\n    obj.save(force_insert=True, using=self.db)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1020, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1061, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1805, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1820, in execute_sql\n    with self.connection.cursor() as cursor:\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
     "sample_http": null,
     "occurrences": [
       {
-        "timestamp": "2026-01-12T06:00:03.212312Z",
+        "timestamp": "2026-01-13T06:00:04.293891Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       },
       {
-        "timestamp": "2026-01-12T06:00:03.117812Z",
+        "timestamp": "2026-01-13T06:00:04.236139Z",
         "service": "novapcr-app",
-        "revision": "novapcr-app-00149-qk8",
+        "revision": "novapcr-app-00150-bv6",
         "http_status": null
       }
     ],
     "error_type": "OperationalError",
     "revisions": [
-      "novapcr-app-00149-qk8"
+      "novapcr-app-00150-bv6"
     ]
   }
 }
