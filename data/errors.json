@@ -1,5 +1,63 @@
 [
   {
+    "id": "6969614500090ed8e3040b98",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00029-5p7",
+    "timestamp": "2026-01-15T21:51:01.593624Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 105, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 144, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 178, in get\n    return super().get(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 142, in get\n    return self.render_to_response(self.get_context_data())\n                                   ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/comercial/views/cotizacion_views.py\", line 137, in get_context_data\n    context = super().get_context_data(**kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 72, in get_context_data\n    kwargs[\"form\"] = self.get_form()\n                     ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 37, in get_form\n    return form_class(**self.get_form_kwargs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/comercial/forms/cotizacion_forms.py\", line 181, in __init__\n    self.fields['proveedor_servicio'].queryset = Proveedor.objects.filter(activo=True).order_by('nombre')\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1727, in order_by\n    obj.query.add_ordering(*field_names)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2305, in add_ordering\n    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1806, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'nombre' into field. Choices are: activo, ciudad, ciudad_id, codigo, condiciones_pago, condiciones_pago_id, contacto_principal, cotizaciones_servicio, created_at, dias_credito, direccion, email, id, materiales_principal, nit, nombre_comercial, observaciones, razon_social, telefono, updated_at",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69696145000913d466b0f534",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00029-5p7",
+    "timestamp": "2026-01-15T21:51:01.551603Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://hemisferio-erp-381877373634.us-central1.run.app/comercial/cotizaciones/crear/",
+      "status": 500,
+      "latency": "0.041604739s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+      "remoteIp": "190.29.28.18"
+    },
+    "trace": "projects/appsindunnova/traces/96f81aa329ea4eeb3959a9582b465e6b",
+    "spanId": "94317881f83aeec2"
+  },
+  {
+    "id": "69695ee9000e5161c083c977",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00029-5p7",
+    "timestamp": "2026-01-15T21:40:57.938337Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 105, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 144, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 178, in get\n    return super().get(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 142, in get\n    return self.render_to_response(self.get_context_data())\n                                   ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/comercial/views/cotizacion_views.py\", line 137, in get_context_data\n    context = super().get_context_data(**kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 72, in get_context_data\n    kwargs[\"form\"] = self.get_form()\n                     ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 37, in get_form\n    return form_class(**self.get_form_kwargs())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/comercial/forms/cotizacion_forms.py\", line 181, in __init__\n    self.fields['proveedor_servicio'].queryset = Proveedor.objects.filter(activo=True).order_by('nombre')\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1727, in order_by\n    obj.query.add_ordering(*field_names)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2305, in add_ordering\n    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1806, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'nombre' into field. Choices are: activo, ciudad, ciudad_id, codigo, condiciones_pago, condiciones_pago_id, contacto_principal, cotizaciones_servicio, created_at, dias_credito, direccion, email, id, materiales_principal, nit, nombre_comercial, observaciones, razon_social, telefono, updated_at",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69695ee9000e5596fe748b08",
+    "service": "hemisferio-erp",
+    "revision": "hemisferio-erp-00029-5p7",
+    "timestamp": "2026-01-15T21:40:57.872957Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://hemisferio-erp-381877373634.us-central1.run.app/comercial/cotizaciones/crear/",
+      "status": 500,
+      "latency": "0.064937441s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+      "remoteIp": "181.143.36.243"
+    },
+    "trace": "projects/appsindunnova/traces/af4ece1f7b120580a83314874d14bf4a",
+    "spanId": "238c30c98a6da901"
+  },
+  {
     "id": "696958c80007d3fa60274e53",
     "service": "rgd-aire",
     "revision": "rgd-aire-00333-pj4",
@@ -24285,56 +24343,5 @@
     "httpRequest": null,
     "trace": "",
     "spanId": ""
-  },
-  {
-    "id": "696775360001c818d1b1e9ce",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00081-tnd",
-    "timestamp": "2026-01-14T10:51:34.116760Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "696775360001c7e6fe2091a5",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00081-tnd",
-    "timestamp": "2026-01-14T10:51:34.116710Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 187, in _get_session\n    return self._session_cache\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'SessionStore' object has no attribute '_session_cache'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69677535000a3997dccb322b",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00081-tnd",
-    "timestamp": "2026-01-14T10:51:33.670103Z",
-    "severity": "ERROR",
-    "message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "696775360001cef5c9ddddaa",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00081-tnd",
-    "timestamp": "2026-01-14T10:51:33.613640Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://gestion-proveedores-isa-381877373634.us-central1.run.app/ws/tablero/d60b1764-1d90-421e-9c98-fddca37a2c38/",
-      "status": 500,
-      "latency": "0.498317s",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "2803:9810:68ac:4e08:78a9:ff63:63e4:95a8"
-    },
-    "trace": "projects/appsindunnova/traces/430f8542a32413f1a5296fdd2bf4014e",
-    "spanId": "d196869e1857532e"
   }
 ]
