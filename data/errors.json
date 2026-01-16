@@ -1,5 +1,114 @@
 [
   {
+    "id": "696ac440000650ca7ea8d84f",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00416-r8v",
+    "timestamp": "2026-01-16T23:05:36.413898Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 226, in get\n    context = self.get_context_data(**kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/inventario/views_productos.py\", line 2178, in get_context_data\n    categorias = CategoriaMateriaPrima.objects.filter(is_active=True).order_by('nombre')\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1436, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1454, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1461, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1546, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1577, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1427, in build_filter\n    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1237, in solve_lookup_type\n    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'is_active' into field. Choices are: descripcion, id, materiaprima, nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "696ac4400006560020ea011d",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00416-r8v",
+    "timestamp": "2026-01-16T23:05:31.714597Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/inventario/inventario-bodega/",
+      "status": 500,
+      "latency": "4.692485955s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+      "remoteIp": "181.143.36.243"
+    },
+    "trace": "projects/appsindunnova/traces/1daf76ac3fd6e43dd5b08e3a933be705",
+    "spanId": "ab381eff920207cb"
+  },
+  {
+    "id": "696ac0fd000d0688f82d0d23",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00413-drz",
+    "timestamp": "2026-01-16T22:51:41.853640Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 1156: 'endif', expected 'endblock'. Did you forget to register or load this tag?",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "696ac0fd000d0649d9f34a59",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00413-drz",
+    "timestamp": "2026-01-16T22:51:41.853577Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'endif'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "696ac0fd000d0adcc6ff1a23",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00413-drz",
+    "timestamp": "2026-01-16T22:51:41.802191Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/inventario/productos-terminados/173/",
+      "status": 500,
+      "latency": "0.050254770s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+      "remoteIp": "181.143.36.243"
+    },
+    "trace": "projects/appsindunnova/traces/d22c77a6dfc6a4f291c36df91ce18ced",
+    "spanId": "194d5a8f82dfdc82"
+  },
+  {
+    "id": "696ac09a000d57cf35cc125b",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00413-drz",
+    "timestamp": "2026-01-16T22:50:02.874447Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 1156: 'endif', expected 'endblock'. Did you forget to register or load this tag?",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "696ac09a000d5796807ed4c9",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00413-drz",
+    "timestamp": "2026-01-16T22:50:02.874390Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'endif'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "696ac09a000d60eb16179e19",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00413-drz",
+    "timestamp": "2026-01-16T22:50:02.783432Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/inventario/productos-terminados/174/",
+      "status": 500,
+      "latency": "0.091290646s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+      "remoteIp": "181.205.251.118"
+    },
+    "trace": "projects/appsindunnova/traces/9570def7e91e6c68425eb8110d1590f0",
+    "spanId": "9fe02dfae4804b53"
+  },
+  {
     "id": "696a96aa0009002c495a4174",
     "service": "rgd-aire",
     "revision": "rgd-aire-00338-pkm",
@@ -24129,107 +24238,5 @@
     "httpRequest": null,
     "trace": "",
     "spanId": ""
-  },
-  {
-    "id": "6968a2060003eb0421b4e585",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00150-bv6",
-    "timestamp": "2026-01-15T08:15:02.256772Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6968a2060003dc7fe6ab4420",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00150-bv6",
-    "timestamp": "2026-01-15T08:15:02.253055Z",
-    "severity": "ERROR",
-    "message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6968a2060003ef920d83268a",
-    "service": "novapcr-app",
-    "revision": "novapcr-app-00150-bv6",
-    "timestamp": "2026-01-15T08:15:01.795145Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "POST",
-      "url": "https://novapcr-app-381877373634.us-central1.run.app/sensores/cron/sync-alertas/",
-      "status": 500,
-      "latency": "0.454368269s",
-      "userAgent": "Google-Cloud-Scheduler",
-      "remoteIp": "35.187.132.227"
-    },
-    "trace": "projects/appsindunnova/traces/8abeea603ad112e3e210cc3ea5da2abb",
-    "spanId": "4a826c0c30cf66eb"
-  },
-  {
-    "id": "6968a1000007f2d703e7f782",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00108-fnb",
-    "timestamp": "2026-01-15T08:10:40.520919Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 253, in _get_response_async\n    response = await wrapped_callback(\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 71, in dispatch\n    if not request.user.is_authenticated:\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 266, in inner\n    self._setup()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/functional.py\", line 419, in _setup\n    self._wrapped = self._setupfunc()\n                    ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/middleware.py\", line 25, in <lambda>\n    request.user = SimpleLazyObject(lambda: get_user(request))\n                                            ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/middleware.py\", line 11, in get_user\n    request._cached_user = auth.get_user(request)\n                           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py\", line 191, in get_user\n    user_id = _get_user_session_key(request)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py\", line 60, in _get_user_session_key\n    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])\n                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 53, in __getitem__\n    return self._session[key]\n           ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 192, in _get_session\n    self._session_cache = self.load()\n                          ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 42, in load\n    s = self._get_session_from_db()\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/db.py\", line 32, in _get_session_from_db\n    return self.model.objects.get(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 633, in get\n    num = len(clone)\n          ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 380, in __len__\n    self._fetch_all()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1881, in _fetch_all\n    self._result_cache = list(self._iterable_class(self))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 91, in __iter__\n    results = compiler.execute_sql(\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1560, in execute_sql\n    cursor = self.connection.cursor()\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 329, in cursor\n    return self._cursor()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 305, in _cursor\n    self.ensure_connection()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 287, in ensure_connection\n    with self.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6968a1000007f2a11fb1e89c",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00108-fnb",
-    "timestamp": "2026-01-15T08:10:40.520865Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 288, in ensure_connection\n    self.connect()\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/base/base.py\", line 269, in connect\n    self.connection = self.get_new_connection(conn_params)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/asyncio.py\", line 26, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/base.py\", line 275, in get_new_connection\n    connection = self.Database.connect(**conn_params)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/psycopg2/__init__.py\", line 122, in connect\n    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.OperationalError: connection to server on socket \"/cloudsql/appsindunnova:us-central1:postgres-consolidated/.s.PGSQL.5432\" failed: Connection refused",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6968a1000007f28fc719e8dc",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00108-fnb",
-    "timestamp": "2026-01-15T08:10:40.520847Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/sessions/backends/base.py\", line 187, in _get_session\n    return self._session_cache\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'SessionStore' object has no attribute '_session_cache'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6968a1000007e222d428ee34",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00108-fnb",
-    "timestamp": "2026-01-15T08:10:40.516642Z",
-    "severity": "ERROR",
-    "message": "Cloud SQL connection failed. Please see https://cloud.google.com/sql/docs/mysql/connect-run, https://cloud.google.com/sql/docs/postgres/connect-run, or https://cloud.google.com/sql/docs/sqlserver/connect-run for additional details: fetch ephemeral cert failed: refresh error: create ephemeral cert failed (connection name = \"appsindunnova:us-central1:postgres-consolidated\"): googleapi: Error 409: The instance or operation is not in an appropriate state to handle the request., invalidState",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6968a10000080243febdb5c1",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00108-fnb",
-    "timestamp": "2026-01-15T08:10:40.422221Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://gestion-proveedores-isa-381877373634.us-central1.run.app/notificaciones/no-leidas/",
-      "status": 500,
-      "latency": "0.095606818s",
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "2803:9810:68ac:4e08:749a:8217:9656:1c06"
-    },
-    "trace": "projects/appsindunnova/traces/992725e29be71fd9e4853a9153b2544b",
-    "spanId": "19dcad264330833a"
   }
 ]
