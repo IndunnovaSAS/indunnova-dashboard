@@ -148,7 +148,6 @@ function updateMetrics() {
     document.getElementById('totalErrors24h').textContent = metaData.totalErrors24h || 0;
     document.getElementById('totalDeployments7d').textContent = metaData.totalDeployments7d || 0;
     document.getElementById('totalDeployments24h').textContent = metaData.totalDeployments24h || 0;
-    document.getElementById('servicesWithErrors').textContent = metaData.servicesWithErrors || 0;
 }
 
 function renderDailyErrorsChart() {
