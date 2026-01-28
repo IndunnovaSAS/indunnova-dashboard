@@ -1,5 +1,85 @@
 [
   {
+    "id": "697a60ec00099227d2c8ffef",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00512-kn2",
+    "timestamp": "2026-01-28T19:18:04.627239Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/sellado.py\", line 1523, in registrar_desperdicio_turno_sellado\n    desperdicio.save()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1020, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1061, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1805, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1822, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697a60ec000991e26543bdc0",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00512-kn2",
+    "timestamp": "2026-01-28T19:18:04.627170Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697a60ec000996c40f0effb8",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00512-kn2",
+    "timestamp": "2026-01-28T19:18:04.591526Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/sellado/16/desperdicio/registrar/",
+      "status": 500,
+      "latency": "0.029573686s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "129.222.203.197"
+    },
+    "trace": "projects/appsindunnova/traces/092c8dddbb3bd4b68883de5efde0b6b4",
+    "spanId": "0a8c726076125bcf"
+  },
+  {
+    "id": "697a604e0005b5f8edf97026",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00512-kn2",
+    "timestamp": "2026-01-28T19:15:26.374264Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/sellado.py\", line 1523, in registrar_desperdicio_turno_sellado\n    desperdicio.save()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1020, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1061, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1805, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1822, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697a604e0005b5b29fd9bfad",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00512-kn2",
+    "timestamp": "2026-01-28T19:15:26.374194Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697a604e0005bba9aa63d644",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00512-kn2",
+    "timestamp": "2026-01-28T19:15:26.253759Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/sellado/16/desperdicio/registrar/",
+      "status": 500,
+      "latency": "0.113612860s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "129.222.203.197"
+    },
+    "trace": "projects/appsindunnova/traces/c9400e42e9ec2b45e668d11c88140d1e",
+    "spanId": "3b54e666e5125af3"
+  },
+  {
     "id": "697a532b00040387ce4dc5b7",
     "service": "arcopack-erp",
     "revision": "arcopack-erp-00512-kn2",
@@ -22520,245 +22600,5 @@
     },
     "trace": "projects/appsindunnova/traces/045b3d65fbb5e0fd9d6b96279f78e8d7",
     "spanId": "3e0210c352c5e29b"
-  },
-  {
-    "id": "6971237d000ed033f81672e9",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:05:33.970803Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 284, in _get_response_async\n    response = await sync_to_async(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 953, in do_if\n    nodelist = parser.parse((\"elif\", \"else\", \"endif\"))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 853, in do_for\n    nodelist_loop = parser.parse(\n                    ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1491, in do_with\n    nodelist = parser.parse((\"endwith\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 524: 'empty', expected 'endwith'. Did you forget to register or load this tag?",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971237d000ecfc9284955f6",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:05:33.970697Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'empty'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971237d000ee46e7a662238",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:05:33.655210Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://fortalecimiento.indunnova.com/proyectos/23eb8179-1ac1-45d0-9ef1-30b1edaeb96d/",
-      "status": 500,
-      "latency": "0.315912496s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "179.1.25.28"
-    },
-    "trace": "projects/appsindunnova/traces/30cde4a5c6b85c5f86b86a0c6a9c82f5",
-    "spanId": "d3ffaa993a5d2ded"
-  },
-  {
-    "id": "6971232f00087048bcb4c509",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:04:15.553032Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 284, in _get_response_async\n    response = await sync_to_async(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 953, in do_if\n    nodelist = parser.parse((\"elif\", \"else\", \"endif\"))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 853, in do_for\n    nodelist_loop = parser.parse(\n                    ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1491, in do_with\n    nodelist = parser.parse((\"endwith\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 524: 'empty', expected 'endwith'. Did you forget to register or load this tag?",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971232f00086fcf602aa37c",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:04:15.552911Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'empty'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971232f000882a1a8e20f18",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:04:15.272686Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://fortalecimiento.indunnova.com/proyectos/23eb8179-1ac1-45d0-9ef1-30b1edaeb96d/",
-      "status": 500,
-      "latency": "0.283217280s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "179.1.25.28"
-    },
-    "trace": "projects/appsindunnova/traces/e72881b79cde26c9923f3f0ba4e46e0d",
-    "spanId": "bff230fc0b0c1ac9"
-  },
-  {
-    "id": "69712329000edc8228cff820",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:04:09.973954Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 284, in _get_response_async\n    response = await sync_to_async(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 953, in do_if\n    nodelist = parser.parse((\"elif\", \"else\", \"endif\"))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 853, in do_for\n    nodelist_loop = parser.parse(\n                    ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1491, in do_with\n    nodelist = parser.parse((\"endwith\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 524: 'empty', expected 'endwith'. Did you forget to register or load this tag?",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69712329000edc0f2656fa3f",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:04:09.973839Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'empty'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69712329000eed0c44bd908f",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T19:04:09.628230Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://fortalecimiento.indunnova.com/proyectos/23eb8179-1ac1-45d0-9ef1-30b1edaeb96d/",
-      "status": 500,
-      "latency": "0.342497332s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "179.1.25.28"
-    },
-    "trace": "projects/appsindunnova/traces/f187cc506b386402923f3f0ba4e46281",
-    "spanId": "f264882cc0de44e4"
-  },
-  {
-    "id": "69712227000e37176d51a3bf",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:51.931607Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 284, in _get_response_async\n    response = await sync_to_async(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 953, in do_if\n    nodelist = parser.parse((\"elif\", \"else\", \"endif\"))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 853, in do_for\n    nodelist_loop = parser.parse(\n                    ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1491, in do_with\n    nodelist = parser.parse((\"endwith\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 524: 'empty', expected 'endwith'. Did you forget to register or load this tag?",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69712227000e368b686ff464",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:51.931467Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'empty'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69712227000e487e522ecf47",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:51.626643Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://fortalecimiento.indunnova.com/proyectos/23eb8179-1ac1-45d0-9ef1-30b1edaeb96d/",
-      "status": 500,
-      "latency": "0.307552665s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "179.1.25.28"
-    },
-    "trace": "projects/appsindunnova/traces/976174f46ad72f3d972f85918d6f596b",
-    "spanId": "2a9bb32f51f462d9"
-  },
-  {
-    "id": "6971221a000eac7f04c0430c",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:38.961663Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 284, in _get_response_async\n    response = await sync_to_async(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 953, in do_if\n    nodelist = parser.parse((\"elif\", \"else\", \"endif\"))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 853, in do_for\n    nodelist_loop = parser.parse(\n                    ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1491, in do_with\n    nodelist = parser.parse((\"endwith\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 524: 'empty', expected 'endwith'. Did you forget to register or load this tag?",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971221a000eac021c576f0c",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:38.961538Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'empty'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971221a000ebf8d970fbf94",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:38.612340Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://fortalecimiento.indunnova.com/proyectos/23eb8179-1ac1-45d0-9ef1-30b1edaeb96d/",
-      "status": 500,
-      "latency": "0.352524959s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "179.1.25.28"
-    },
-    "trace": "projects/appsindunnova/traces/865d1f50b66e32b6972f85918d6f5dea",
-    "spanId": "90fd9fdea955e361"
-  },
-  {
-    "id": "69712214000060b6fa0896c5",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:32.024758Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 284, in _get_response_async\n    response = await sync_to_async(\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 42, in select_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 33, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 175, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/engine.py\", line 157, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 200, in compile_nodelist\n    return parser.parse()\n           ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 293, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 232, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 953, in do_if\n    nodelist = parser.parse((\"elif\", \"else\", \"endif\"))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 853, in do_for\n    nodelist_loop = parser.parse(\n                    ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 513, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 511, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 1491, in do_with\n    nodelist = parser.parse((\"endwith\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 507, in parse\n    self.invalid_block_tag(token, command, parse_until)\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 558, in invalid_block_tag\n    raise self.error(\ndjango.template.exceptions.TemplateSyntaxError: Invalid block tag on line 524: 'empty', expected 'endwith'. Did you forget to register or load this tag?",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6971221400006014e3c40788",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:32.024596Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 505, in parse\n    compile_func = self.tags[command]\n                   ~~~~~~~~~^^^^^^^^^\nKeyError: 'empty'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "69712214000079953a18da98",
-    "service": "gestion-proveedores-isa",
-    "revision": "gestion-proveedores-isa-00121-wzr",
-    "timestamp": "2026-01-21T18:59:31.615535Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://fortalecimiento.indunnova.com/proyectos/23eb8179-1ac1-45d0-9ef1-30b1edaeb96d/",
-      "status": 500,
-      "latency": "0.413947231s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
-      "remoteIp": "179.1.25.28"
-    },
-    "trace": "projects/appsindunnova/traces/0f83a6a9743e3f74c4f6443be9fcf43b",
-    "spanId": "b15df4e6c30f855e"
   }
 ]
