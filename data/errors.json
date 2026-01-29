@@ -1,5 +1,45 @@
 [
   {
+    "id": "697be52e000ccd72ccfa22c1",
+    "service": "gestion-proveedores-isa",
+    "revision": "gestion-proveedores-isa-00157-vpt",
+    "timestamp": "2026-01-29T22:54:38.839026Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 42, in inner\n    response = await get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 555, in thread_handler\n    raise exc_info[1]\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 253, in _get_response_async\n    response = await wrapped_callback(\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 504, in __call__\n    ret = await asyncio.shield(exec_coro)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/current_thread_executor.py\", line 40, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/asgiref/sync.py\", line 559, in thread_handler\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/decorators/http.py\", line 43, in inner\n    return func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/etapas/views.py\", line 2809, in guardar_encuesta_satisfaccion\n    encuesta.save()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 990, in _save_table\n    updated = self._do_update(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1054, in _do_update\n    return filtered._update(values) > 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1231, in _update\n    return query.get_compiler(self.db).execute_sql(CURSOR)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1984, in execute_sql\n    cursor = super().execute_sql(result_type)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"p11_que_le_gusta\" of relation \"etapas_encuestasatisfaccion\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697be52e000ccd4abbd55e21",
+    "service": "gestion-proveedores-isa",
+    "revision": "gestion-proveedores-isa-00157-vpt",
+    "timestamp": "2026-01-29T22:54:38.838986Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"p11_que_le_gusta\" of relation \"etapas_encuestasatisfaccion\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697be52e000cda5a1898ac35",
+    "service": "gestion-proveedores-isa",
+    "revision": "gestion-proveedores-isa-00157-vpt",
+    "timestamp": "2026-01-29T22:54:38.757109Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://fortalecimiento.indunnova.com/etapas/etapa1/d6f84e93-132c-4fd6-a2c3-ddf665f2ffab/guardar-encuesta/",
+      "status": 500,
+      "latency": "0.083749412s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "181.143.78.210"
+    },
+    "trace": "projects/appsindunnova/traces/bb0da3e18754ac4d22938ca15b94914b",
+    "spanId": "92ef626227694482"
+  },
+  {
     "id": "697bdb160008bafdd16f4ac4",
     "service": "crm-ecourmet",
     "revision": "crm-ecourmet-00029-5bh",
@@ -22029,23 +22069,5 @@
     },
     "trace": "projects/appsindunnova/traces/5ae0d9666220d4d8ef30874980d6c4cc",
     "spanId": "2e9d476a88e7e128"
-  },
-  {
-    "id": "6972ad1f000a053abd6b3d01",
-    "service": "syncmeetings",
-    "revision": "syncmeetings-00034-vod",
-    "timestamp": "2026-01-22T23:00:03.406960Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://us-central1-appsindunnova.cloudfunctions.net/syncMeetings",
-      "status": 504,
-      "latency": "300.000413729s",
-      "userAgent": "Google-Cloud-Scheduler",
-      "remoteIp": "107.178.194.170"
-    },
-    "trace": "projects/appsindunnova/traces/df010bc9914ebb4c42f6fd7476edd9cf",
-    "spanId": "410effd4e128fcbe"
   }
 ]
