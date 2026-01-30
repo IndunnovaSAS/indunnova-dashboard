@@ -22624,34 +22624,5 @@
     },
     "trace": "projects/appsindunnova/traces/96ba0bc784d3f019514a0ef543a76fa3",
     "spanId": "5e4a0f471a3c6c45"
-  },
-  {
-    "id": "6973fbbb0003d86b40fd5065",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00487-g2r",
-    "timestamp": "2026-01-23T22:52:43.252011Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/sellado.py\", line 1453, in turno_sellado_editar\n    form = TurnoSelladoForm(instance=turno)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/forms.py\", line 2906, in __init__\n    self.initial['hora_inicio'] = timezone.localtime(\n                                  ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/utils/timezone.py\", line 218, in localtime\n    raise ValueError(\"localtime() cannot be applied to a naive datetime\")\nValueError: localtime() cannot be applied to a naive datetime",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6973fbbb0003df49a5632c5b",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00487-g2r",
-    "timestamp": "2026-01-23T22:52:43.180635Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/sellado/8/editar/",
-      "status": 500,
-      "latency": "0.071350938s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
-      "remoteIp": "181.143.36.243"
-    },
-    "trace": "projects/appsindunnova/traces/32991c04065eddbb507440b7d36e9f78",
-    "spanId": "37fbe9c27eed7d25"
   }
 ]
