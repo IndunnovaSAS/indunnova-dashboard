@@ -1,5 +1,56 @@
 [
   {
+    "id": "697d080900077c41d73f59e8",
+    "service": "instelec-api",
+    "revision": "instelec-api-00009-pbm",
+    "timestamp": "2026-01-30T19:35:22.786267Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-381877373634.us-central1.run.app/api/health/",
+      "status": 503,
+      "latency": "14.695438175s",
+      "userAgent": "curl/7.88.1",
+      "remoteIp": "34.174.217.145"
+    },
+    "trace": "projects/appsindunnova/traces/4eec21306b64583ba4507c9a75263308",
+    "spanId": "653b327f822115d3"
+  },
+  {
+    "id": "-pr0svjd927y",
+    "service": "instelec-api",
+    "revision": "",
+    "timestamp": "2026-01-30T19:28:44.137465Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "tpojnie2hqj6",
+    "service": "instelec-api",
+    "revision": "instelec-api-00008-k7j",
+    "timestamp": "2026-01-30T19:28:44.068377Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697d066c0000e8799807944d",
+    "service": "instelec-api",
+    "revision": "instelec-api-00008-k7j",
+    "timestamp": "2026-01-30T19:28:44.059513Z",
+    "severity": "ERROR",
+    "message": "Default STARTUP TCP probe failed 1 time consecutively for container \"instelec-api-1\" on port 8080. The instance was not started.\nConnection failed with status CANCELLED.",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
     "id": "-2fljzle2jfue",
     "service": "instelec-api",
     "revision": "",
@@ -22671,49 +22722,5 @@
     },
     "trace": "projects/appsindunnova/traces/904364bcaa4959930e501eaefdd1377a",
     "spanId": "b539700dfc7ae81c"
-  },
-  {
-    "id": "6973d036000f288b8cca6016",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00143-9gg",
-    "timestamp": "2026-01-23T19:47:02.993419Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/app/production/signals.py\", line 1712, in create_wip_troquelado_on_receipt\n    Movement.objects.create(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 663, in create\n    obj.save(force_insert=True, using=self.db)\n  File \"/app/inventory/models.py\", line 1270, in save\n    super().save(*args, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 902, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1008, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1169, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1210, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1868, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1882, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 79, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 92, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 100, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"unit_measure\" of relation \"inventory_movement\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6973d036000f257f289af3bf",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00143-9gg",
-    "timestamp": "2026-01-23T19:47:02.992639Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"unit_measure\" of relation \"inventory_movement\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6973cde3000ab006f517d559",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00143-9gg",
-    "timestamp": "2026-01-23T19:37:07.700422Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/app/production/signals.py\", line 1712, in create_wip_troquelado_on_receipt\n    Movement.objects.create(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 663, in create\n    obj.save(force_insert=True, using=self.db)\n  File \"/app/inventory/models.py\", line 1270, in save\n    super().save(*args, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 902, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1008, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1169, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1210, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1868, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1882, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 79, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 92, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 100, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"unit_measure\" of relation \"inventory_movement\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "6973cde3000aac46a8b2abce",
-    "service": "mouse-digital",
-    "revision": "mouse-digital-00143-9gg",
-    "timestamp": "2026-01-23T19:37:07.699462Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 105, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"unit_measure\" of relation \"inventory_movement\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
   }
 ]
