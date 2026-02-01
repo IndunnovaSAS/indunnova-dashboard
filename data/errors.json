@@ -1,5 +1,207 @@
 [
   {
+    "id": "697f8ac80007d08fa3203718",
+    "service": "greenhills-crm",
+    "revision": "greenhills-crm-00005-l9g",
+    "timestamp": "2026-02-01T17:18:00.512143Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 92, in rendered_content\n    return template.render(context, self._request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/backends/django.py\", line 107, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 171, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 159, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py\", line 327, in render\n    return nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 65, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1067, in render\n    output = self.filter_expression.resolve(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 745, in resolve\n    new_obj = func(obj, *arg_vals)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/defaultfilters.py\", line 784, in date\n    return formats.date_format(value, arg)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/formats.py\", line 155, in date_format\n    return dateformat.format(\n           ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/dateformat.py\", line 325, in format\n    return df.format(format_string)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/utils/dateformat.py\", line 45, in format\n    raise TypeError(\nTypeError: The format for date objects may not contain time-related format specifiers (found 'e').",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697f8ac80007d4e44afe82ac",
+    "service": "greenhills-crm",
+    "revision": "greenhills-crm-00005-l9g",
+    "timestamp": "2026-02-01T17:18:00.391263Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://greenhills-crm-381877373634.us-central1.run.app/ventas/1/",
+      "status": 500,
+      "latency": "0.120037321s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/6e536ff4369e1ff1bdd3de98b231fcaf",
+    "spanId": "4ef37a92dcb4d7a3"
+  },
+  {
+    "id": "697f884b0003346ac902ccd4",
+    "service": "instelec-api",
+    "revision": "instelec-api-00017-n6d",
+    "timestamp": "2026-02-01T17:07:14.344546Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "8.858622487s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/ef0fc06eb82779fe504fd4c65b3c085c",
+    "spanId": "31893b0d79c894aa"
+  },
+  {
+    "id": "697f873a00094c3be11af56c",
+    "service": "instelec-api",
+    "revision": "instelec-api-00016-mrp",
+    "timestamp": "2026-02-01T17:02:50.152708Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "0.448042452s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/b7fe08e973ddb76d7061ee01a2c80fb5",
+    "spanId": "770b5aa45b5d2aaf"
+  },
+  {
+    "id": "697f86870008af61fa6586e4",
+    "service": "instelec-api",
+    "revision": "instelec-api-00016-mrp",
+    "timestamp": "2026-02-01T16:59:51.520033Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "0.047802259s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/5671be41593cf09f88a67dd9b8796e58",
+    "spanId": "5a935c484d05b135"
+  },
+  {
+    "id": "697f86830002421f47858568",
+    "service": "instelec-api",
+    "revision": "instelec-api-00016-mrp",
+    "timestamp": "2026-02-01T16:59:41.276436Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "5.864753148s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/43d521ed28c987ee17bad0c1cfc1a86d",
+    "spanId": "4653acdc4f49075e"
+  },
+  {
+    "id": "697f843100022bd223d4ca57",
+    "service": "instelec-api",
+    "revision": "instelec-api-00015-pzt",
+    "timestamp": "2026-02-01T16:49:53.108080Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "0.032366641s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/742cbe144d14f34210ac891f8c47e2fb",
+    "spanId": "ca97d8da82219a71"
+  },
+  {
+    "id": "697f842e00005f54032220d6",
+    "service": "instelec-api",
+    "revision": "instelec-api-00015-pzt",
+    "timestamp": "2026-02-01T16:49:49.955689Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "0.067034263s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/cc66f3edf4e28776903cb2e5b002a1d1",
+    "spanId": "9d43c78c0f0cfc23"
+  },
+  {
+    "id": "697f8147000445647df43d8e",
+    "service": "greenhills-crm",
+    "revision": "greenhills-crm-00003-s8c",
+    "timestamp": "2026-02-01T16:37:27.279908Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/response.py\", line 92, in rendered_content\n    return template.render(context, self._request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/backends/django.py\", line 107, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 171, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 134, in render\n    compiled_parent = self.get_parent(context)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 131, in get_parent\n    return self.find_template(parent, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 109, in find_template\n    template, origin = context.template.engine.find_template(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/engine.py\", line 159, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 196, in compile_nodelist\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/defaulttags.py\", line 976, in do_if\n    nodelist = parser.parse((\"endif\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/usr/local/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/django/template/loader_tags.py\", line 228, in do_block\n    raise TemplateSyntaxError(\ndjango.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "697f8147000449dcf4c60610",
+    "service": "greenhills-crm",
+    "revision": "greenhills-crm-00003-s8c",
+    "timestamp": "2026-02-01T16:37:24.311801Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://greenhills-crm-381877373634.us-central1.run.app/usuarios/login/?next=/",
+      "status": 500,
+      "latency": "2.962377809s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/0463d95132d34bfad84892cab36c2c1b",
+    "spanId": "75f786324428ba63"
+  },
+  {
+    "id": "697f7fc4000188752209b1f9",
+    "service": "instelec-api",
+    "revision": "instelec-api-00014-wrh",
+    "timestamp": "2026-02-01T16:31:00.072289Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/financiero/",
+      "status": 500,
+      "latency": "0.026508739s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/158691163920ca56b64dbf8cb687fdb5",
+    "spanId": "3b3bcd02f328e7e6"
+  },
+  {
+    "id": "697f7fb80004c7d6a12f489d",
+    "service": "instelec-api",
+    "revision": "instelec-api-00014-wrh",
+    "timestamp": "2026-02-01T16:30:48.217915Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/ambiental/",
+      "status": 500,
+      "latency": "0.093497563s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2803:9810:68ac:4e08:8876:a1d4:b710:9601"
+    },
+    "trace": "projects/appsindunnova/traces/0d949f4d2fbc5edebf08db423c61d786",
+    "spanId": "eea2145f24a195c6"
+  },
+  {
     "id": "697f6385000b8fefda1139ac",
     "service": "rgd-aire-staging",
     "revision": "rgd-aire-staging-00012-hkb",
