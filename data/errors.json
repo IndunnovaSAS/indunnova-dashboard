@@ -1,5 +1,34 @@
 [
   {
+    "id": "69824dd7000e2f98a38dc473",
+    "service": "crm-komsa",
+    "revision": "crm-komsa-00059-lf9",
+    "timestamp": "2026-02-03T19:34:47.929688Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/clientes/views.py\", line 249, in importar_clientes_excel\n    return redirect('login')\n           ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/shortcuts.py\", line 48, in redirect\n    return redirect_class(resolve_url(to, *args, **kwargs))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/shortcuts.py\", line 145, in resolve_url\n    return reverse(to, args=args, kwargs=kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/urls/base.py\", line 88, in reverse\n    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/urls/resolvers.py\", line 828, in _reverse_with_prefix\n    raise NoReverseMatch(msg)\ndjango.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69824dd7000e82174f7aa7d4",
+    "service": "crm-komsa",
+    "revision": "crm-komsa-00059-lf9",
+    "timestamp": "2026-02-03T19:34:24.153213Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://crm-komsa-381877373634.us-central1.run.app/clientes/importar-excel/",
+      "status": 500,
+      "latency": "23.560561419s",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0",
+      "remoteIp": "2a09:bac3:347d:26b4::3db:7"
+    },
+    "trace": "projects/appsindunnova/traces/e39b97ada3f901602a2768e27a2cfcb2",
+    "spanId": "3ba5c883384cb2e3"
+  },
+  {
     "id": "69823e4b000707e863c733bc",
     "service": "rgd-aire-staging",
     "revision": "rgd-aire-staging-00012-hkb",
