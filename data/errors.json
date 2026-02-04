@@ -1,5 +1,172 @@
 [
   {
+    "id": "698378450003d4f78546baac",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:48:05.251127Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 60, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/views/decorators/http.py\", line 64, in inner\n    return func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/preop_talks/views.py\", line 333, in templates_list\n    templates = TalkTemplate.objects.filter(is_active=True).order_by(\"name\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/db/models/query.py\", line 1706, in order_by\n    obj.query.add_ordering(*field_names)\n  File \"/opt/venv/lib/python3.12/site-packages/django/db/models/sql/query.py\", line 2250, in add_ordering\n    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)\n  File \"/opt/venv/lib/python3.12/site-packages/django/db/models/sql/query.py\", line 1769, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: content, created_at, created_by, created_by_id, description, estimated_duration, id, instances, is_active, key_points, requires_signature, safety_topics, talk_type, target_activities, title, updated_at",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "698378450003dc31e8bb67a3",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:48:05.199486Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://sd-lms-rvfp6uj2va-uc.a.run.app/preop-talks/templates/",
+      "status": 500,
+      "latency": "0.051612790s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "200.116.223.83"
+    },
+    "trace": "projects/appsindunnova/traces/4f6c09e6d9b9855104f1dd90fcf02bd6",
+    "spanId": "3ac36a27edc6469b"
+  },
+  {
+    "id": "6983782c0002f33f0f22db11",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:47:40.193343Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 60, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/preop_talks/views.py\", line 96, in talk_create\n    templates = TalkTemplate.objects.filter(is_active=True).order_by(\"name\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/db/models/query.py\", line 1706, in order_by\n    obj.query.add_ordering(*field_names)\n  File \"/opt/venv/lib/python3.12/site-packages/django/db/models/sql/query.py\", line 2250, in add_ordering\n    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)\n  File \"/opt/venv/lib/python3.12/site-packages/django/db/models/sql/query.py\", line 1769, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: content, created_at, created_by, created_by_id, description, estimated_duration, id, instances, is_active, key_points, requires_signature, safety_topics, talk_type, target_activities, title, updated_at",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983782c000302e40511328d",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:47:40.073725Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://sd-lms-rvfp6uj2va-uc.a.run.app/preop-talks/create/",
+      "status": 500,
+      "latency": "0.121769701s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "200.116.223.83"
+    },
+    "trace": "projects/appsindunnova/traces/29ab2ef921cbe3b7f8fe9903a253dbf7",
+    "spanId": "8bf3d320221ccb44"
+  },
+  {
+    "id": "698377b5000950ebf32b5a3b",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:45:41.610539Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 60, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/views/decorators/http.py\", line 64, in inner\n    return func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/lessons_learned/views.py\", line 34, in lesson_list\n    return render(request, \"lessons_learned/lesson_list.html\", context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/shortcuts.py\", line 25, in render\n    content = loader.render_to_string(template_name, context, request, using=using)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader.py\", line 61, in render_to_string\n    template = get_template(template_name, using=using)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader.py\", line 15, in get_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/backends/django.py\", line 79, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/engine.py\", line 177, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/engine.py\", line 159, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 196, in compile_nodelist\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 295, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 234, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 961, in do_if\n    condition = TemplateIfParser(parser, bits).parse()\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 894, in __init__\n    super().__init__(*args, **kwargs)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/smartif.py\", line 171, in __init__\n    mapped_tokens.append(self.translate_token(token))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/smartif.py\", line 182, in translate_token\n    return self.create_var(token)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 897, in create_var\n    return TemplateLiteral(self.template_parser.compile_filter(value), value)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 605, in compile_filter\n    return FilterExpression(token, self)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 706, in __init__\n    raise TemplateSyntaxError(\ndjango.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '('lessons_learned.add_lessonlearned')' from 'user.has_perm('lessons_learned.add_lessonlearned')'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "698377b50009506570c81497",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:45:41.610405Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/smartif.py\", line 180, in translate_token\n    op = OPERATORS[token]\n         ~~~~~~~~~^^^^^^^\nKeyError: \"user.has_perm('lessons_learned.add_lessonlearned')\"",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "698377b50009554de25a5ff0",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:45:41.560809Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://sd-lms-rvfp6uj2va-uc.a.run.app/lessons-learned/",
+      "status": 500,
+      "latency": "0.048786555s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "200.116.223.83"
+    },
+    "trace": "projects/appsindunnova/traces/a6910810e36b7adf566f6438125fa478",
+    "spanId": "fb78ac692ac435ca"
+  },
+  {
+    "id": "6983774a000c940e80ed1777",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:43:54.824334Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 60, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/views/decorators/http.py\", line 64, in inner\n    return func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reports/views.py\", line 25, in admin_dashboard\n    return render(request, \"dashboard/admin.html\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/shortcuts.py\", line 25, in render\n    content = loader.render_to_string(template_name, context, request, using=using)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader.py\", line 62, in render_to_string\n    return template.render(context, request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/backends/django.py\", line 107, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 171, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 159, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 159, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 163, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 65, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 65, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 65, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 1008, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 969, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 480, in render\n    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/urls/base.py\", line 88, in reverse\n    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/urls/resolvers.py\", line 831, in _reverse_with_prefix\n    raise NoReverseMatch(msg)\ndjango.urls.exceptions.NoReverseMatch: Reverse for 'dashboard-compliance-chart' not found. 'dashboard-compliance-chart' is not a valid view function or pattern name.",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983774a000c998c830e3baa",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:43:54.764515Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://sd-lms-rvfp6uj2va-uc.a.run.app/reports/dashboard/",
+      "status": 500,
+      "latency": "0.058976143s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2800:e2:2880:ed7:c5bc:3a75:9b9c:879d"
+    },
+    "trace": "projects/appsindunnova/traces/f7591952101a537601ff1ab993012011",
+    "spanId": "129a1ed5c7ce80ab"
+  },
+  {
+    "id": "6983772900039f95d4a26b90",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:43:21.237461Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/contrib/auth/decorators.py\", line 60, in _view_wrapper\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/views/decorators/http.py\", line 64, in inner\n    return func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/lessons_learned/views.py\", line 34, in lesson_list\n    return render(request, \"lessons_learned/lesson_list.html\", context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/shortcuts.py\", line 25, in render\n    content = loader.render_to_string(template_name, context, request, using=using)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader.py\", line 61, in render_to_string\n    template = get_template(template_name, using=using)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader.py\", line 15, in get_template\n    return engine.get_template(template_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/backends/django.py\", line 79, in get_template\n    return Template(self.engine.get_template(template_name), self)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/engine.py\", line 177, in get_template\n    template, origin = self.find_template(template_name)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/engine.py\", line 159, in find_template\n    template = loader.get_template(name, skip=skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loaders/cached.py\", line 57, in get_template\n    template = super().get_template(template_name, skip)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loaders/base.py\", line 28, in get_template\n    return Template(\n           ^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 154, in __init__\n    self.nodelist = self.compile_nodelist()\n                    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 196, in compile_nodelist\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 295, in do_extends\n    nodelist = parser.parse()\n               ^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/loader_tags.py\", line 234, in do_block\n    nodelist = parser.parse((\"endblock\",))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 518, in parse\n    raise self.error(token, e)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 516, in parse\n    compiled_result = compile_func(self, token)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 961, in do_if\n    condition = TemplateIfParser(parser, bits).parse()\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 894, in __init__\n    super().__init__(*args, **kwargs)\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/smartif.py\", line 171, in __init__\n    mapped_tokens.append(self.translate_token(token))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/smartif.py\", line 182, in translate_token\n    return self.create_var(token)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/defaulttags.py\", line 897, in create_var\n    return TemplateLiteral(self.template_parser.compile_filter(value), value)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 605, in compile_filter\n    return FilterExpression(token, self)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/base.py\", line 706, in __init__\n    raise TemplateSyntaxError(\ndjango.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '('lessons_learned.add_lessonlearned')' from 'user.has_perm('lessons_learned.add_lessonlearned')'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983772900039ef2cd31cc20",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:43:21.237298Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.12/site-packages/django/template/smartif.py\", line 180, in translate_token\n    op = OPERATORS[token]\n         ~~~~~~~~~^^^^^^^\nKeyError: \"user.has_perm('lessons_learned.add_lessonlearned')\"",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "698377290003a9766dfa58f6",
+    "service": "sd-lms",
+    "revision": "sd-lms-00003-p5n",
+    "timestamp": "2026-02-04T16:43:21.170279Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://sd-lms-rvfp6uj2va-uc.a.run.app/lessons-learned/",
+      "status": 500,
+      "latency": "0.067847045s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "2800:e2:2880:ed7:c5bc:3a75:9b9c:879d"
+    },
+    "trace": "projects/appsindunnova/traces/d8d9af89bf20d13711196147e223f69f",
+    "spanId": "c7891198cdc38443"
+  },
+  {
     "id": "698373ae000541006bc60b01",
     "service": "arcopack-erp",
     "revision": "arcopack-erp-00566-gbf",
@@ -14703,183 +14870,5 @@
     },
     "trace": "projects/appsindunnova/traces/1097930260327c91d88fde7096d972be",
     "spanId": "008dc2e3fa5bd22e"
-  },
-  {
-    "id": "697a49f00005da21ee26dcdd",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T17:40:00.383521Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 92, in rendered_content\n    return template.render(context, self._request)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/backends/django.py\", line 61, in render\n    return self.template.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 175, in render\n    return self._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 157, in render\n    return compiled_parent._render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 167, in _render\n    return self.nodelist.render(context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py\", line 63, in render\n    result = block.nodelist.render(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in render\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1005, in <listcomp>\n    return SafeString(\"\".join([node.render_annotated(context) for node in self]))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py\", line 238, in render\n    nodelist.append(node.render_annotated(context))\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 966, in render_annotated\n    return self.render(context)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 1064, in render\n    output = self.filter_expression.resolve(context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 715, in resolve\n    obj = self.var.resolve(context)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 847, in resolve\n    value = self._resolve_lookup(context)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 890, in _resolve_lookup\n    current = getattr(current, bit)\n              ^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/produccion/models.py\", line 424, in maquinas_str\n    maquinas = [p.maquina.nombre for p in self.procesos.select_related('maquina').order_by('orden_ejecucion')]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/produccion/models.py\", line 424, in <listcomp>\n    maquinas = [p.maquina.nombre for p in self.procesos.select_related('maquina').order_by('orden_ejecucion')]\n                ^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'nombre'",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a49f00005d9a446b3afef",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T17:40:00.383396Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/template/base.py\", line 880, in _resolve_lookup\n    current = current[bit]\n              ~~~~~~~^^^^^\nTypeError: 'OrdenProduccion' object is not subscriptable",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a49f00005cc54f3e10653",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T17:40:00.164250Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://plasticos-ambientales-rvfp6uj2va-uc.a.run.app/produccion/ordenes/",
-      "status": 500,
-      "latency": "0.207333817s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
-      "remoteIp": "186.171.19.125"
-    },
-    "trace": "projects/appsindunnova/traces/69b704fa6d456e636dd6508c1bdadaa6",
-    "spanId": "63a6191e74b8ba98"
-  },
-  {
-    "id": "697a3f39000b2071da8a81dd",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00512-kn2",
-    "timestamp": "2026-01-28T16:54:17.729201Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/sellado.py\", line 1523, in registrar_desperdicio_turno_sellado\n    desperdicio.save()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1020, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1061, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1805, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1822, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a3f39000b2025abe844d6",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00512-kn2",
-    "timestamp": "2026-01-28T16:54:17.729125Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a3f39000b25a23160bb5c",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00512-kn2",
-    "timestamp": "2026-01-28T16:54:17.701025Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "POST",
-      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/sellado/14/desperdicio/registrar/",
-      "status": 500,
-      "latency": "0.027416541s",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-      "remoteIp": "129.222.203.197"
-    },
-    "trace": "projects/appsindunnova/traces/69223b182cb63bf26b63240065f7c166",
-    "spanId": "917351cedc1b8c31"
-  },
-  {
-    "id": "697a3f32000f1e54831599b9",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00512-kn2",
-    "timestamp": "2026-01-28T16:54:10.990804Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/sellado.py\", line 1523, in registrar_desperdicio_turno_sellado\n    desperdicio.save()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1020, in _save_table\n    results = self._do_insert(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1061, in _do_insert\n    return manager._insert(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1805, in _insert\n    return query.get_compiler(using=using).execute_sql(returning_fields)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1822, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a3f32000f1e065064d2ec",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00512-kn2",
-    "timestamp": "2026-01-28T16:54:10.990726Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"tipo_desperdicio\" of relation \"produccion_desperdicioturnosellado\" violates not-null constraint",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a3f32000f237cc03d828d",
-    "service": "arcopack-erp",
-    "revision": "arcopack-erp-00512-kn2",
-    "timestamp": "2026-01-28T16:54:10.926215Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "POST",
-      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/sellado/14/desperdicio/registrar/",
-      "status": 500,
-      "latency": "0.064011306s",
-      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-      "remoteIp": "129.222.203.197"
-    },
-    "trace": "projects/appsindunnova/traces/e0e6fef1dd8584586b63240065f7c2f2",
-    "spanId": "e9895db8d1fb3375"
-  },
-  {
-    "id": "697a3e580007432a14ad1461",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T16:50:32.475946Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 220, in _get_response\n    response = response.render()\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 114, in render\n    self.content = self.rendered_content\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 90, in rendered_content\n    template = self.resolve_template(self.template_name)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/response.py\", line 72, in resolve_template\n    return select_template(template, using=self.using)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/template/loader.py\", line 47, in select_template\n    raise TemplateDoesNotExist(\", \".join(template_name_list), chain=chain)\ndjango.template.exceptions.TemplateDoesNotExist: inventario/inventario_detail.html",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a3e58000748b69912676c",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T16:50:32.397514Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://plasticos-ambientales-rvfp6uj2va-uc.a.run.app/inventario/inventario/0b7017dd-6aaa-4779-acfb-dc41c6f6ccb9/",
-      "status": 500,
-      "latency": "0.078064809s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
-      "remoteIp": "186.171.19.125"
-    },
-    "trace": "projects/appsindunnova/traces/01aa3d78fdee91d5d00433a6c15b808d",
-    "spanId": "98721c3329bb5cd5"
-  },
-  {
-    "id": "697a3dc1000acab3962f7ef9",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T16:48:01.707251Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/detail.py\", line 109, in get\n    context = self.get_context_data(object=self.object)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/produccion/views.py\", line 1992, in get_context_data\n    context['paradas'] = ParadaProduccion.objects.filter(\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1436, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1454, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1461, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1546, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1577, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1427, in build_filter\n    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1237, in solve_lookup_type\n    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'hora_inicio' into field. Choices are: acciones_tomadas, costo_estimado, created_at, descripcion, duracion, fecha_fin, fecha_inicio, id, maquina, maquina_id, orden, orden_id, reportado_por, reportado_por_id, tipo, updated_at",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697a3dc1000acb352e44c86e",
-    "service": "plasticos-ambientales",
-    "revision": "plasticos-ambientales-00120-rkc",
-    "timestamp": "2026-01-28T16:48:01.537961Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://plasticos-ambientales-rvfp6uj2va-uc.a.run.app/produccion/peletizado/958b36d1-3777-4556-8f38-8aeaac292de4/",
-      "status": 500,
-      "latency": "0.167469102s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
-      "remoteIp": "186.171.19.125"
-    },
-    "trace": "projects/appsindunnova/traces/8a09b0e25d0fa91d68ad71cc90e92aaa",
-    "spanId": "5e3af2408e7f633c"
   }
 ]
