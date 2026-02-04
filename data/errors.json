@@ -1,5 +1,34 @@
 [
   {
+    "id": "69833b1f000e494985e52ac1",
+    "service": "moldes-mecanizados-app",
+    "revision": "moldes-mecanizados-app-00091-bt5",
+    "timestamp": "2026-02-04T12:27:11.936265Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 226, in get\n    context = self.get_context_data(**kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/produccion/views.py\", line 46, in get_context_data\n    ).aggregate(\n      ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 592, in aggregate\n    return self.query.chain().get_aggregation(self.db, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 398, in get_aggregation\n    aggregate = aggregate_expr.resolve_expression(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'eficiencia' into field. Choices are: calidad, cantidad_conforme, cantidad_final, cantidad_no_conforme, color, color_otro, consumos_lotes, created_at, created_by, created_by_id, detalles_productos, disponibilidad, fecha, fecha_hora_fin, fecha_hora_inicio, id, is_active, lote, lotes, maquina, maquina_id, material, material_usado_kg, movimientos_inventario, numero_ciclos, numero_registro, observaciones, oee, operario, operario_id, paros_mantenimiento, presion_proceso, procesos_acabado, producto, producto_id, proveedor, proveedor_id, puesta_punto_colaborador, puesta_punto_colaborador_id, rebaba_kg, rendimiento, reportes_defectos, reportes_paros, solicitudes_material, temperatura_proceso, tiempo_ciclo_min, tiempo_paro_min, tiempo_total_orden_min, turno, turno_id, updated_at, updated_by, updated_by_id",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69833b1f000e40e5134ae689",
+    "service": "moldes-mecanizados-app",
+    "revision": "moldes-mecanizados-app-00091-bt5",
+    "timestamp": "2026-02-04T12:27:11.844727Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://moldes-mecanizados-app-381877373634.us-central1.run.app/produccion/",
+      "status": 500,
+      "latency": "0.087400921s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "181.205.220.42"
+    },
+    "trace": "projects/appsindunnova/traces/53205afe846fc9c5883cb88813c49975",
+    "spanId": "fce4d1d0727ff687"
+  },
+  {
     "id": "698326ee00065f46e6b19124",
     "service": "novapcr-app",
     "revision": "novapcr-app-00157-58v",
