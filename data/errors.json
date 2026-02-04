@@ -1,5 +1,313 @@
 [
   {
+    "id": "6983c19e00044b69ecd01c02",
+    "service": "novapcr-app",
+    "revision": "novapcr-app-00161-tbx",
+    "timestamp": "2026-02-04T22:00:02.264790Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://novapcr-app-381877373634.us-central1.run.app/sensores/cron/sync-alertas/",
+      "status": 504,
+      "latency": "59.997331454s",
+      "userAgent": "Google-Cloud-Scheduler",
+      "remoteIp": "107.178.194.101"
+    },
+    "trace": "projects/appsindunnova/traces/36b211a245bebd38ee073a2e3d7594d1",
+    "spanId": "19ad1eb80f7f035b"
+  },
+  {
+    "id": "6983bf770002df88fcbf6b14",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:51.188296Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'parada_mto_pct' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf770002e38feb2e87e5",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:51.132057Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=TODOS&indicador=PARADA_MTO&fecha_desde=2025-11-06&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.055512593s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/512027c4413ec3d6ade5d042128ab23a",
+    "spanId": "20ba21b5dc64651a"
+  },
+  {
+    "id": "6983bf4c0003a8870b854045",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:08.239751Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf4c0003abcc0a32d47a",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:08.176048Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=TODOS&indicador=COSTOS&fecha_desde=2025-11-06&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.063112699s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/3172d20c2c253115e75069feef2da9a0",
+    "spanId": "bc537af194eecf3e"
+  },
+  {
+    "id": "6983bf49000bf7eef42a5307",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:05.784366Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf49000bfcbd1a3e3e09",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:05.720632Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=M_85_15&indicador=COSTOS&fecha_desde=2025-11-06&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.063440349s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/892eb0bd6bc90f7be75069feef2da5a2",
+    "spanId": "2e1c2c1da63eed83"
+  },
+  {
+    "id": "6983bf48000b2167ece30c1f",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:04.729447Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf48000b25682b4aa617",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:04.675075Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=M_85_15&indicador=COSTOS&fecha_desde=2026-01-05&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.053504048s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/779c3dfcb22f0bfee75069feef2da3ab",
+    "spanId": "17b55762ea3d7f61"
+  },
+  {
+    "id": "6983bf460001284dd8f11104",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:02.075853Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf4600012c5a0ff76d72",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:51:02.012856Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=M_85_15&indicador=COSTOS&fecha_desde=2026-01-28&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.062352678s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/fa863ab3b3d43f52d134b6ef3b090a8e",
+    "spanId": "ccb2beea11d6cf3b"
+  },
+  {
+    "id": "6983bf3d000ae3472a7e604a",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:53.713543Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf3d000aef1c592b448a",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:53.658626Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=SUDAR&indicador=COSTOS&fecha_desde=2026-01-28&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.056183368s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/ee9366e85bd07ca405abe362d9860a3a",
+    "spanId": "4e8dbc94f58b8ff8"
+  },
+  {
+    "id": "6983bf3a0000f347d6477d08",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:50.062279Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf3a0000f6f2c0e8e9e2",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:50.013206Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=SUDAR&indicador=COSTOS&fecha_desde=2025-02-04&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.048299032s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/ed5bfd3c4eea286d05abe362d98600da",
+    "spanId": "9a1adbb1ff81917a"
+  },
+  {
+    "id": "6983bf36000c96cea0c4f70f",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:46.825038Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf36000c9ada9622ec53",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:46.769586Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=COSTILLA_C&indicador=COSTOS&fecha_desde=2025-02-04&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.054557847s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/f99a7d1081a1c3b618be35ba0f561ac9",
+    "spanId": "93d6e31dfe669a1c"
+  },
+  {
+    "id": "6983bf260003682299ebbbbe",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:30.223266Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'utilidad' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf2600036d87d612ee81",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:30.141453Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=MILANESA&indicador=COSTOS&fecha_desde=2025-02-04&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.081040129s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/606e7afbfe0c4fb3e34b84b750ebd85c",
+    "spanId": "2c0e3bbfde4770f3"
+  },
+  {
+    "id": "6983bf23000842f164e370f8",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:27.541425Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 287, in get\n    datos = self.get_datos_ano(planta, producto, campo, ano, fecha_desde, fecha_hasta)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/reportes/views_produccion.py\", line 358, in get_datos_ano\n    for registro in qs_hist.values('mes').annotate(valor=Avg(campo_hist)):\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1590, in annotate\n    return self._annotate(args, kwargs, select=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1638, in _annotate\n    clone.query.add_annotation(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1133, in add_annotation\n    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/aggregates.py\", line 64, in resolve_expression\n    c = super().resolve_expression(query, allow_joins, reuse, summarize)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 950, in resolve_expression\n    c.source_expressions[pos] = arg.resolve_expression(\n                                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/expressions.py\", line 829, in resolve_expression\n    return query.resolve_ref(self.name, allow_joins, reuse, summarize)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1977, in resolve_ref\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'parada_mto_pct' into field. Choices are: activo, actualizado_en, actualizado_por, actualizado_por_id, ano, categoria, consumo_agua, creado_en, creado_por, creado_por_id, cumplimiento_pct, fecha_importacion, hoja, id, kg_hora_hombre, kg_lanzados, kg_producidos, merma_pct, mes, origen, planta, producto, producto_nombre",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6983bf230008478334be98aa",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00408-v6k",
+    "timestamp": "2026-02-04T21:50:27.425937Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/reportes/produccion/api/chart/?planta=CARNES&producto=MILANESA&indicador=PARADA_MTO&fecha_desde=2025-02-04&fecha_hasta=2026-02-04",
+      "status": 500,
+      "latency": "0.114618570s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/bce1441ebccf0b73cc64e9e6bcca3da0",
+    "spanId": "8014cfa447bcc15d"
+  },
+  {
     "id": "6983b057000ddc3447f1a71d",
     "service": "hemisferio-erp",
     "revision": "hemisferio-erp-00124-n5g",
