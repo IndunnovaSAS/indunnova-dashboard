@@ -1,5 +1,128 @@
 [
   {
+    "id": "6984ef420008a03173f63bdf",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00420-brf",
+    "timestamp": "2026-02-05T19:28:02.565297Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 208, in post\n    return super().post(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py\", line 153, in post\n    return self.form_valid(form)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/trazabilidad/views/embutidos.py\", line 315, in form_valid\n    self.object.save()\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 814, in save\n    self.save_base(\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 877, in save_base\n    updated = self._save_table(\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 990, in _save_table\n    updated = self._do_update(\n              ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/base.py\", line 1054, in _do_update\n    return filtered._update(values) > 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1231, in _update\n    return query.get_compiler(self.db).execute_sql(CURSOR)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1984, in execute_sql\n    cursor = super().execute_sql(result_type)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py\", line 1562, in execute_sql\n    cursor.execute(sql, params)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 67, in execute\n    return self._execute_with_wrappers(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 80, in _execute_with_wrappers\n    return executor(sql, params, many, context)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 84, in _execute\n    with self.db.wrap_database_errors:\n  File \"/usr/local/lib/python3.11/site-packages/django/db/utils.py\", line 91, in __exit__\n    raise dj_exc_value.with_traceback(traceback) from exc_value\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ndjango.db.utils.IntegrityError: null value in column \"fecha_produccion\" of relation \"trazabilidad_trazabilidadembutidos\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6984ef4200089ff936e09a87",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00420-brf",
+    "timestamp": "2026-02-05T19:28:02.565241Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py\", line 89, in _execute\n    return self.cursor.execute(sql, params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npsycopg2.errors.NotNullViolation: null value in column \"fecha_produccion\" of relation \"trazabilidad_trazabilidadembutidos\" violates not-null constraint",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6984ef420008a5f473a2359a",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00420-brf",
+    "timestamp": "2026-02-05T19:28:02.411917Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/trazabilidad/embutidos/54a272e2-4d1a-40bd-9512-d9a693477f9d/editar/",
+      "status": 500,
+      "latency": "0.153197733s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/4fdc118348499956d45e12eb2d6a8711",
+    "spanId": "33f5440ec00ebcb6"
+  },
+  {
+    "id": "6984eeec0005a4ed8507074e",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00419-7m4",
+    "timestamp": "2026-02-05T19:26:36.369901Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/list.py\", line 174, in get\n    context = self.get_context_data()\n              ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/trazabilidad/views/no_embutidos.py\", line 65, in get_context_data\n    temps = [registro.coccion_temp_final_arriba, registro.coccion_temp_final_centro,\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'TrazabilidadNoEmbutidos' object has no attribute 'coccion_temp_final_arriba'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "6984eeec0005a9a8b52a44c1",
+    "service": "carnesdelsebastian",
+    "revision": "carnesdelsebastian-00419-7m4",
+    "timestamp": "2026-02-05T19:26:36.258556Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://carnesdelsebastian-381877373634.us-central1.run.app/trazabilidad/no-embutidos/",
+      "status": 500,
+      "latency": "0.110516547s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "remoteIp": "170.247.0.146"
+    },
+    "trace": "projects/appsindunnova/traces/40f730adb43505bfbcb42e7e6e49781d",
+    "spanId": "0e753df612c50e2c"
+  },
+  {
+    "id": "6984e5a30009d080bbd7333a",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00578-b2t",
+    "timestamp": "2026-02-05T18:46:59.612705Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/doblado/16/desperdicio/registrar/",
+      "status": 500,
+      "latency": "0.028731035s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "186.169.137.80"
+    },
+    "trace": "projects/appsindunnova/traces/a5cc31109663dac67b58685878a88c1e",
+    "spanId": "8d4c6224e510676b"
+  },
+  {
+    "id": "6984e488000e9c155b1bacba",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00578-b2t",
+    "timestamp": "2026-02-05T18:42:16.926705Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/doblado/16/desperdicio/registrar/",
+      "status": 500,
+      "latency": "0.024080198s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "186.169.137.80"
+    },
+    "trace": "projects/appsindunnova/traces/69d49be062766d60e6de4b314b31a5f4",
+    "spanId": "4fbe09a7008bc57e"
+  },
+  {
+    "id": "6984e45800097e994ba1580e",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00578-b2t",
+    "timestamp": "2026-02-05T18:41:28.589302Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "POST",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/turno/doblado/16/desperdicio/registrar/",
+      "status": 500,
+      "latency": "0.028930692s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "186.169.137.80"
+    },
+    "trace": "projects/appsindunnova/traces/6224a20f9c59d408c488b6c4408cd2bc",
+    "spanId": "94dd7fdd4e379293"
+  },
+  {
     "id": "6984e11a0008d60fd1d719ed",
     "service": "rgd-aire-staging",
     "revision": "rgd-aire-staging-00012-hkb",
@@ -15130,184 +15253,5 @@
     },
     "trace": "projects/appsindunnova/traces/11ffc5825057c8fa86a3146767a83f16",
     "spanId": "ea6731d3b0dd9040"
-  },
-  {
-    "id": "697baeda0002ad40b716fc0a",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.175424Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/gunicorn/workers/gthread.py\", line 362, in handle\n    keepalive = self.handle_request(req, conn)\n  File \"/opt/venv/lib/python3.10/site-packages/gunicorn/workers/gthread.py\", line 415, in handle_request\n    respiter = self.wsgi(environ, resp.start_response)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/wsgi.py\", line 124, in __call__\n    response = self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/base.py\", line 140, in get_response\n    response = self._middleware_chain(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002ace686e565dc",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.175334Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002aca0228a63e8",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.175264Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/whitenoise/middleware.py\", line 123, in __call__\n    return self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002ac5372c14bdc",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.175187Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/corsheaders/middleware.py\", line 53, in __call__\n    result = self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002ac05ebeb9a8a",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.175109Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002abb7a8beebf0",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.175031Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002ab52c3cef325",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.174930Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002ab047a945d95",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.174852Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002aab92480b369",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.174777Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002aa68ba752e26",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.174696Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/deprecation.py\", line 129, in __call__\n    response = response or self.get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 57, in inner\n    response = response_for_exception(request, exc)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 141, in response_for_exception\n    response = handle_uncaught_exception(\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 185, in handle_uncaught_exception\n    callback = resolver.resolve_error_handler(500)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 732, in resolve_error_handler\n    callback = getattr(self.urlconf_module, \"handler%s\" % view_type, None)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002a9f7df2a2fb4",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:50.174583Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/base.py\", line 181, in _get_response\n    callback, callback_args, callback_kwargs = self.resolve_request(request)\n  File \"/opt/venv/lib/python3.10/site-packages/django/core/handlers/base.py\", line 313, in resolve_request\n    resolver_match = resolver.resolve(request.path_info)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 666, in resolve\n    for pattern in self.url_patterns:\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 718, in url_patterns\n    patterns = getattr(self.urlconf_module, \"urlpatterns\", self.urlconf_module)\n  File \"/opt/venv/lib/python3.10/site-packages/django/utils/functional.py\", line 47, in __get__\n    res = instance.__dict__[self.name] = self.func(instance)\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/resolvers.py\", line 711, in urlconf_module\n    return import_module(self.urlconf_name)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/config/urls.py\", line 14, in <module>\n    path('api/', include('apps.api.urls')),\n  File \"/opt/venv/lib/python3.10/site-packages/django/urls/conf.py\", line 39, in include\n    urlconf_module = import_module(urlconf_module)\n  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/app/apps/api/urls.py\", line 5, in <module>\n    from .router import api\n  File \"/app/apps/api/router.py\", line 75, in <module>\n    from apps.campo.api import router as campo_router\n  File \"/app/apps/campo/api.py\", line 20, in <module>\n    from .validators import validate_evidence_mime_type, validate_signature_mime_type\n  File \"/app/apps/campo/validators.py\", line 19, in <module>\n    import magic\n  File \"/opt/venv/lib/python3.10/site-packages/magic/__init__.py\", line 209, in <module>\n    libmagic = loader.load_lib()\n  File \"/opt/venv/lib/python3.10/site-packages/magic/loader.py\", line 49, in load_lib\n    raise ImportError('failed to find libmagic.  Check your installation')\nImportError: failed to find libmagic.  Check your installation",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697baeda0002ee0f4deca6ae",
-    "service": "instelec-api",
-    "revision": "instelec-api-00001-rwx",
-    "timestamp": "2026-01-29T19:02:41.834071Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://instelec-api-rvfp6uj2va-uc.a.run.app/api/health/",
-      "status": 500,
-      "latency": "8.161924903s",
-      "userAgent": "curl/7.88.1",
-      "remoteIp": "34.174.217.145"
-    },
-    "trace": "projects/appsindunnova/traces/554c9767da5a7627d9f42f82b14f0afd",
-    "spanId": "f0a2f53752deaf82"
-  },
-  {
-    "id": "697bace000056abf0db677ba",
-    "service": "crm-ecourmet",
-    "revision": "crm-ecourmet-00028-gxq",
-    "timestamp": "2026-01-29T18:54:24.355007Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/apps/maestros/views.py\", line 1112, in api_productos_servicios\n    productos = ProductoServicio.objects.filter(activo=True).select_related('categoria', 'tipo_producto').values(\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1313, in values\n    clone = self._values(*fields, **expressions)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1308, in _values\n    clone.query.set_values(fields)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2463, in set_values\n    self.add_fields(field_names, True)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2195, in add_fields\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'iva' into field. Choices are: activo, categoria, categoria_id, codigo, conceptos_costo, costo_total, created_at, descripcion, id, imagen, items_cotizacion, nombre, porcentaje_impuesto, precio_aproximado, subtipo_producto, subtipo_producto_id, tipo_impuesto, tipo_producto, tipo_producto_id, updated_at, utilidad_esperada",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697bace000056aa5439a6825",
-    "service": "crm-ecourmet",
-    "revision": "crm-ecourmet-00028-gxq",
-    "timestamp": "2026-01-29T18:54:24.354981Z",
-    "severity": "ERROR",
-    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2162, in add_fields\n    join_info = self.setup_joins(\n                ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1824, in setup_joins\n    path, final_field, targets, rest = self.names_to_path(\n                                       ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'iva' into field. Choices are: activo, categoria, categoria_id, codigo, conceptos_costo, costo_total, created_at, descripcion, id, imagen, items_cotizacion, nombre, porcentaje_impuesto, precio_aproximado, subtipo_producto, subtipo_producto_id, tipo_impuesto, tipo_producto, tipo_producto_id, updated_at, utilidad_esperada",
-    "httpRequest": null,
-    "trace": "",
-    "spanId": ""
-  },
-  {
-    "id": "697bace000056e792723891c",
-    "service": "crm-ecourmet",
-    "revision": "crm-ecourmet-00028-gxq",
-    "timestamp": "2026-01-29T18:54:24.330368Z",
-    "severity": "ERROR",
-    "message": "",
-    "httpRequest": {
-      "method": "GET",
-      "url": "https://crm-ecourmet-381877373634.us-central1.run.app/maestros/api/productos-servicios/",
-      "status": 500,
-      "latency": "0.024025710s",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
-      "remoteIp": "181.143.36.243"
-    },
-    "trace": "projects/appsindunnova/traces/3fba5d1fd6d8d5cfd3b6fd623aed4209",
-    "spanId": "513a07beb243b00b"
   }
 ]
