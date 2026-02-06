@@ -1,5 +1,63 @@
 [
   {
+    "id": "69866019000d1f312213dae0",
+    "service": "colorplastic-app",
+    "revision": "colorplastic-app-00090-lv9",
+    "timestamp": "2026-02-06T21:41:45.859953Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/gestion/views/roles_usuarios.py\", line 177, in usuarios_list\n    operarios = Operarios.objects.filter(activo=True).order_by('nombre')\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1659, in order_by\n    obj.query.add_ordering(*field_names)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2222, in add_ordering\n    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'nombre' into field. Choices are: activo, areas, codigo, controlcalidad, id_operario, nombre_completo, parosproduccion, produccionhomogeneizacion, produccioninyeccion, produccionlavado, produccionmolido, produccionpeletizado, produccionpulverizado, usuarios",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69866019000d275acdeead2c",
+    "service": "colorplastic-app",
+    "revision": "colorplastic-app-00090-lv9",
+    "timestamp": "2026-02-06T21:41:45.810989Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://colorplastic-app-381877373634.us-central1.run.app/gestion/usuarios/",
+      "status": 500,
+      "latency": "0.049031963s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "186.169.246.181"
+    },
+    "trace": "projects/appsindunnova/traces/fe7741980087adbd6757545a8d44a357",
+    "spanId": "cd192d11465843ea"
+  },
+  {
+    "id": "69865fb20008e146cbe7def3",
+    "service": "colorplastic-app",
+    "revision": "colorplastic-app-00090-lv9",
+    "timestamp": "2026-02-06T21:40:02.581958Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/decorators.py\", line 23, in _wrapper_view\n    return view_func(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/gestion/views/roles_usuarios.py\", line 177, in usuarios_list\n    operarios = Operarios.objects.filter(activo=True).order_by('nombre')\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/query.py\", line 1659, in order_by\n    obj.query.add_ordering(*field_names)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 2222, in add_ordering\n    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)\n  File \"/usr/local/lib/python3.11/site-packages/django/db/models/sql/query.py\", line 1725, in names_to_path\n    raise FieldError(\ndjango.core.exceptions.FieldError: Cannot resolve keyword 'nombre' into field. Choices are: activo, areas, codigo, controlcalidad, id_operario, nombre_completo, parosproduccion, produccionhomogeneizacion, produccioninyeccion, produccionlavado, produccionmolido, produccionpeletizado, produccionpulverizado, usuarios",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69865fb20008e61d979aceb9",
+    "service": "colorplastic-app",
+    "revision": "colorplastic-app-00090-lv9",
+    "timestamp": "2026-02-06T21:40:02.486084Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://colorplastic-app-381877373634.us-central1.run.app/gestion/usuarios/",
+      "status": 500,
+      "latency": "0.094722176s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "186.169.246.181"
+    },
+    "trace": "projects/appsindunnova/traces/02a121a67ffa2c6b7a240be2c52dec71",
+    "spanId": "024a5b28aea8161f"
+  },
+  {
     "id": "69863d910001c597f9334c8d",
     "service": "vid-comunicaciones",
     "revision": "vid-comunicaciones-00042-x4q",
