@@ -1,5 +1,34 @@
 [
   {
+    "id": "69873d4f000c89f4a4203a86",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00588-rpw",
+    "timestamp": "2026-02-07T13:25:35.821748Z",
+    "severity": "ERROR",
+    "message": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py\", line 55, in inner\n    response = get_response(request)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py\", line 197, in _get_response\n    response = wrapped_callback(request, *callback_args, **callback_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 104, in view\n    return self.dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/contrib/auth/mixins.py\", line 73, in dispatch\n    return super().dispatch(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 143, in dispatch\n    return handler(request, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/django/views/generic/base.py\", line 226, in get\n    context = self.get_context_data(**kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/produccion/views/sellado.py\", line 1122, in get_context_data\n    context['tiempo_productivo_calculado'] = duracion_total_minutos - total_duracion_paros\n                                             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~\nTypeError: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'",
+    "httpRequest": null,
+    "trace": "",
+    "spanId": ""
+  },
+  {
+    "id": "69873d4f000c8f726d7b0c47",
+    "service": "arcopack-erp",
+    "revision": "arcopack-erp-00588-rpw",
+    "timestamp": "2026-02-07T13:25:35.651568Z",
+    "severity": "ERROR",
+    "message": "",
+    "httpRequest": {
+      "method": "GET",
+      "url": "https://arcopack-erp-381877373634.us-central1.run.app/produccion/registros/sellado/54/",
+      "status": 500,
+      "latency": "0.169845672s",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",
+      "remoteIp": "201.184.138.210"
+    },
+    "trace": "projects/appsindunnova/traces/3a97c69be544b689ff7d221c74770ea7",
+    "spanId": "4a7f48b3ed036ca6"
+  },
+  {
     "id": "69872ea400016911088bd186",
     "service": "arcopack-erp",
     "revision": "arcopack-erp-00588-rpw",
